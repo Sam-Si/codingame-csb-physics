@@ -6496,3 +6496,503 @@ Good, I have the full picture. Let me rebuild the driver and run the validation.
 
 - Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && g++ -std=c++17 -O2 -o physics/replay_driver physics/replay_driver.cpp (Rebuild C++ physics driver)
 - Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python sim/verify_battles.py battles/leaderboard_battles 2>&1 (Run full validation against all leaderboard battles)
+
+## Assistant
+
+Now let me investigate the failures more deeply. I need to understand the different failure categories. Let me look at a few specific failures.
+
+## Tools
+
+- Read: sim/battle_parser.py
+
+## Assistant
+
+While the subagent investigates specific battles, let me run a quick diagnostic to understand the timeout behavior and CP detection patterns in both passing and failing battles.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import sys
+sys.path.insert(0, 'sim')
+from battle_parser import load_battle
+
+# Check timeout values in a passing test_session battle around CP crossings
+import glob
+files = sorted(glob.glob('battles/test_session_battles/battle_*.json'))[:5]
+for f in files:
+    log = load_battle(f)
+    for t, kf in enumerate(log.keyframes):
+        for i, p in enumerate(kf.pods):
+            if t > 0:
+                prev_kf = log.keyframes[t-1]
+                prev_cp = prev_kf.pods[i].next_cp
+                cur_cp = p.next_cp
+                if cur_cp != prev_cp:
+                    player = 0 if i < 2 else 1
+                    timeout = kf.timeout_p0 if player == 0 else kf.timeout_p1
+                    prev_timeout = prev_kf.timeout_p0 if player == 0 else prev_kf.timeout_p1
+                    print(f'{f.split(\"/\")[-1]} turn {t}: pod{i} cp {prev_cp}->{cur_cp}, timeout p{player}: {prev_timeout}->{timeout}')
+    print('---')
+" 2>&1 | head -60
+ (Check timeout values around CP crossings in passing battles)
+
+## Assistant
+
+Interesting - passing battles show timeout=100 after CP crossing, but some failing battles show gt=101. Let me check the raw keyframe data to understand the discrepancy.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import json, sys
+sys.path.insert(0, 'sim')
+from battle_parser import parse_view
+
+# Check a specific failing battle's raw view around the failing turn
+with open('battles/leaderboard_battles/battle_872313632.json') as f:
+    raw = json.load(f)
+
+frames = raw['frames']
+# Turn 18 = keyframe at frame 2*18+2 = 38
+# Also check turn 17 (frame 36) for comparison
+for fidx in [36, 38]:
+    if fidx < len(frames):
+        frame = frames[fidx]
+        v = frame.get('view','')
+        print(f'=== Frame {fidx} (keyframe={frame.get(\"keyframe\",\"?\")}):')
+        lines = v.strip().split('\n')
+        for line in lines:
+            print(f'  {line}')
+        print()
+" 2>&1 | head -40
+ (Check raw keyframe data for failing battle around turn 18)
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import json, sys
+sys.path.insert(0, 'sim')
+from battle_parser import parse_view
+
+# Also check the initial state and a normal CP crossing in a passing test_session battle
+with open('battles/test_session_battles/battle_891669739.json') as f:
+    raw = json.load(f)
+
+frames = raw['frames']
+# Frame 0 = initial state
+print('=== PASSING BATTLE: Frame 0 ===')
+v = frames[0]['view']
+lines = v.strip().split('\n')
+for line in lines[-3:]:  # just the last few lines (timeout + any collisions)
+    print(f'  {line}')
+
+# Turn 5 = frame 12, where pod2 crosses CP (timeout p1: 95->100)
+print()
+print('=== Turn 4 (frame 10) ===')
+v = frames[10]['view']
+lines = v.strip().split('\n')
+for line in lines[-3:]:
+    print(f'  {line}')
+
+print()
+print('=== Turn 5 (frame 12) - CP crossing ===')
+v = frames[12]['view']
+lines = v.strip().split('\n')
+for line in lines[-3:]:
+    print(f'  {line}')
+" 2>&1
+ (Check timeout values in passing battle raw data)
+
+## Assistant
+
+The timeout reset value is 100, not 101. Let me find the failing battle and check its raw data.
+
+## Tools
+
+- Execute: find /Users/samsi/PycharmProjects/codingame-csb-physics/battles/leaderboard_battles -name "battle_872313632.json" 2>/dev/null (Find location of failing battle file)
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import json, sys
+sys.path.insert(0, 'sim')
+from battle_parser import parse_view
+
+# Check raw view data for the failing battle around turn 18
+path = 'battles/leaderboard_battles/rank_134_manmanman/battle_872313632.json'
+with open(path) as f:
+    raw = json.load(f)
+
+frames = raw['frames']
+# Turn 17 = frame 36, Turn 18 = frame 38
+for t in [17, 18]:
+    fidx = 2*t + 2  # keyframe
+    frame = frames[fidx]
+    v = frame.get('view','')
+    lines = v.strip().split('\n')
+    print(f'=== Turn {t} (frame {fidx}) ===')
+    for line in lines:
+        print(f'  {line}')
+    print()
+
+    # Also show player actions for this turn
+    fidx_p0 = 2*t + 1
+    fidx_p1 = 2*t + 2
+    stdout_p0 = frames[fidx_p0].get('stdout', '')
+    stdout_p1 = frames[fidx_p1].get('stdout', '')
+    print(f'  P0 actions: {repr(stdout_p0.strip())}')
+    print(f'  P1 actions: {repr(stdout_p1.strip())}')
+    print()
+" 2>&1
+ (Check raw view data for failing battle around turn 18)
+
+## Assistant
+
+Let me trace the timeout values over more turns to understand the pattern.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import json, sys
+sys.path.insert(0, 'sim')
+
+# Check timeout evolution over all turns for the failing battle
+path = 'battles/leaderboard_battles/rank_134_manmanman/battle_872313632.json'
+with open(path) as f:
+    raw = json.load(f)
+
+frames = raw['frames']
+import re
+for t in range(min(25, (len(frames)-1)//2)):
+    fidx = 2*t + 2  # keyframe
+    frame = frames[fidx]
+    v = frame.get('view','')
+    lines = v.strip().split('\n')
+    # Find timeout line
+    for line in lines:
+        m = re.match(r'(\d+):([-\d]+)\s+(\d+):([-\d]+)', line.strip())
+        if m:
+            # Also get pod3's next_cp
+            pod_lines = []
+            for l in lines:
+                parts = l.strip().split()
+                if len(parts) >= 12 and parts[0].replace('.','').replace('-','').isdigit():
+                    pod_lines.append(parts)
+            
+            pod3_cp = pod_lines[3][10] if len(pod_lines) >= 4 else '?'
+            print(f'Turn {t:3d}: {line.strip()}  (pod3 next_cp={pod3_cp})')
+            break
+" 2>&1
+ (Trace timeout evolution in failing battle)
+
+## Assistant
+
+Let me check if timeout=101 ever appears in passing test_session battles, and also check the exact checkpoint layout of the failing battle.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import sys, glob
+sys.path.insert(0, 'sim')
+from battle_parser import load_battle
+
+# Check ALL test_session battles for timeout=101
+files = sorted(glob.glob('battles/test_session_battles/battle_*.json'))
+count_101 = 0
+for f in files:
+    log = load_battle(f)
+    for t, kf in enumerate(log.keyframes):
+        if kf.timeout_p0 == 101 or kf.timeout_p1 == 101:
+            print(f'{f.split(\"/\")[-1]} turn {t}: timeouts=({kf.timeout_p0}, {kf.timeout_p1})')
+            count_101 += 1
+            if count_101 > 20:
+                break
+    if count_101 > 20:
+        break
+
+if count_101 == 0:
+    print('No timeout=101 found in any test_session battle')
+else:
+    print(f'Found {count_101} instances of timeout=101')
+" 2>&1
+ (Check if timeout=101 ever occurs in passing test_session battles)
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import json
+# Check checkpoints and laps for the failing battle
+path = 'battles/leaderboard_battles/rank_134_manmanman/battle_872313632.json'
+with open(path) as f:
+    raw = json.load(f)
+
+# Parse checkpoints from refereeInput
+ref_input = raw.get('refereeInput', '')
+for line in ref_input.split('\n'):
+    print(f'refereeInput: {line}')
+
+# Get total number of unique CPs
+import sys
+sys.path.insert(0, 'sim')
+from battle_parser import parse_checkpoints_from_referee
+cps = parse_checkpoints_from_referee(ref_input)
+print(f'\\nCheckpoints: {cps}')
+print(f'Number of checkpoints: {len(cps)}')
+
+# Check pod states around turn 17-18 for pod3 (is it close to TWO checkpoints?)
+from battle_parser import load_battle
+log = load_battle(path)
+print(f'Laps: {log.laps}')
+
+# Print pod3 position and velocity at turns 16-18
+for t in [16, 17, 18]:
+    kf = log.keyframes[t]
+    p = kf.pods[3]
+    print(f'Turn {t}: pod3 pos=({p.x},{p.y}) vel=({p.vx},{p.vy}) next_cp={p.next_cp} angle={p.angle}')
+    
+# Print the checkpoints with indices
+for i, cp in enumerate(cps):
+    print(f'CP{i}: {cp}')
+" 2>&1
+ (Check checkpoints and pod positions for failing battle)
+
+## Assistant
+
+Let me check collision data for CP crossing turns in test_session battles to understand the timing pattern.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import sys
+sys.path.insert(0, 'sim')
+from battle_parser import load_battle
+
+# Check test_session battle: do CP crossing turns always have collisions?
+log = load_battle('battles/test_session_battles/battle_891669739.json')
+for t, kf in enumerate(log.keyframes[:30]):
+    for i, p in enumerate(kf.pods):
+        if t > 0:
+            prev_kf = log.keyframes[t-1]
+            prev_cp = prev_kf.pods[i].next_cp
+            cur_cp = p.next_cp
+            if cur_cp != prev_cp:
+                player = 0 if i < 2 else 1
+                timeout = kf.timeout_p0 if player == 0 else kf.timeout_p1
+                has_collisions = len(kf.collisions) > 0
+                print(f'Turn {t}: pod{i} cp {prev_cp}->{cur_cp}, timeout={timeout}, collisions={has_collisions} ({len(kf.collisions)})')
+" 2>&1
+ (Check if CP crossing turns have collisions in test_session)
+
+## Assistant
+
+Let me check if the timeout=101 vs timeout=100 pattern correlates with collision presence.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import json, sys, re
+sys.path.insert(0, 'sim')
+from battle_parser import load_battle
+
+# Check ALL CP crossings in the failing battle and correlate with collisions
+path = 'battles/leaderboard_battles/rank_134_manmanman/battle_872313632.json'
+log = load_battle(path)
+
+for t in range(len(log.keyframes)):
+    kf = log.keyframes[t]
+    for i in range(4):
+        if t > 0:
+            prev_kf = log.keyframes[t-1]
+            prev_cp = prev_kf.pods[i].next_cp
+            cur_cp = kf.pods[i].next_cp
+            if cur_cp != prev_cp:
+                player = 0 if i < 2 else 1
+                timeout = kf.timeout_p0 if player == 0 else kf.timeout_p1
+                prev_timeout = prev_kf.timeout_p0 if player == 0 else prev_kf.timeout_p1
+                has_collisions = len(kf.collisions) > 0
+                
+                # Check distance from pod to the crossed CP at end of turn
+                cp_idx = prev_cp  # the CP that was crossed
+                cp = log.checkpoints[cp_idx % len(log.checkpoints)]
+                p = kf.pods[i]
+                dist = ((p.x - cp[0])**2 + (p.y - cp[1])**2)**0.5
+                
+                print(f'Turn {t:3d}: pod{i} cp {prev_cp}->{cur_cp}, timeout {prev_timeout}->{timeout}, collisions={has_collisions}, dist_to_crossed_cp={dist:.1f}')
+" 2>&1
+ (Check CP crossing patterns with timeout and collision data)
+
+## Assistant
+
+Now I have a clear picture. The key issue with CP detection is that our engine checks CPs AFTER `endTurn()` rounding. The rounding changes position by ~0.5 units, which causes boundary cases (exactly 600.0 distance) to fail the strict `<` comparison. Let me also check passing leaderboard battles for timeout=101.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import sys, glob, os
+sys.path.insert(0, 'sim')
+from battle_parser import load_battle
+
+# Check a sample of PASSING leaderboard battles for timeout=101
+files = sorted(glob.glob('battles/leaderboard_battles/**/battle_*.json', recursive=True))
+# Pick 200 random passing battles
+import random
+random.seed(42)
+sample = random.sample(files, min(500, len(files)))
+
+count_101 = 0
+battles_checked = 0
+for f in sample:
+    try:
+        log = load_battle(f)
+        battles_checked += 1
+        for kf in log.keyframes:
+            if kf.timeout_p0 == 101 or kf.timeout_p1 == 101:
+                count_101 += 1
+                if count_101 <= 5:
+                    name = os.path.basename(f)
+                    turn = kf.game_turn
+                    print(f'{name} turn {turn}: timeouts=({kf.timeout_p0}, {kf.timeout_p1})')
+                break
+    except:
+        pass
+
+print(f'\\nChecked {battles_checked} battles, found {count_101} with timeout=101')
+" 2>&1
+ (Check if timeout=101 appears in passing leaderboard battles)
+
+## Assistant
+
+Now I have the data I need. The critical finding is that `dist_to_crossed_cp=600.0` at the one turn with timeout=101 — our engine misses the CP because position rounding moves the endpoint to exactly 600 distance, and the strict `<` comparison fails.
+
+Let me check the subagent's findings, then implement fixes.
+
+Excellent analysis from the subagent! Three clear root causes identified. Let me now implement the fixes.
+
+Now let me implement all three fixes in `physics.h`:
+
+## Tools
+
+- Edit: physics/physics.h
+- Edit: physics/physics.h
+
+## Assistant
+
+Now the big fix — restructure `nextTurn()` to always check CPs in the while loop (removing the `if (t > 0)` skip), use `while` loops for multi-CP detection, and check CPs before `endTurn()`:
+
+## Tools
+
+- Edit: physics/physics.h
+
+## Assistant
+
+Now rebuild and test on test_session first to make sure nothing is broken:
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && g++ -std=c++17 -O2 -o physics/replay_driver physics/replay_driver.cpp (Rebuild C++ physics driver with fixes)
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python sim/verify_battles.py battles/test_session_battles 2>&1 (Verify test_session battles still pass with fixes)
+
+## Assistant
+
+The test timed out — the `while` loop in CP detection is causing an infinite loop when a pod reaches the last checkpoint. Let me fix this.
+
+## Tools
+
+- Edit: physics/physics.h
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && g++ -std=c++17 -O2 -o physics/replay_driver physics/replay_driver.cpp && python sim/verify_battles.py battles/test_session_battles 2>&1 (Rebuild and verify test_session battles with infinite loop fix)
+
+## Assistant
+
+The `<=` change in `cpCollide` is causing false positive CP detections. The referee uses strict `<`. The real fix is that we now check CPs with pre-rounding positions (inside the while loop). Let me revert `<=` back to `<`.
+
+## Tools
+
+- Edit: physics/physics.h
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && g++ -std=c++17 -O2 -o physics/replay_driver physics/replay_driver.cpp && python sim/verify_battles.py battles/test_session_battles 2>&1 (Rebuild and test with strict < comparison restored)
+
+## Assistant
+
+The removal of `if (t > 0)` is causing over-counting. Let me take a more careful approach — keep the original while-loop structure but move the final CP check to BEFORE `endTurn()`:
+
+## Tools
+
+- Edit: physics/physics.h
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && g++ -std=c++17 -O2 -o physics/replay_driver physics/replay_driver.cpp && python sim/verify_battles.py battles/test_session_battles 2>&1 (Rebuild and verify test_session with revised CP check ordering)
+
+## Assistant
+
+Let me check if these are pre-existing failures from new files in the directory, not regressions from my changes.
+
+## Tools
+
+- Execute: ls /Users/samsi/PycharmProjects/codingame-csb-physics/battles/test_session_battles/battle_*.json | wc -l (Count battle files in test_session directory)
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+# Check if the 4 failing battles were in the original 220 test set
+# by checking git history for these files
+import subprocess
+for name in ['battle_891669745', 'battle_891670270', 'battle_891684936', 'battle_891686698']:
+    result = subprocess.run(['git', 'log', '--oneline', '-1', '--', f'battles/test_session_battles/{name}.json'], 
+                          capture_output=True, text=True)
+    print(f'{name}: {result.stdout.strip() or \"NOT IN GIT\"}')" 2>&1
+ (Check if failing battles are new additions)
+- Execute: ls /Users/samsi/PycharmProjects/codingame-csb-physics/battles/test_session_battles/ | head -20 && echo "---" && ls /Users/samsi/PycharmProjects/codingame-csb-physics/battles/test_session_battles/battle_*.json 2>/dev/null | wc -l (Check test_session directory structure)
+
+## Assistant
+
+Let me check if these 4 failures are pre-existing or introduced by my changes.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && git stash && g++ -std=c++17 -O2 -o physics/replay_driver physics/replay_driver.cpp && python sim/compare_battle.py battles/test_session_battles/battle_891669745.json 60 2>&1 | tail -10 (Test failing battles with original code (pre-changes))
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python sim/compare_battle.py battles/test_session_battles/battle_891686698.json 50 2>&1 | tail -5 (Test second failing battle with original code)
+
+## Assistant
+
+Both battles pass with the original code. My changes introduced regressions. Let me restore my changes and investigate which change is the culprit.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && git stash pop (Restore modified physics.h)
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python sim/compare_battle.py battles/test_session_battles/battle_891669745.json 60 2>&1 | tail -10 (Confirm failure with new code)
+
+## Assistant
+
+The regressions need investigation. Let me dig into what's happening with the first failing battle.
+
+## Tools
+
+- Execute: cd /Users/samsi/PycharmProjects/codingame-csb-physics && python3 -c "
+import sys, math
+sys.path.insert(0, 'sim')
+from battle_parser import load_battle
+
+log = load_battle('battles/test_session_battles/battle_891669745.json')
+print(f'Checkpoints ({len(log.checkpoints)}): {log.checkpoints}')
+print(f'Laps: {log.laps}')
+
+# Check state at turns 54 and 55
+for t in [54, 55]:
+    kf = log.keyframes[t]
+    for i in range(4):
+        p = kf.pods[i]
+        print(f'Turn {t}: pod{i} pos=({p.x},{p.y}) vel=({p.vx},{p.vy}) next_cp={p.next_cp} angle={math.degrees(p.angle):.1f}° shield={p.shield_active}')
+    print(f'  timeouts=({kf.timeout_p0}, {kf.timeout_p1})')
+    print(f'  collisions: {[(c.t, c.pod_a, c.pod_b) for c in kf.collisions]}')
+    
+    # Print actions for this turn
+    ta = log.turns[t]
+    print(f'  P0 actions: pod0=({ta.p0_pod0.target_x},{ta.p0_pod0.target_y},{ta.p0_pod0.thrust}) pod1=({ta.p0_pod1.target_x},{ta.p0_pod1.target_y},{ta.p0_pod1.thrust})')
+    print(f'  P1 actions: pod2=({ta.p1_pod0.target_x},{ta.p1_pod0.target_y},{ta.p1_pod0.thrust}) pod3=({ta.p1_pod1.target_x},{ta.p1_pod1.target_y},{ta.p1_pod1.thrust})')
+    print()
+
+# Check which CP was supposedly crossed
+print('\\nPod2 at turn 54->55:')
+p54 = log.keyframes[54].pods[2]
+p55 = log.keyframes[55].pods[2]
+print(f'  next_cp: {p54.next_cp} -> {p55.next_cp}')
+# gt shows 3 (unchanged), sim says 4 (extra crossing)
+# So our engine thinks pod2 crossed CP3 (going from 3->4)
+
+# CP3 is log.checkpoints[3]
+if len(log.checkpoints) > 3:
+    cp3 = log.checkpoints[3]
+    print(f'  CP3 = {cp3}')
+    # Distance from pod2 at turn 55 to CP3
+    dist = ((p55.x - cp3[0])**2 + (p55.y - cp3[1])**2)**0.5
+    print(f'  dist pod2->CP3 at end of turn 55: {dist:.2f}')
+    
+    # Also check at turn 54
+    dist54 = ((p54.x - cp3[0])**2 + (p54.y - cp3[1])**2)**0.5
+    print(f'  dist pod2->CP3 at end of turn 54: {dist54:.2f}')
+" 2>&1
+ (Investigate over-counting CP detection in failing test battle)
