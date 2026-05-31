@@ -1,0 +1,78 @@
+{
+  "frames": [
+    {
+      "gameInformation": "",
+      "summary": "$0 rank: 1\n$1 rank: 1\n",
+      "view": " 0\nCodersStrikeBack\n16000 9000 400 600 4 0.3141592653589793\n10339 3348 11199 5400 7238 6633 5442 2810\n0 10800.0 3155.0 0 9878.0 3541.0 1 11722.0 2768.0 1 8956.0 3928.0\n10800.0 3155.0 0 0 0 0 null null null 0 1 1\n\"\"\n9878.0 3541.0 0 0 0 0 null null null 0 1 1\n\"\"\n11722.0 2768.0 0 0 0 0 null null null 0 1 1\n\"\"\n8956.0 3928.0 0 0 0 0 null null null 0 1 1\n\"\"\n1:100 1:100\n",
+      "keyframe": true,
+      "agentId": -1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (10800, 13155) at power 200\nPod 2 of player $0 moves towards (16949, 10612) at power 0\n",
+      "stdout": "10800 13155 200\n16949 10612 0\n",
+      "view": " 1\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (59785, 16550) at power 0\nPod 2 of player $1 moves towards (57863, 14324) at power 164\n",
+      "stdout": "59785 16550 0\n57863 14324 164\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 2\n10800.0 3355.0 0 170 200 0 10800 13155 1.5707963267948966 0 1 1\n\"\"\n9878.0 3541.0 0 0 0 0 16949 10612 0.7853981633974483 0 1 2\n\"\"\n11722.0 2768.0 0 0 0 0 59785 16550 0.27925568953759483 0 1 4\n\"\"\n9116.0 3962.0 136 28 164 0 57863 14324 0.20944921818281284 0 1 3\n\"\"\n1:99 2:99\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (10800, 13355) at power 200\nPod 2 of player $0 moves towards (16949, 10612) at power 0\n",
+      "stdout": "10800 13355 200\n16949 10612 0\n",
+      "view": " 3\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "¤RED¤invalid input. Expected '0 <= power <= 200' but found 'power = 32766'§RED§\n",
+      "stdout": "61600 6256 SHIELD\n59047 6579 32766\n",
+      "summary": "$0 rank: 1\n$1 eliminated! rank: 2\n",
+      "view": " 4 InvalidInput\n10800.0 3725.0 0 314 200 0 10800 13355 1.5707963267948966 0 1 1\n\"\"\n9921.0 3512.0 119 -79 0 0 16949 10612 0.7853981633974483 0 1 2\n\"\"\n11722.0 2768.0 0 0 0 1 61600 6256 0.06981697029212845 1 1 4\n\"\"\n9209.0 4019.0 -4 102 0 1 null null 0.20944921818281284 0 1 3\n\"\"\n1:98 2:98\n0 0.6920344062973459 3 9210 3981 1 9878 3541 169.063485404117 68 14\n",
+      "keyframe": true,
+      "agentId": 1
+    }
+  ],
+  "gameId": 886496962,
+  "refereeInput": "seed=900047737\npod_timeout=100\nmap=10339 3348 11199 5400 7238 6633 5442 2810\npod_per_player=2\n",
+  "scores": [
+    2.0,
+    0.0
+  ],
+  "ranks": [
+    0,
+    1
+  ],
+  "tooltips": [
+    "{\"turn\":4,\"text\":\"$1: invalid action\",\"event\":1}"
+  ],
+  "agents": [
+    {
+      "index": 0,
+      "codingamer": {
+        "userId": 2716390,
+        "pseudo": "ADZeus",
+        "avatar": 39213225300941
+      },
+      "agentId": 6428998,
+      "score": 38.937027202864776,
+      "valid": true
+    },
+    {
+      "index": 1,
+      "codingamer": {
+        "userId": 3719253,
+        "pseudo": "daffie",
+        "avatar": 41786526997017
+      },
+      "agentId": 3528925,
+      "score": 37.591545259966004,
+      "valid": true
+    }
+  ]
+}
