@@ -28,13 +28,22 @@ def vel_close(a: int, b: int, tol: int = 1) -> bool:
     return abs(a - b) <= tol
 
 def angle_close(a: float, b: float, tol_deg: float = 1.0) -> bool:
-    # angles are radians
     da = abs(a - b)
     da = min(da, 2*math.pi - da)
     return da <= (tol_deg * math.pi / 180.0)
 
+def _is_invalid_thrust(thrust_str):
+    if thrust_str in ("SHIELD", "BOOST"):
+        return False
+    try:
+        val = int(thrust_str)
+        return val < 0 or val > 200
+    except (ValueError, TypeError):
+        return False
 
-def compare_one_turn(turn: int, sim_pods: list, gt_pods: list, sim_timeouts, gt_timeouts) -> list[str]:
+
+def compare_one_turn(turn: int, sim_pods: list, gt_pods: list,
+                     sim_timeouts, gt_timeouts, n_checkpoints=0) -> list[str]:
     """Return list of mismatch descriptions, or [] if perfect match."""
     errs = []
     for i in range(4):
@@ -47,11 +56,12 @@ def compare_one_turn(turn: int, sim_pods: list, gt_pods: list, sim_timeouts, gt_
         if not (vel_close(sp["vx"], gp.vx) and vel_close(sp["vy"], gp.vy)):
             errs.append(f"pod{i} vel: sim=({sp['vx']},{sp['vy']}) gt=({gp.vx},{gp.vy})")
 
-        if not angle_close(sp["angle"], gp.angle or 0.0, tol_deg=2.0):
-            errs.append(f"pod{i} angle: sim={sp['angle']:.4f} gt={gp.angle}")
+        if not angle_close(sp["angle"], gp.angle or 0.0, tol_deg=1.0):
+            errs.append(f"pod{i} angle: sim={math.degrees(sp['angle']):.1f}° gt={math.degrees(gp.angle or 0):.1f}°")
 
-        if sp["next"] != gp.next_cp:
-            errs.append(f"pod{i} next_cp: sim={sp['next']} gt={gp.next_cp}")
+        sim_cp = sp["next"] % n_checkpoints if n_checkpoints > 0 else sp["next"]
+        if sim_cp != gp.next_cp:
+            errs.append(f"pod{i} next_cp: sim={sp['next']}(mod={sim_cp}) gt={gp.next_cp}")
 
     if sim_timeouts != gt_timeouts:
         errs.append(f"timeouts: sim={sim_timeouts} gt={gt_timeouts}")
@@ -72,8 +82,8 @@ def main():
     print(f"  {len(log.turns)} turns, {len(log.checkpoints)} checkpoints")
     print(f"  Final referee outcome: ranks={log.ranks}, timeouts p0/p1 = {log.keyframes[-1].timeout_p0}/{log.keyframes[-1].timeout_p1}")
 
-    phys = CppPhysics("../physics/replay_driver")
-    phys.init_battle(log.checkpoints, laps=3)
+    phys = CppPhysics()
+    phys.init_battle(log.checkpoints, laps=log.laps)
 
     # Inject *exact* initial state from the battle (critical)
     init = log.initial_state
@@ -87,16 +97,37 @@ def main():
         if t >= max_turns:
             break
 
-        # Feed the exact 4 actions the players actually sent that turn
-        phys.apply(0, ta.p0_pod0.target_x, ta.p0_pod0.target_y, ta.p0_pod0.thrust)
-        phys.apply(1, ta.p0_pod1.target_x, ta.p0_pod1.target_y, ta.p0_pod1.thrust)
-        phys.apply(2, ta.p1_pod0.target_x, ta.p1_pod0.target_y, ta.p1_pod0.thrust)
-        phys.apply(3, ta.p1_pod1.target_x, ta.p1_pod1.target_y, ta.p1_pod1.thrust)
+        # InvalidInput propagation (same logic as verify_battles.py)
+        p0_acts = [(ta.p0_pod0.target_x, ta.p0_pod0.target_y, ta.p0_pod0.thrust),
+                   (ta.p0_pod1.target_x, ta.p0_pod1.target_y, ta.p0_pod1.thrust)]
+        p1_acts = [(ta.p1_pod0.target_x, ta.p1_pod0.target_y, ta.p1_pod0.thrust),
+                   (ta.p1_pod1.target_x, ta.p1_pod1.target_y, ta.p1_pod1.thrust)]
+
+        if _is_invalid_thrust(p0_acts[0][2]):
+            inv = p0_acts[0][2]
+            p0_acts = [(p0_acts[0][0], p0_acts[0][1], inv),
+                       (p0_acts[1][0], p0_acts[1][1], inv)]
+        elif _is_invalid_thrust(p0_acts[1][2]):
+            pass  # only second pod invalidated
+
+        if _is_invalid_thrust(p1_acts[0][2]):
+            inv = p1_acts[0][2]
+            p1_acts = [(p1_acts[0][0], p1_acts[0][1], inv),
+                       (p1_acts[1][0], p1_acts[1][1], inv)]
+        elif _is_invalid_thrust(p1_acts[1][2]):
+            pass  # only second pod invalidated
+
+        phys.apply(0, p0_acts[0][0], p0_acts[0][1], p0_acts[0][2])
+        phys.apply(1, p0_acts[1][0], p0_acts[1][1], p0_acts[1][2])
+        phys.apply(2, p1_acts[0][0], p1_acts[0][1], p1_acts[0][2])
+        phys.apply(3, p1_acts[1][0], p1_acts[1][1], p1_acts[1][2])
 
         sim = phys.step()
         gt = log.keyframes[t]
 
-        errs = compare_one_turn(t, sim["pods"], gt.pods, sim["timeouts"], (gt.timeout_p0, gt.timeout_p1))
+        errs = compare_one_turn(t, sim["pods"], gt.pods, sim["timeouts"],
+                                (gt.timeout_p0, gt.timeout_p1),
+                                n_checkpoints=len(log.checkpoints))
 
         if errs:
             if first_mismatch is None:

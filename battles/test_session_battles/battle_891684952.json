@@ -1,0 +1,80 @@
+{
+  "frames": [
+    {
+      "gameInformation": "",
+      "summary": "$0 rank: 1\n$1 rank: 1\n",
+      "view": " 0\nCodersStrikeBack\n16000 9000 400 600 4 0.3141592653589793\n7196 2147 3597 5307 13839 5093 10688 2261 8707 7462\n0 7526.0 2523.0 0 6866.0 1771.0 1 8186.0 3274.0 1 6206.0 1020.0\n7526.0 2523.0 0 0 0 0 null null null 0 1 1\n\"\"\n6866.0 1771.0 0 0 0 0 null null null 0 1 1\n\"\"\n8186.0 3274.0 0 0 0 0 null null null 0 1 1\n\"\"\n6206.0 1020.0 0 0 0 0 null null null 0 1 1\n\"\"\n1:100 1:100\n",
+      "keyframe": true,
+      "agentId": -1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 enabled its shield\nPod 2 of player $0 moves towards (-492, 8543) at power 165\n",
+      "stdout": "-633 8304 SHIELD SHIELD\n-492 8543 165\n",
+      "view": " 1\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7526, 2523) at power 200\nPod 2 of player $1 boosts towards (1711, 2877)\n",
+      "stdout": "7526 2523 200\n1711 2877 BOOST\n",
+      "stderr": "INIT:laps=3;checkpoint_count=5;cp0_x=7196;cp0_y=2147;cp1_x=3597;cp1_y=5307;cp2_x=13839;cp2_y=5093;cp3_x=10688;cp3_y=2261;cp4_x=8707;cp4_y=7462\nP0:turn=0;id=0;x=8186;y=3274;vx=0;vy=0;angle=-1;target_cp=1;action=200;target_x=7526;target_y=2523;opp_id=2;opp_x=7526;opp_y=2523;opp_vx=0;opp_vy=0;opp_angle=-1;opp_target_cp=1\nP1:turn=0;id=1;x=6206;y=1020;vx=0;vy=0;angle=-1;target_cp=1;action=BOOST;target_x=1711;target_y=2877;opp_id=3;opp_x=6866;opp_y=1771;opp_vx=0;opp_vy=0;opp_angle=-1;opp_target_cp=1\n",
+      "summary": "$0 rank: 2\n$1 rank: 1\n",
+      "view": " 2\n7526.0 2523.0 -20 -23 0 0 -633 8304 2.5251563045119263 1 1 3\n\"SHIELD\"\n6745.0 1883.0 -103 94 165 0 -492 8543 2.3976427836463774 0 1 2\n\"\"\n8054.0 3124.0 91 104 200 0 7526 2523 -2.291790417881966 0 1 4\n\"\"\n5605.0 1268.0 -510 210 650 0 1711 2877 2.7498224816001096 0 1 1\n\"\"\n2:99 1:99\n0 0.9990024004795196 2 8054 3124 0 7526 2523 363.6363636363636 -66 -75\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "¤RED¤Timeout: the program did not provide 2 input lines in due time... $0 will no longer be active in this game.§RED§\n",
+      "stdout": "",
+      "view": " 3\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7526, 2523) at power 200\nPod 2 of player $1 moves towards (15645, 4969) at power 200\n",
+      "stdout": "7526 2523 200\n15645 4969 200\n",
+      "stderr": "PRED_ASSERT:turn=0;pod_id=0;actual_x=8054;actual_y=3124;actual_vx=91;actual_vy=104;actual_angle=229;pred_x=8054;pred_y=3124;pred_vx=-112;pred_vy=-127;pred_angle=-131.31;diff_x=0.00;diff_y=0.00;diff_vx=203.00;diff_vy=231.00;diff_angle=0.31;diff_cp=0;my_timeout_left=99;opp_timeout_left=99\nPRED_ASSERT:turn=0;pod_id=1;actual_x=5605;actual_y=1268;actual_vx=-510;actual_vy=210;actual_angle=158;pred_x=6021.00;pred_y=1096.00;pred_vx=-157.00;pred_vy=64.00;pred_angle=157.55;diff_x=-416.00;diff_y=172.00;diff_vx=-353.00;diff_vy=146.00;diff_angle=0.45;diff_cp=0;my_timeout_left=99;opp_timeout_left=99\nP0:turn=1;id=0;x=8054;y=3124;vx=91;vy=104;angle=229;target_cp=1;action=200;target_x=7526;target_y=2523;opp_id=2;opp_x=7526;opp_y=2523;opp_vx=-20;opp_vy=-23;opp_angle=145;opp_target_cp=1\nP1:turn=1;id=1;x=5605;y=1268;vx=-510;vy=210;angle=158;target_cp=1;action=200;target_x=15645;target_y=4969;opp_id=3;opp_x=6745;opp_y=1883;opp_vx=-103;opp_vy=94;opp_angle=137;opp_target_cp=1\n",
+      "summary": "$0 eliminated! rank: 2\n$1 rank: 1\n",
+      "view": " 4\n7496.0 2489.0 -25 -29 0 1 null null 2.5251563045119263 1 1 4\n\"\"\n6642.0 1977.0 -87 79 0 1 null null 2.3976427836463774 0 1 3\n\"\"\n8111.0 3189.0 48 55 200 0 7526 2523 -2.29162538301985 0 1 2\n\"\"\n4943.0 1608.0 -562 288 200 0 15645 4969 2.4356632162411302 0 1 1\n\"\"\n2:98 1:98\n1 0.0 2 8054 3124 0 7526 2523 148.48115761667324 -31 -35\n",
+      "keyframe": true,
+      "agentId": 1
+    }
+  ],
+  "gameId": 891684952,
+  "refereeInput": "seed=50988283\npod_timeout=100\nmap=7196 2147 3597 5307 13839 5093 10688 2261 8707 7462\npod_per_player=2\n",
+  "scores": [
+    0.0,
+    2.0
+  ],
+  "ranks": [
+    1,
+    0
+  ],
+  "tooltips": [
+    "{\"turn\":3,\"text\":\"$0: timeout!\",\"event\":0}"
+  ],
+  "agents": [
+    {
+      "index": 0,
+      "codingamer": {
+        "userId": 381613,
+        "pseudo": "Hadou_",
+        "avatar": 1729970888927
+      },
+      "agentId": 1440241,
+      "score": 9.359853644523312,
+      "valid": true
+    },
+    {
+      "index": 1,
+      "codingamer": {
+        "userId": 984614,
+        "pseudo": "SamSi",
+        "avatar": 9557317848695
+      },
+      "agentId": 6489224,
+      "score": 10.39357592063464,
+      "valid": true
+    }
+  ]
+}

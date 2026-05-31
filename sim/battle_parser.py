@@ -109,10 +109,14 @@ def parse_view(view: str) -> Dict[str, Any]:
 
     result: Dict[str, Any] = {}
 
-    # Frame number line can be "414 endReached" or just "414"
+    # Frame number line can be "414 endReached", "76 InvalidInput", or just "414"
     first_line = lines[0]
     if "endReached" in first_line:
         result["end_reached"] = True
+        result["frame"] = int(first_line.split()[0])
+    elif "InvalidInput" in first_line:
+        result["end_reached"] = False
+        result["invalid_input"] = True
         result["frame"] = int(first_line.split()[0])
     else:
         result["end_reached"] = False

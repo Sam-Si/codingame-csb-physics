@@ -193,19 +193,49 @@ struct Game {
 
     // Apply one pod's command for the turn (rotation + thrust/shield/boost).
     // Must be called for all 4 pods before nextTurn().
-    // thrust_str: "200", "0", "BOOST", "SHIELD"
+    // thrust_str: "200", "0", "BOOST", "SHIELD", or negative (InvalidInput)
     void applyAction(int pod_idx, int target_x, int target_y, const std::string& thrust_str) {
         if (pod_idx < 0 || pod_idx >= 4) return;
         Pod& p = pods[pod_idx];
         Point target = {(double)target_x, (double)target_y};
 
-        if (p.isFirstTurn) {
-            p.isFirstTurn = false;
-            // First round: angle set directly, no 18° limit (per rules + bot stderr observations)
-            double a = std::atan2(target.y - p.p.y, target.x - p.p.x);
-            p.applyRotateFirst(a);
+        // InvalidInput handling — verified from battle data:
+        // - Negative thrust (e.g. "-1"): activates shield (shieldtimer=4), no rotation, no thrust.
+        // - Thrust > 200 (e.g. "286", "32766"): does NOT activate shield, no rotation, no thrust.
+        // Both cases: angle stays exactly unchanged, velocity gets only friction.
+        if (thrust_str != "SHIELD" && thrust_str != "BOOST") {
+            try {
+                int val = std::stoi(thrust_str);
+                if (val < 0) {
+                    // Negative thrust: activates shield
+                    p.shieldtimer = 4;
+                    if (p.isFirstTurn) p.isFirstTurn = false;
+                    return;
+                }
+                if (val > 200) {
+                    // Thrust > 200: invalid but does NOT activate shield
+                    if (p.isFirstTurn) p.isFirstTurn = false;
+                    return;
+                }
+            } catch (...) {}
+        }
+
+        // Rotation: skip if target is the pod's own position (atan2(0,0) undefined).
+        // The referee checks dx/dy != 0 before computing the facing direction.
+        // Verified from battle data: bots commonly target their own position on SHIELD turns.
+        double dx = target.x - p.p.x;
+        double dy = target.y - p.p.y;
+        if (dx != 0.0 || dy != 0.0) {
+            if (p.isFirstTurn) {
+                p.isFirstTurn = false;
+                double a = std::atan2(dy, dx);
+                p.applyRotateFirst(a);
+            } else {
+                p.applyRotate(target);
+            }
         } else {
-            p.applyRotate(target);
+            // Target == position: no rotation, but consume isFirstTurn
+            if (p.isFirstTurn) p.isFirstTurn = false;
         }
 
         int thrust = 0;
@@ -237,12 +267,8 @@ struct Game {
 
         // During shield cooldown the pod cannot accelerate (thrust forced to 0).
         // This includes the turn the shield is activated (shieldtimer==4).
-        // If BOOST was requested during cooldown, the boost is NOT consumed.
+        // BOOST IS consumed during cooldown (boosted stays 1) — verified from battle data.
         if (!used_shield && p.shieldtimer > 0) {
-            if (thrust_str == "BOOST" && p.boosted == 1) {
-                // Undo the boost consumption — pod can't thrust during cooldown
-                p.boosted = 0;
-            }
             thrust = 0;
         }
 

@@ -46,6 +46,19 @@ def angle_close(a_rad, b_rad):
     return da <= (ANG_TOL_DEG * math.pi / 180.0)
 
 
+def _is_invalid_thrust(thrust_str):
+    """Check if a single thrust value is invalid (negative or > 200).
+    Both cases: referee skips rotation and applies 0 thrust.
+    Difference: negative activates shield, >200 does not."""
+    if thrust_str in ("SHIELD", "BOOST"):
+        return False
+    try:
+        val = int(thrust_str)
+        return val < 0 or val > 200
+    except (ValueError, TypeError):
+        return False
+
+
 def compare_turn(sim_pods, gt_pods, sim_timeouts, gt_timeouts, n_checkpoints=0):
     """Compare simulation output for one turn against ground-truth keyframe.
     Returns list of mismatch strings (empty = perfect match).
@@ -98,10 +111,36 @@ def run_battle(phys, log):
         if t_idx >= len(log.keyframes):
             break  # no ground truth for this turn
 
-        phys.apply(0, ta.p0_pod0.target_x, ta.p0_pod0.target_y, ta.p0_pod0.thrust)
-        phys.apply(1, ta.p0_pod1.target_x, ta.p0_pod1.target_y, ta.p0_pod1.thrust)
-        phys.apply(2, ta.p1_pod0.target_x, ta.p1_pod0.target_y, ta.p1_pod0.thrust)
-        phys.apply(3, ta.p1_pod1.target_x, ta.p1_pod1.target_y, ta.p1_pod1.thrust)
+        # InvalidInput rule (verified from battle data):
+        # - If a player's FIRST pod action has invalid thrust → BOTH pods invalidated
+        # - If only the SECOND pod action is invalid → only that pod invalidated
+        # The referee reads stdout line by line; error on line 1 stops parsing entirely.
+        p0_acts = [(ta.p0_pod0.target_x, ta.p0_pod0.target_y, ta.p0_pod0.thrust),
+                   (ta.p0_pod1.target_x, ta.p0_pod1.target_y, ta.p0_pod1.thrust)]
+        p1_acts = [(ta.p1_pod0.target_x, ta.p1_pod0.target_y, ta.p1_pod0.thrust),
+                   (ta.p1_pod1.target_x, ta.p1_pod1.target_y, ta.p1_pod1.thrust)]
+
+        if _is_invalid_thrust(p0_acts[0][2]):
+            # First line invalid → both pods invalidated.
+            # Propagate the same invalid value so C++ engine applies correct behavior
+            # (negative = shield, >200 = no shield).
+            inv = p0_acts[0][2]
+            p0_acts = [(p0_acts[0][0], p0_acts[0][1], inv),
+                       (p0_acts[1][0], p0_acts[1][1], inv)]
+        elif _is_invalid_thrust(p0_acts[1][2]):
+            pass  # only second pod invalidated, keep original value for C++ engine
+
+        if _is_invalid_thrust(p1_acts[0][2]):
+            inv = p1_acts[0][2]
+            p1_acts = [(p1_acts[0][0], p1_acts[0][1], inv),
+                       (p1_acts[1][0], p1_acts[1][1], inv)]
+        elif _is_invalid_thrust(p1_acts[1][2]):
+            pass  # only second pod invalidated, keep original value for C++ engine
+
+        phys.apply(0, p0_acts[0][0], p0_acts[0][1], p0_acts[0][2])
+        phys.apply(1, p0_acts[1][0], p0_acts[1][1], p0_acts[1][2])
+        phys.apply(2, p1_acts[0][0], p1_acts[0][1], p1_acts[0][2])
+        phys.apply(3, p1_acts[1][0], p1_acts[1][1], p1_acts[1][2])
 
         sim = phys.step()
         if len(sim["pods"]) < 4:

@@ -1,0 +1,1648 @@
+{
+  "frames": [
+    {
+      "gameInformation": "",
+      "summary": "$0 rank: 1\n$1 rank: 1\n",
+      "view": " 0\nCodersStrikeBack\n16000 9000 400 600 4 0.3141592653589793\n3149 7552 9542 4402 14499 7800 6302 4266 7791 853 7689 5944\n0 2928.0 7103.0 0 3370.0 8001.0 1 2486.0 6206.0 1 3812.0 8898.0\n2928.0 7103.0 0 0 0 0 null null null 0 1 1\n\"\"\n3370.0 8001.0 0 0 0 0 null null null 0 1 1\n\"\"\n2486.0 6206.0 0 0 0 0 null null null 0 1 1\n\"\"\n3812.0 8898.0 0 0 0 0 null null null 0 1 1\n\"\"\n1:100 1:100\n",
+      "keyframe": true,
+      "agentId": -1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (9542, 4402) at power 100\nPod 2 of player $0 moves towards (9542, 4402) at power 100\n",
+      "stdout": "9542 4402 100\n9542 4402 100\n",
+      "view": " 1\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (2928, 7103) at power 200\nPod 2 of player $1 boosts towards (6806, 8547)\n",
+      "stdout": "2928 7103 200\n6806 8547 BOOST\n",
+      "stderr": "INIT:laps=3;checkpoint_count=6;cp0_x=3149;cp0_y=7552;cp1_x=9542;cp1_y=4402;cp2_x=14499;cp2_y=7800;cp3_x=6302;cp3_y=4266;cp4_x=7791;cp4_y=853;cp5_x=7689;cp5_y=5944\nP0:turn=0;id=0;x=2486;y=6206;vx=0;vy=0;angle=-1;target_cp=1;action=200;target_x=2928;target_y=7103;opp_id=2;opp_x=2928;opp_y=7103;opp_vx=0;opp_vy=0;opp_angle=-1;opp_target_cp=1\nP1:turn=0;id=1;x=3812;y=8898;vx=0;vy=0;angle=-1;target_cp=1;action=BOOST;target_x=6806;target_y=8547;opp_id=3;opp_x=3370;opp_y=8001;opp_vx=0;opp_vy=0;opp_angle=-1;opp_target_cp=1\n",
+      "summary": "$0 rank: 2\n$1 rank: 1\n",
+      "view": " 2\n3021.0 7065.0 78 -32 100 0 9542 4402 -0.3877062942867666 0 1 2\n\"\"\n3456.0 7951.0 73 -42 100 0 9542 4402 -0.527913250728853 0 1 3\n\"\"\n2574.0 6385.0 75 152 200 0 2928 7103 1.1129626057759323 0 1 4\n\"\"\n4458.0 8822.0 548 -64 650 0 6806 8547 -0.11670176784514744 0 1 1\n\"\"\n2:99 1:99\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 boosts towards (9542, 4402)\nPod 2 of player $0 boosts towards (9542, 4402)\n",
+      "stdout": "9542 4402 BOOST\n9542 4402 BOOST\n",
+      "view": " 3\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (3021, 7065) at power 200\nPod 2 of player $1 moves towards (12344, 6911) at power 200\n",
+      "stdout": "3021 7065 200\n12344 6911 200\n",
+      "stderr": "PRED_ASSERT:turn=0;pod_id=0;actual_x=2574;actual_y=6385;actual_vx=75;actual_vy=152;actual_angle=64;pred_x=2574;pred_y=6385;pred_vx=75;pred_vy=152;pred_angle=63.77;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.23;diff_cp=0;my_timeout_left=99;opp_timeout_left=99\nPRED_ASSERT:turn=0;pod_id=1;actual_x=4458;actual_y=8822;actual_vx=548;actual_vy=-64;actual_angle=353;pred_x=4011.00;pred_y=8875.00;pred_vx=168.00;pred_vy=-19.00;pred_angle=-6.69;diff_x=447.00;diff_y=-53.00;diff_vx=380.00;diff_vy=-45.00;diff_angle=-0.31;diff_cp=0;my_timeout_left=99;opp_timeout_left=99\nP0:turn=1;id=0;x=2574;y=6385;vx=75;vy=152;angle=64;target_cp=1;action=200;target_x=3021;target_y=7065;opp_id=2;opp_x=3021;opp_y=7065;opp_vx=78;opp_vy=-32;opp_angle=338;opp_target_cp=1\nP1:turn=1;id=1;x=4458;y=8822;vx=548;vy=-64;angle=353;target_cp=1;action=200;target_x=12344;target_y=6911;opp_id=3;opp_x=3456;opp_y=7951;opp_vx=73;opp_vy=-42;opp_angle=330;opp_target_cp=1\n",
+      "summary": "$0 rank: 2\n$1 rank: 1\n",
+      "view": " 4\n3774.0 6847.0 576 -331 650 0 9542 4402 -0.3877035321114705 0 1 2\n\"\"\n4135.0 7679.0 647 -76 650 0 9542 4402 -0.5279314088360197 0 1 3\n\"\"\n2641.0 6548.0 49 128 200 0 3021 7065 0.9892694336808767 0 1 4\n\"\"\n5200.0 8711.0 631 -94 200 0 12344 6911 -0.23774519191912988 0 1 1\n\"\"\n2:98 1:98\n0 0.06757051888344927 2 2586 6407 0 3067 7046 210.01791859725574 432 21\n1 0.6523465045200829 1 3870 7710 0 3538 6982 307.314223268812 720 -240\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (9542, 4402) at power 200\nPod 2 of player $0 moves towards (8350, 4541) at power 100\n",
+      "stdout": "9542 4402 BOOST\n8350 4541 100\n",
+      "view": " 5\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (3774, 6847) at power 200\nPod 2 of player $1 moves towards (13299, 2211) at power 200\n",
+      "stdout": "3774 6847 200\n13299 2211 200\n",
+      "stderr": "PRED_COLLISION:turn=1;p1=2;p2=0;time=0.0684\nPRED_COLLISION:turn=1;p1=3;p2=2;time=0.6565\nPRED_ASSERT:turn=1;pod_id=0;actual_x=2641;actual_y=6548;actual_vx=49;actual_vy=128;actual_angle=57;pred_x=2642.0000;pred_y=6549.0000;pred_vx=50.0000;pred_vy=129.0000;pred_angle=56.68;diff_x=-1.00;diff_y=-1.00;diff_vx=-1.00;diff_vy=-1.00;diff_angle=0.32;diff_cp=0;my_timeout_left=98;opp_timeout_left=98\nPRED_ASSERT:turn=1;pod_id=1;actual_x=5200;actual_y=8711;actual_vx=631;actual_vy=-94;actual_angle=346;pred_x=5200.00;pred_y=8711.00;pred_vx=631.00;pred_vy=-94.00;pred_angle=-13.62;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.38;diff_cp=0;my_timeout_left=98;opp_timeout_left=98\nP0:turn=2;id=0;x=2641;y=6548;vx=49;vy=128;angle=57;target_cp=1;action=200;target_x=3774;target_y=6847;opp_id=2;opp_x=3774;opp_y=6847;opp_vx=576;opp_vy=-331;opp_angle=338;opp_target_cp=1\nP1:turn=2;id=1;x=5200;y=8711;vx=631;vy=-94;angle=346;target_cp=1;action=200;target_x=13299;target_y=2211;opp_id=3;opp_x=4135;opp_y=7679;opp_vx=647;opp_vy=-76;opp_angle=330;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 6\n4534.0 6438.0 646 -347 200 0 9542 4402 -0.4009304563738579 0 1 1\n\"\"\n4862.0 7543.0 618 -115 100 0 8350 4541 -0.6399615026576935 0 1 3\n\"\"\n2846.0 6801.0 174 215 200 0 3774 6847 0.6751101683218974 0 1 4\n\"\"\n6001.0 8512.0 681 -169 200 0 13299 2211 -0.5519044572781092 0 1 2\n\"\"\n1:97 2:97\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (9542, 4402) at power 200\nPod 2 of player $0 moves towards (8362, 4621) at power 100\n",
+      "stdout": "9542 4402 BOOST\n8362 4621 100\n",
+      "view": " 7\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (4534, 6438) at power 200\nPod 2 of player $1 moves towards (2268, 5045) at power 200\n",
+      "stdout": "4534 6438 200\n2268 5045 200\n",
+      "stderr": "PRED_ASSERT:turn=2;pod_id=0;actual_x=2846;actual_y=6801;actual_vx=174;actual_vy=215;actual_angle=39;pred_x=2845.00;pred_y=6802.00;pred_vx=173.00;pred_vy=215.00;pred_angle=39.00;diff_x=1.00;diff_y=-1.00;diff_vx=1.00;diff_vy=0.00;diff_angle=-0.00;diff_cp=0;my_timeout_left=97;opp_timeout_left=97\nPRED_ASSERT:turn=2;pod_id=1;actual_x=6001;actual_y=8512;actual_vx=681;actual_vy=-169;actual_angle=328;pred_x=6001.00;pred_y=8511.00;pred_vx=680.00;pred_vy=-169.00;pred_angle=328.00;diff_x=0.00;diff_y=1.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=97;opp_timeout_left=97\nP0:turn=3;id=0;x=2846;y=6801;vx=174;vy=215;angle=39;target_cp=1;action=200;target_x=4534;target_y=6438;opp_id=2;opp_x=4534;opp_y=6438;opp_vx=646;opp_vy=-347;opp_angle=337;opp_target_cp=1\nP1:turn=3;id=1;x=6001;y=8512;vx=681;vy=-169;angle=328;target_cp=1;action=200;target_x=2268;target_y=5045;opp_id=3;opp_x=4862;opp_y=7543;opp_vx=618;opp_vy=-115;opp_angle=323;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 8\n5365.0 6016.0 706 -358 200 0 9542 4402 -0.3861397332942129 0 1 1\n\"\"\n5557.0 7364.0 590 -152 100 0 8362 4621 -0.6956368999368437 0 1 3\n\"\"\n3207.0 7087.0 306 242 200 0 4534 6438 0.3609509029629181 0 1 4\n\"\"\n6812.0 8191.0 688 -273 200 0 2268 5045 -0.8660637226370885 0 1 2\n\"\"\n1:96 2:96\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13428, 8342) at power 0\nPod 2 of player $0 moves towards (8379, 4701) at power 100\n",
+      "stdout": "13428 8342 0\n8379 4701 100\n",
+      "view": " 9\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (5365, 6016) at power 200\nPod 2 of player $1 moves towards (10585, 8336) at power 200\n",
+      "stdout": "5365 6016 200\n10585 8336 200\n",
+      "stderr": "PRED_ASSERT:turn=3;pod_id=0;actual_x=3207;actual_y=7087;actual_vx=306;actual_vy=242;actual_angle=21;pred_x=3207.00;pred_y=7088.00;pred_vx=306.00;pred_vy=243.00;pred_angle=21.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=96;opp_timeout_left=96\nPRED_ASSERT:turn=3;pod_id=1;actual_x=6812;actual_y=8191;actual_vx=688;actual_vy=-273;actual_angle=310;pred_x=6811.00;pred_y=8190.00;pred_vx=688.00;pred_vy=-273.00;pred_angle=310.00;diff_x=1.00;diff_y=1.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=96;opp_timeout_left=96\nP0:turn=4;id=0;x=3207;y=7087;vx=306;vy=242;angle=21;target_cp=1;action=200;target_x=5365;target_y=6016;opp_id=2;opp_x=5365;opp_y=6016;opp_vx=706;opp_vy=-358;opp_angle=338;opp_target_cp=1\nP1:turn=4;id=1;x=6812;y=8191;vx=688;vy=-273;angle=310;target_cp=1;action=200;target_x=10585;target_y=8336;opp_id=3;opp_x=5557;opp_y=7364;opp_vx=590;opp_vy=-152;opp_angle=320;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 10\n6071.0 5658.0 600 -304 0 0 13428 8342 -0.0719804679352336 0 1 1\n\"\"\n6220.0 7143.0 563 -187 100 0 8379 4701 -0.7564181295118834 0 1 3\n\"\"\n3713.0 7338.0 429 213 200 0 5365 6016 0.046791637603938785 0 1 4\n\"\"\n7670.0 7813.0 729 -321 200 0 10585 8336 -0.5519044572781092 0 1 2\n\"\"\n1:95 2:95\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13428, 8342) at power 0\nPod 2 of player $0 moves towards (8403, 4780) at power 100\n",
+      "stdout": "13428 8342 0\n8403 4780 100\n",
+      "view": " 11\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (6071, 5658) at power 200\nPod 2 of player $1 moves towards (3332, 2730) at power 200\n",
+      "stdout": "6071 5658 200\n3332 2730 200\n",
+      "stderr": "PRED_ASSERT:turn=4;pod_id=0;actual_x=3713;actual_y=7338;actual_vx=429;actual_vy=213;actual_angle=3;pred_x=3713.00;pred_y=7339.00;pred_vx=429.00;pred_vy=214.00;pred_angle=3.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=-0.00;diff_cp=0;my_timeout_left=95;opp_timeout_left=95\nPRED_ASSERT:turn=4;pod_id=1;actual_x=7670;actual_y=7813;actual_vx=729;actual_vy=-321;actual_angle=328;pred_x=7670.00;pred_y=7812.00;pred_vx=728.00;pred_vy=-322.00;pred_angle=328.00;diff_x=0.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=95;opp_timeout_left=95\nP0:turn=5;id=0;x=3713;y=7338;vx=429;vy=213;angle=3;target_cp=1;action=200;target_x=6071;target_y=5658;opp_id=2;opp_x=6071;opp_y=5658;opp_vx=600;opp_vy=-304;opp_angle=356;opp_target_cp=1\nP1:turn=5;id=1;x=7670;y=7813;vx=729;vy=-321;angle=328;target_cp=1;action=200;target_x=3332;target_y=2730;opp_id=3;opp_x=6220;opp_y=7143;opp_vx=563;opp_vy=-187;opp_angle=317;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 12\n6671.0 5354.0 510 -258 0 0 13428 8342 0.2421787974237457 0 1 1\n\"\"\n6851.0 6883.0 536 -221 100 0 8403 4780 -0.824972739148552 0 1 3\n\"\"\n4335.0 7498.0 528 136 200 0 6071 5658 -0.2673676277550405 0 1 4\n\"\"\n8529.0 7340.0 729 -402 200 0 3332 2730 -0.8660637226370885 0 1 2\n\"\"\n1:94 2:94\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13428, 8341) at power 0\nPod 2 of player $0 moves towards (8432, 4859) at power 100\n",
+      "stdout": "13428 8341 0\n8432 4859 100\n",
+      "view": " 13\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (6671, 5354) at power 200\nPod 2 of player $1 moves towards (4602, 6634) at power 200\n",
+      "stdout": "6671 5354 200\n4602 6634 200\n",
+      "stderr": "PRED_ASSERT:turn=5;pod_id=0;actual_x=4335;actual_y=7498;actual_vx=528;actual_vy=136;actual_angle=345;pred_x=4335.00;pred_y=7499.00;pred_vx=528.00;pred_vy=137.00;pred_angle=-15.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=94;opp_timeout_left=94\nPRED_ASSERT:turn=5;pod_id=1;actual_x=8529;actual_y=7340;actual_vx=729;actual_vy=-402;actual_angle=310;pred_x=8528.00;pred_y=7339.00;pred_vx=728.00;pred_vy=-403.00;pred_angle=310.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=94;opp_timeout_left=94\nP0:turn=6;id=0;x=4335;y=7498;vx=528;vy=136;angle=345;target_cp=1;action=200;target_x=6671;target_y=5354;opp_id=2;opp_x=6671;opp_y=5354;opp_vx=510;opp_vy=-258;opp_angle=14;opp_target_cp=1\nP1:turn=6;id=1;x=8529;y=7340;vx=729;vy=-402;angle=310;target_cp=1;action=200;target_x=4602;target_y=6634;opp_id=3;opp_x=6851;opp_y=6883;opp_vx=536;opp_vy=-221;opp_angle=313;opp_target_cp=1\n",
+      "summary": "$0 rank: 2\n$1 rank: 1\n",
+      "view": " 14\n7181.0 5096.0 433 -219 0 0 13428 8341 0.4162315063902729 0 1 2\n\"\"\n7449.0 6583.0 507 -254 100 0 8432 4859 -0.90767004105844 0 1 3\n\"\"\n5030.0 7524.0 590 22 200 0 6671 5354 -0.5815268931140198 0 1 4\n\"\"\n9334.0 6753.0 684 -498 200 0 4602 6634 -1.1802229879960677 0 1 1\n\"\"\n2:93 1:93\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13428, 8341) at power 0\nPod 2 of player $0 moves towards (8469, 4939) at power 100\n",
+      "stdout": "13428 8341 0\n8469 4939 100\n",
+      "view": " 15\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7181, 5096) at power 200\nPod 2 of player $1 moves towards (1523, 4201) at power 200\n",
+      "stdout": "7181 5096 200\n1523 4201 200\n",
+      "stderr": "PRED_ASSERT:turn=6;pod_id=0;actual_x=5030;actual_y=7524;actual_vx=590;actual_vy=22;actual_angle=327;pred_x=5031.00;pred_y=7525.00;pred_vx=591.00;pred_vy=23.00;pred_angle=327.00;diff_x=-1.00;diff_y=-1.00;diff_vx=-1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=93;opp_timeout_left=93\nPRED_ASSERT:turn=6;pod_id=1;actual_x=9334;actual_y=6753;actual_vx=684;actual_vy=-498;actual_angle=292;pred_x=9333.00;pred_y=6753.00;pred_vx=683.00;pred_vy=-499.00;pred_angle=292.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=93;opp_timeout_left=93\nP0:turn=7;id=0;x=5030;y=7524;vx=590;vy=22;angle=327;target_cp=1;action=200;target_x=7181;target_y=5096;opp_id=2;opp_x=7181;opp_y=5096;opp_vx=433;opp_vy=-219;opp_angle=24;opp_target_cp=1\nP1:turn=7;id=1;x=9334;y=6753;vx=684;vy=-498;angle=292;target_cp=1;action=200;target_x=1523;target_y=4201;opp_id=3;opp_x=7449;opp_y=6583;opp_vx=507;opp_vy=-254;opp_angle=308;opp_target_cp=1\n",
+      "summary": "$0 rank: 2\n$1 rank: 1\n",
+      "view": " 16\n7614.0 4877.0 368 -186 0 0 13428 8341 0.4790857368675129 0 1 2\n\"\"\n8009.0 6244.0 475 -288 100 0 8469 4939 -1.0154843105896825 0 1 3\n\"\"\n5753.0 7396.0 614 -108 200 0 7181 5096 -0.8458180910798805 0 1 4\n\"\"\n10033.0 6056.0 594 -592 200 0 1523 4201 -1.494382253355047 0 1 1\n\"\"\n2:92 1:92\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13428, 8341) at power 0\nPod 2 of player $0 moves towards (8515, 5024) at power 100\n",
+      "stdout": "13428 8341 0\n8515 5024 100\n",
+      "view": " 17\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7614, 4877) at power 200\nPod 2 of player $1 moves towards (15979, 4994) at power 200\n",
+      "stdout": "7614 4877 200\n15979 4994 200\n",
+      "stderr": "PRED_ASSERT:turn=7;pod_id=0;actual_x=5753;actual_y=7396;actual_vx=614;actual_vy=-108;actual_angle=312;pred_x=5753.00;pred_y=7396.00;pred_vx=614.00;pred_vy=-108.00;pred_angle=-48.46;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.46;diff_cp=0;my_timeout_left=92;opp_timeout_left=92\nPRED_ASSERT:turn=7;pod_id=1;actual_x=10033;actual_y=6056;actual_vx=594;actual_vy=-592;actual_angle=274;pred_x=10032.00;pred_y=6055.00;pred_vx=593.00;pred_vy=-592.00;pred_angle=274.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=92;opp_timeout_left=92\nP0:turn=8;id=0;x=5753;y=7396;vx=614;vy=-108;angle=312;target_cp=1;action=200;target_x=7614;target_y=4877;opp_id=2;opp_x=7614;opp_y=4877;opp_vx=368;opp_vy=-186;opp_angle=27;opp_target_cp=1\nP1:turn=8;id=1;x=10033;y=6056;vx=594;vy=-592;angle=274;target_cp=1;action=200;target_x=15979;target_y=4994;opp_id=3;opp_x=8009;opp_y=6244;opp_vx=475;opp_vy=-288;opp_angle=302;opp_target_cp=1\n",
+      "summary": "$0 rank: 2\n$1 rank: 1\n",
+      "view": " 18\n7982.0 4691.0 312 -158 0 0 13428 8341 0.5373279283453094 0 1 2\n\"\"\n8522.0 5864.0 436 -323 100 0 8515 5024 -1.1776359569599832 0 1 3\n\"\"\n6486.0 7127.0 622 -228 200 0 7614 4877 -0.9345113900797529 0 1 4\n\"\"\n10703.0 5279.0 569 -660 200 0 15979 4994 -1.1802229879960677 0 1 1\n\"\"\n2:91 1:91\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8471, 4944) at power 100\nPod 2 of player $0 moves towards (13534, 8514) at power 0\n",
+      "stdout": "8471 4944 100\n13534 8514 0\n",
+      "view": " 19\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7982, 4691) at power 200\nPod 2 of player $1 moves towards (12780, 5377) at power 200\n",
+      "stdout": "7982 4691 200\n12780 5377 200\n",
+      "stderr": "PRED_ASSERT:turn=8;pod_id=0;actual_x=6486;actual_y=7127;actual_vx=622;actual_vy=-228;actual_angle=306;pred_x=6486.00;pred_y=7127.00;pred_vx=622.00;pred_vy=-228.00;pred_angle=-53.54;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.46;diff_cp=0;my_timeout_left=91;opp_timeout_left=91\nPRED_ASSERT:turn=8;pod_id=1;actual_x=10703;actual_y=5279;actual_vx=569;actual_vy=-660;actual_angle=292;pred_x=10702.00;pred_y=5279.00;pred_vx=568.00;pred_vy=-660.00;pred_angle=292.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=91;opp_timeout_left=91\nP0:turn=9;id=0;x=6486;y=7127;vx=622;vy=-228;angle=306;target_cp=1;action=200;target_x=7982;target_y=4691;opp_id=2;opp_x=7982;opp_y=4691;opp_vx=312;opp_vy=-158;opp_angle=31;opp_target_cp=1\nP1:turn=9;id=1;x=10703;y=5279;vx=569;vy=-660;angle=292;target_cp=1;action=200;target_x=12780;target_y=5377;opp_id=3;opp_x=8522;opp_y=5864;opp_vx=436;opp_vy=-323;opp_angle=293;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 20\n8383.0 4579.0 340 -95 100 0 8471 4944 0.47745664183026665 0 1 1\n\"\"\n8958.0 5541.0 370 -274 0 0 13534 8514 -0.8634766916010039 0 1 2\n\"\"\n7213.0 6729.0 617 -338 200 0 7982 4691 -1.020058018315211 0 1 4\n\"\"\n11402.0 4467.0 593 -690 200 0 12780 5377 -0.8660637226370884 0 1 3\n\"\"\n1:90 2:90\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8386, 4724) at power 100\nPod 2 of player $0 moves towards (13534, 8514) at power 0\n",
+      "stdout": "8386 4724 100\n13534 8514 0\n",
+      "view": " 21\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8383, 4579) at power 200\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "8383 4579 200\n2359 3209 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=9;pod_id=0;actual_x=7213;actual_y=6729;actual_vx=617;actual_vy=-338;actual_angle=302;pred_x=7213.00;pred_y=6729.00;pred_vx=617.00;pred_vy=-338.00;pred_angle=-58.45;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.45;diff_cp=0;my_timeout_left=90;opp_timeout_left=90\nPRED_ASSERT:turn=9;pod_id=1;actual_x=11402;actual_y=4467;actual_vx=593;actual_vy=-690;actual_angle=310;pred_x=11401.00;pred_y=4466.00;pred_vx=592.00;pred_vy=-691.00;pred_angle=310.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=90;opp_timeout_left=90\nP0:turn=10;id=0;x=7213;y=6729;vx=617;vy=-338;angle=302;target_cp=1;action=200;target_x=8383;target_y=4579;opp_id=2;opp_x=8383;opp_y=4579;opp_vx=340;opp_vy=-95;opp_angle=27;opp_target_cp=1\nP1:turn=10;id=1;x=11402;y=4467;vx=593;vy=-690;angle=310;target_cp=1;action=SHIELD;target_x=2359;target_y=3209;opp_id=3;opp_x=8958;opp_y=5541;opp_vx=370;opp_vy=-274;opp_angle=311;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 22\n8793.0 4555.0 348 -20 100 0 8386 4724 0.7916159071892459 0 1 1\n\"\"\n9328.0 5267.0 314 -232 0 0 13534 8514 -0.5493174262420246 0 1 2\n\"\"\n7926.0 6215.0 605 -436 200 0 8383 4579 -1.0724277593512237 0 1 3\n\"\"\n11995.0 3777.0 504 -586 0 0 2359 3209 -1.1802229879960677 1 1 4\n\"\"\n1:89 2:89\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8343, 4470) at power 100\nPod 2 of player $0 moves towards (13533, 8513) at power 0\n",
+      "stdout": "8343 4470 100\n13533 8513 0\n",
+      "view": " 23\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "8793 4555 SHIELD\n14914 5259 200\n",
+      "stderr": "PRED_ASSERT:turn=10;pod_id=0;actual_x=7926;actual_y=6215;actual_vx=605;actual_vy=-436;actual_angle=299;pred_x=7926.00;pred_y=6215.00;pred_vx=605.00;pred_vy=-436.00;pred_angle=-61.45;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.45;diff_cp=0;my_timeout_left=89;opp_timeout_left=89\nPRED_ASSERT:turn=10;pod_id=1;actual_x=11995;actual_y=3777;actual_vx=504;actual_vy=-586;actual_angle=292;pred_x=11995.00;pred_y=3777.00;pred_vx=504.00;pred_vy=-586.00;pred_angle=292.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=89;opp_timeout_left=89\nP0:turn=11;id=0;x=7926;y=6215;vx=605;vy=-436;angle=299;target_cp=1;action=SHIELD;target_x=8793;target_y=4555;opp_id=2;opp_x=8793;opp_y=4555;opp_vx=348;opp_vy=-20;opp_angle=45;opp_target_cp=1\nP1:turn=11;id=1;x=11995;y=3777;vx=504;vy=-586;angle=292;target_cp=1;action=200;target_x=14914;target_y=5259;opp_id=3;opp_x=9328;opp_y=5267;opp_vx=314;opp_vy=-232;opp_angle=329;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 24\n9063.0 4476.0 180 -126 100 0 8343 4470 1.1057751725482252 0 2 1\n\"\"\n9765.0 5184.0 419 -12 0 0 13533 8513 -0.2351581608830453 0 1 2\n\"\"\n8531.0 5779.0 514 -370 0 0 8793 4555 -1.0894768055594617 1 1 3\n\"\"\n12499.0 3191.0 428 -498 0 0 14914 5259 -0.8660637226370884 0 1 4\n\"\"\n1:100 2:88\n2 0.31729231094940197 1 9428 5193 0 8918 4577 282.465966563223 353 -81\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13515, 8488) at power 100\nPod 2 of player $0 moves towards (10741, 4367) at power 82\n",
+      "stdout": "13515 8488 100\n10741 4367 82\n",
+      "view": " 25\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "9063 4476 200\n593 6413 200\n",
+      "stderr": "PRED_COLLISION:turn=11;p1=3;p2=2;time=0.3328\nPRED_CHECKPOINT:turn=11;pod_id=2;actual_crossed=1;pred_crossed=1;actual_next_cp=2;pred_next_cp=2\nPRED_ASSERT:turn=11;pod_id=0;actual_x=8531;actual_y=5779;actual_vx=514;actual_vy=-370;actual_angle=298;pred_x=8531.0000;pred_y=5779.0000;pred_vx=514.0000;pred_vy=-370.0000;pred_angle=-62.42;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.42;diff_cp=0;my_timeout_left=88;opp_timeout_left=100\nPRED_ASSERT:turn=11;pod_id=1;actual_x=12499;actual_y=3191;actual_vx=428;actual_vy=-498;actual_angle=310;pred_x=12499.00;pred_y=3191.00;pred_vx=428.00;pred_vy=-498.00;pred_angle=310.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=88;opp_timeout_left=100\nP0:turn=12;id=0;x=8531;y=5779;vx=514;vy=-370;angle=298;target_cp=1;action=200;target_x=9063;target_y=4476;opp_id=2;opp_x=9063;opp_y=4476;opp_vx=180;opp_vy=-126;opp_angle=63;opp_target_cp=2\nP1:turn=12;id=1;x=12499;y=3191;vx=428;vy=-498;angle=310;target_cp=1;action=200;target_x=593;target_y=6413;opp_id=3;opp_x=9765;opp_y=5184;opp_vx=419;opp_vy=-12;opp_angle=347;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 26\n9313.0 4421.0 212 -46 100 0 13515 8488 0.7916159071892459 0 2 1\n\"\"\n10254.0 5129.0 415 -46 82 0 10741 4367 -0.5493174262420246 0 1 2\n\"\"\n9045.0 5409.0 436 -314 0 0 9063 4476 -1.1831651197235302 0 1 3\n\"\"\n12927.0 2693.0 363 -423 0 0 593 6413 -1.1802229879960677 0 1 4\n\"\"\n1:99 2:87\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13326, 8054) at power 100\nPod 2 of player $0 moves towards (10734, 4269) at power 56\n",
+      "stdout": "13326 8054 100\n10734 4269 56\n",
+      "view": " 27\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "9313 4421 200\n2254 6647 200\n",
+      "stderr": "PRED_ASSERT:turn=12;pod_id=0;actual_x=9045;actual_y=5409;actual_vx=436;actual_vy=-314;actual_angle=292;pred_x=9045.00;pred_y=5409.00;pred_vx=436.00;pred_vy=-314.00;pred_angle=-67.79;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.21;diff_cp=0;my_timeout_left=87;opp_timeout_left=99\nPRED_ASSERT:turn=12;pod_id=1;actual_x=12927;actual_y=2693;actual_vx=363;actual_vy=-423;actual_angle=292;pred_x=12927.00;pred_y=2693.00;pred_vx=363.00;pred_vy=-423.00;pred_angle=292.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=87;opp_timeout_left=99\nP0:turn=13;id=0;x=9045;y=5409;vx=436;vy=-314;angle=292;target_cp=1;action=200;target_x=9313;target_y=4421;opp_id=2;opp_x=9313;opp_y=4421;opp_vx=212;opp_vy=-46;opp_angle=45;opp_target_cp=2\nP1:turn=13;id=1;x=12927;y=2693;vx=363;vy=-423;angle=292;target_cp=1;action=200;target_x=2254;target_y=6647;opp_id=3;opp_x=10254;opp_y=5129;opp_vx=415;opp_vy=-46;opp_angle=329;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 28\n9629.0 4308.0 310 -280 100 0 13326 8054 0.7357398328980718 0 2 1\n\"\"\n10705.0 5040.0 383 -75 56 0 10734 4269 -0.8634766916010039 0 1 3\n\"\"\n9451.0 5229.0 303 31 0 0 9313 4421 -1.3059150787044713 0 1 2\n\"\"\n13290.0 2270.0 308 -359 0 0 2254 6647 -1.494382253355047 0 1 4\n\"\"\n1:98 2:86\n3 0.6189786439174696 2 9315 5215 0 9490 4434 359.80276723676536 361 -146\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13608, 8604) at power 100\nPod 2 of player $0 moves towards (10719, 4171) at power 46\n",
+      "stdout": "13608 8604 100\n10719 4171 46\n",
+      "view": " 29\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (4629, 1846) at power 200\n",
+      "stdout": "9629 4308 200\n4629 1846 200\n",
+      "stderr": "PRED_COLLISION:turn=13;p1=2;p2=0;time=0.5494\nPRED_ASSERT:turn=13;pod_id=0;actual_x=9451;actual_y=5229;actual_vx=303;actual_vy=31;actual_angle=285;pred_x=9429.0000;pred_y=5271.0000;pred_vx=272.0000;pred_vy=64.0000;pred_angle=-74.82;diff_x=22.00;diff_y=-42.00;diff_vx=31.00;diff_vy=-33.00;diff_angle=-0.18;diff_cp=0;my_timeout_left=86;opp_timeout_left=98\nPRED_ASSERT:turn=13;pod_id=1;actual_x=13290;actual_y=2270;actual_vx=308;actual_vy=-359;actual_angle=274;pred_x=13290.00;pred_y=2270.00;pred_vx=308.00;pred_vy=-359.00;pred_angle=274.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=86;opp_timeout_left=98\nP0:turn=14;id=0;x=9451;y=5229;vx=303;vy=31;angle=285;target_cp=1;action=200;target_x=9629;target_y=4308;opp_id=2;opp_x=9629;opp_y=4308;opp_vx=310;opp_vy=-280;opp_angle=42;opp_target_cp=2\nP1:turn=14;id=1;x=13290;y=2270;vx=308;vy=-359;angle=274;target_cp=1;action=200;target_x=4629;target_y=1846;opp_id=3;opp_x=10705;opp_y=5040;opp_vx=383;opp_vy=-75;opp_angle=311;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 30\n10007.0 4101.0 321 -175 100 0 13608 8604 0.8236875977161762 0 2 1\n\"\"\n11106.0 4923.0 340 -99 46 0 10719 4171 -1.1776359569599832 0 1 3\n\"\"\n9754.0 5260.0 257 26 0 0 9629 4308 -1.379881964088576 0 1 2\n\"\"\n13551.0 1717.0 221 -470 200 0 4629 1846 -1.8085415187140264 0 1 4\n\"\"\n1:97 2:85\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13445, 8374) at power 100\nPod 2 of player $0 moves towards (10694, 4066) at power 42\n",
+      "stdout": "13445 8374 100\n10694 4066 42\n",
+      "view": " 31\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10007, 4101) at power 200\nPod 2 of player $1 moves towards (13495, 576) at power 200\n",
+      "stdout": "10007 4101 200\n13495 576 200\n",
+      "stderr": "PRED_ASSERT:turn=14;pod_id=0;actual_x=9754;actual_y=5260;actual_vx=257;actual_vy=26;actual_angle=281;pred_x=9754.00;pred_y=5260.00;pred_vx=257.00;pred_vy=26.00;pred_angle=-79.06;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.06;diff_cp=0;my_timeout_left=85;opp_timeout_left=97\nPRED_ASSERT:turn=14;pod_id=1;actual_x=13551;actual_y=1717;actual_vx=221;actual_vy=-470;actual_angle=256;pred_x=13550.00;pred_y=1717.00;pred_vx=220.00;pred_vy=-470.00;pred_angle=256.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=85;opp_timeout_left=97\nP0:turn=15;id=0;x=9754;y=5260;vx=257;vy=26;angle=281;target_cp=1;action=200;target_x=10007;target_y=4101;opp_id=2;opp_x=10007;opp_y=4101;opp_vx=321;opp_vy=-175;opp_angle=47;opp_target_cp=2\nP1:turn=15;id=1;x=13551;y=1717;vx=221;vy=-470;angle=256;target_cp=1;action=200;target_x=13495;target_y=576;opp_id=3;opp_x=11106;opp_y=4923;opp_vx=340;opp_vy=-99;opp_angle=293;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 32\n10391.0 4004.0 326 -82 100 0 13445 8374 0.8932647206308527 0 2 1\n\"\"\n11449.0 4782.0 291 -119 42 0 10694 4066 -1.4917952223189626 0 1 3\n\"\"\n10054.0 5091.0 254 -143 200 0 10007 4101 -1.355876106160322 0 1 2\n\"\"\n13762.0 1047.0 179 -569 200 0 13495 576 -1.619836730118648 0 1 4\n\"\"\n1:96 2:84\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13335, 8092) at power 100\nPod 2 of player $0 moves towards (10652, 3947) at power 41\n",
+      "stdout": "13335 8092 100\n10652 3947 41\n",
+      "view": " 33\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10391, 4004) at power 200\nPod 2 of player $1 moves towards (5795, 7570) at power 200\n",
+      "stdout": "10391 4004 200\n5795 7570 200\n",
+      "stderr": "PRED_ASSERT:turn=15;pod_id=0;actual_x=10054;actual_y=5091;actual_vx=254;actual_vy=-143;actual_angle=282;pred_x=10054.00;pred_y=5091.00;pred_vx=254.00;pred_vy=-143.00;pred_angle=-77.69;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.31;diff_cp=0;my_timeout_left=84;opp_timeout_left=96\nPRED_ASSERT:turn=15;pod_id=1;actual_x=13762;actual_y=1047;actual_vx=179;actual_vy=-569;actual_angle=267;pred_x=13762.00;pred_y=1047.00;pred_vx=179.00;pred_vy=-569.00;pred_angle=-92.81;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.19;diff_cp=0;my_timeout_left=84;opp_timeout_left=96\nP0:turn=16;id=0;x=10054;y=5091;vx=254;vy=-143;angle=282;target_cp=1;action=200;target_x=10391;target_y=4004;opp_id=2;opp_x=10391;opp_y=4004;opp_vx=326;opp_vy=-82;opp_angle=51;opp_target_cp=2\nP1:turn=16;id=1;x=13762;y=1047;vx=179;vy=-569;angle=267;target_cp=1;action=200;target_x=5795;target_y=7570;opp_id=3;opp_x=11449;opp_y=4782;opp_vx=291;opp_vy=-119;opp_angle=275;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 34\n10775.0 4003.0 326 0 100 0 13335 8092 0.9466701757206649 0 2 1\n\"\"\n11730.0 4623.0 239 -135 41 0 10652 3947 -1.8059544876779419 0 1 3\n\"\"\n10367.0 4757.0 266 -283 200 0 10391 4004 -1.2701654777719196 0 1 2\n\"\"\n13870.0 291.0 91 -642 200 0 5795 7570 -1.9339959954776273 0 1 4\n\"\"\n1:95 2:83\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13299, 7800) at power 100\nPod 2 of player $0 moves towards (10586, 3811) at power 42\n",
+      "stdout": "13299 7800 100\n10586 3811 42\n",
+      "view": " 35\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10775, 4003) at power 200\nPod 2 of player $1 moves towards (3770, 6472) at power 200\n",
+      "stdout": "10775 4003 200\n3770 6472 200\n",
+      "stderr": "PRED_ASSERT:turn=16;pod_id=0;actual_x=10367;actual_y=4757;actual_vx=266;actual_vy=-283;actual_angle=287;pred_x=10367.00;pred_y=4757.00;pred_vx=266.00;pred_vy=-283.00;pred_angle=-72.78;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.22;diff_cp=0;my_timeout_left=83;opp_timeout_left=95\nPRED_ASSERT:turn=16;pod_id=1;actual_x=13870;actual_y=291;actual_vx=91;actual_vy=-642;actual_angle=249;pred_x=13869.00;pred_y=291.00;pred_vx=91.00;pred_vy=-642.00;pred_angle=249.00;diff_x=1.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=83;opp_timeout_left=95\nP0:turn=17;id=0;x=10367;y=4757;vx=266;vy=-283;angle=287;target_cp=1;action=200;target_x=10775;target_y=4003;opp_id=2;opp_x=10775;opp_y=4003;opp_vx=326;opp_vy=0;opp_angle=54;opp_target_cp=2\nP1:turn=17;id=1;x=13870;y=291;vx=91;vy=-642;angle=249;target_cp=1;action=200;target_x=3770;target_y=6472;opp_id=3;opp_x=11730;opp_y=4623;opp_vx=239;opp_vy=-135;opp_angle=257;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 36\n11361.0 3744.0 522 -261 100 0 13299 7800 0.9841320033657088 0 2 1\n\"\"\n11947.0 4452.0 184 -145 42 0 10586 3811 -2.120113753036921 0 1 3\n\"\"\n10524.0 4640.0 108 -58 200 0 10775 4003 -1.0748009237913498 0 1 2\n\"\"\n13836.0 -507.0 -29 -678 200 0 3770 6472 -2.2481552608366067 0 1 4\n\"\"\n1:94 2:82\n4 0.12422628536346815 2 10412 4700 0 10822 4013 455.00293224383086 371 -188\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13425, 8336) at power 100\nPod 2 of player $0 moves towards (10484, 3659) at power 45\n",
+      "stdout": "13425 8336 100\n10484 3659 45\n",
+      "view": " 37\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11361, 3744) at power 200\nPod 2 of player $1 moves towards (9624, 6426) at power 200\n",
+      "stdout": "11361 3744 200\n9624 6426 200\n",
+      "stderr": "PRED_COLLISION:turn=17;p1=2;p2=0;time=0.1138\nPRED_ASSERT:turn=17;pod_id=0;actual_x=10524;actual_y=4640;actual_vx=108;actual_vy=-58;actual_angle=298;pred_x=10500.0000;pred_y=4671.0000;pred_vx=88.0000;pred_vy=-32.0000;pred_angle=-61.58;diff_x=24.00;diff_y=-31.00;diff_vx=20.00;diff_vy=-26.00;diff_angle=-0.42;diff_cp=0;my_timeout_left=82;opp_timeout_left=94\nPRED_ASSERT:turn=17;pod_id=1;actual_x=13836;actual_y=-507;actual_vx=-29;actual_vy=-678;actual_angle=231;pred_x=13835.00;pred_y=-506.00;pred_vx=-29.00;pred_vy=-677.00;pred_angle=231.00;diff_x=1.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=82;opp_timeout_left=94\nP0:turn=18;id=0;x=10524;y=4640;vx=108;vy=-58;angle=298;target_cp=1;action=200;target_x=11361;target_y=3744;opp_id=2;opp_x=11361;opp_y=3744;opp_vx=522;opp_vy=-261;opp_angle=56;opp_target_cp=2\nP1:turn=18;id=1;x=13836;y=-507;vx=-29;vy=-678;angle=231;target_cp=1;action=200;target_x=9624;target_y=6426;opp_id=3;opp_x=11947;opp_y=4452;opp_vx=184;opp_vy=-145;opp_angle=239;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 38\n11873.0 3479.0 390 -308 100 0 13425 8336 1.1483771202404256 0 2 1\n\"\"\n12148.0 4373.0 215 16 45 0 10484 3659 -2.4342730183959005 0 1 3\n\"\"\n10769.0 4436.0 207 -173 200 0 11361 3744 -0.8194300277605376 0 1 2\n\"\"\n13640.0 -1294.0 -166 -669 200 0 9624 6426 -2.562314526195586 0 1 4\n\"\"\n1:93 2:81\n5 0.5064680024910887 1 12023 4364 0 11646 3658 219.25328777362103 356 -172\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (15440, 7056) at power 91\nPod 2 of player $0 moves towards (10738, 4491) at power 30\n",
+      "stdout": "15440 7056 91\n10738 4491 30\n",
+      "view": " 39\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11873, 3479) at power 200\nPod 2 of player $1 moves towards (892, 1541) at power 200\n",
+      "stdout": "11873 3479 200\n892 1541 200\n",
+      "stderr": "PRED_COLLISION:turn=18;p1=3;p2=2;time=0.3009\nPRED_ASSERT:turn=18;pod_id=0;actual_x=10769;actual_y=4436;actual_vx=207;actual_vy=-173;actual_angle=313;pred_x=10769.0000;pred_y=4436.0000;pred_vx=207.0000;pred_vy=-173.0000;pred_angle=-46.95;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.05;diff_cp=0;my_timeout_left=81;opp_timeout_left=93\nPRED_ASSERT:turn=18;pod_id=1;actual_x=13640;actual_y=-1294;actual_vx=-166;actual_vy=-669;actual_angle=213;pred_x=13639.00;pred_y=-1294.00;pred_vx=-167.00;pred_vy=-668.00;pred_angle=213.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=81;opp_timeout_left=93\nP0:turn=19;id=0;x=10769;y=4436;vx=207;vy=-173;angle=313;target_cp=1;action=200;target_x=11873;target_y=3479;opp_id=2;opp_x=11873;opp_y=3479;opp_vx=390;opp_vy=-308;opp_angle=66;opp_target_cp=2\nP1:turn=19;id=1;x=13640;y=-1294;vx=-166;vy=-669;angle=213;target_cp=1;action=200;target_x=892;target_y=1541;opp_id=3;opp_x=12148;opp_y=4373;opp_vx=215;opp_vy=16;opp_angle=221;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 40\n12324.0 3238.0 383 -204 91 0 15440 7056 0.8342178548814463 0 2 1\n\"\"\n12335.0 4378.0 159 3 30 0 10738 4491 -2.74843228375488 0 1 3\n\"\"\n11127.0 4132.0 304 -258 200 0 11873 3479 -0.7141941433205922 0 1 2\n\"\"\n13281.0 -2015.0 -305 -613 200 0 892 1541 -2.8764737915545653 0 1 4\n\"\"\n1:92 2:80\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (15558, 7235) at power 96\nPod 2 of player $0 moves towards (10741, 4424) at power 30\n",
+      "stdout": "15558 7235 96\n10741 4424 30\n",
+      "view": " 41\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (12324, 3238) at power 200\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "12324 3238 200\n13605 1377 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=19;pod_id=0;actual_x=11127;actual_y=4132;actual_vx=304;actual_vy=-258;actual_angle=319;pred_x=11127.00;pred_y=4132.00;pred_vx=304.00;pred_vy=-258.00;pred_angle=-40.92;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.08;diff_cp=0;my_timeout_left=80;opp_timeout_left=92\nPRED_ASSERT:turn=19;pod_id=1;actual_x=13281;actual_y=-2015;actual_vx=-305;actual_vy=-613;actual_angle=195;pred_x=13281.00;pred_y=-2015.00;pred_vx=-305.00;pred_vy=-612.00;pred_angle=195.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=80;opp_timeout_left=92\nP0:turn=20;id=0;x=11127;y=4132;vx=304;vy=-258;angle=319;target_cp=1;action=200;target_x=12324;target_y=3238;opp_id=2;opp_x=12324;opp_y=3238;opp_vx=383;opp_vy=-204;opp_angle=48;opp_target_cp=2\nP1:turn=20;id=1;x=13281;y=-2015;vx=-305;vy=-613;angle=195;target_cp=1;action=SHIELD;target_x=13605;target_y=1377;opp_id=3;opp_x=12335;opp_y=4378;opp_vx=159;opp_vy=3;opp_angle=203;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 42\n12767.0 3109.0 376 -109 96 0 15558 7235 0.8905270547552558 0 2 1\n\"\"\n12464.0 4379.0 109 0 30 0 10741 4424 -3.062591549113859 0 1 3\n\"\"\n11591.0 3754.0 394 -321 200 0 12324 3238 -0.6414930793636882 0 1 2\n\"\"\n12976.0 -2628.0 -259 -521 0 0 13605 1377 -3.1906330569135446 1 1 4\n\"\"\n1:91 2:79\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13346, 8134) at power 100\nPod 2 of player $0 moves towards (10742, 4402) at power 30\n",
+      "stdout": "13346 8134 100\n10742 4402 30\n",
+      "view": " 43\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (12767, 3109) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "12767 3109 200\n5407 1775 200\n",
+      "stderr": "PRED_ASSERT:turn=20;pod_id=0;actual_x=11591;actual_y=3754;actual_vx=394;actual_vy=-321;actual_angle=323;pred_x=11591.00;pred_y=3754.00;pred_vx=394.00;pred_vy=-321.00;pred_angle=-36.75;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.25;diff_cp=0;my_timeout_left=79;opp_timeout_left=91\nPRED_ASSERT:turn=20;pod_id=1;actual_x=12976;actual_y=-2628;actual_vx=-259;actual_vy=-521;actual_angle=177;pred_x=12976.00;pred_y=-2628.00;pred_vx=-259.00;pred_vy=-521.00;pred_angle=177.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=79;opp_timeout_left=91\nP0:turn=21;id=0;x=11591;y=3754;vx=394;vy=-321;angle=323;target_cp=1;action=200;target_x=12767;target_y=3109;opp_id=2;opp_x=12767;opp_y=3109;opp_vx=376;opp_vy=-109;opp_angle=51;opp_target_cp=2\nP1:turn=21;id=1;x=12976;y=-2628;vx=-259;vy=-521;angle=177;target_cp=1;action=200;target_x=5407;target_y=1775;opp_id=3;opp_x=12464;opp_y=4379;opp_vx=109;opp_vy=0;opp_angle=185;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 44\n13179.0 3093.0 350 -13 100 0 13346 8134 1.2046863201142353 0 2 1\n\"\"\n12543.0 4379.0 67 0 30 0 10742 4402 3.128236885627958 0 1 3\n\"\"\n12160.0 3337.0 483 -354 200 0 12767 3109 -0.5016673173003159 0 1 2\n\"\"\n12717.0 -3149.0 -220 -442 0 0 5407 1775 -3.504792322272524 0 1 4\n\"\"\n1:90 2:78\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13299, 7844) at power 100\nPod 2 of player $0 moves towards (10742, 4402) at power 30\n",
+      "stdout": "13299 7844 100\n10742 4402 30\n",
+      "view": " 45\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (13179, 3093) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "13179 3093 200\n9446 6535 200\n",
+      "stderr": "PRED_ASSERT:turn=21;pod_id=0;actual_x=12160;actual_y=3337;actual_vx=483;actual_vy=-354;actual_angle=331;pred_x=12160.00;pred_y=3337.00;pred_vx=483.00;pred_vy=-354.00;pred_angle=-28.74;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.26;diff_cp=0;my_timeout_left=78;opp_timeout_left=90\nPRED_ASSERT:turn=21;pod_id=1;actual_x=12717;actual_y=-3149;actual_vx=-220;actual_vy=-442;actual_angle=159;pred_x=12717.00;pred_y=-3149.00;pred_vx=-220.00;pred_vy=-442.00;pred_angle=159.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=78;opp_timeout_left=90\nP0:turn=22;id=0;x=12160;y=3337;vx=483;vy=-354;angle=331;target_cp=1;action=200;target_x=13179;target_y=3093;opp_id=2;opp_x=13179;opp_y=3093;opp_vx=350;opp_vy=-13;opp_angle=69;opp_target_cp=2\nP1:turn=22;id=1;x=12717;y=-3149;vx=-220;vy=-442;angle=159;target_cp=1;action=200;target_x=9446;target_y=6535;opp_id=3;opp_x=12543;opp_y=4379;opp_vx=67;opp_vy=0;opp_angle=179;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 46\n13613.0 3189.0 522 100 100 0 13299 7844 1.5188455854732146 0 2 1\n\"\"\n12580.0 4379.0 31 0 30 0 10742 4402 3.1288226648263056 0 1 2\n\"\"\n12759.0 2927.0 355 -367 200 0 13179 3093 -0.2350252881287246 0 1 3\n\"\"\n12497.0 -3591.0 -187 -375 0 0 9446 6535 -3.818951587631503 0 1 4\n\"\"\n1:89 2:77\n6 0.6973822885073901 2 12632 3058 0 13427 3154 261.5326503513861 516 -157\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13320, 7574) at power 100\nPod 2 of player $0 moves towards (10742, 4402) at power 30\n",
+      "stdout": "13320 7574 100\n10742 4402 30\n",
+      "view": " 47\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (13613, 3189) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "13613 3189 200\n11015 8460 200\n",
+      "stderr": "PRED_COLLISION:turn=22;p1=2;p2=0;time=0.7859\nPRED_ASSERT:turn=22;pod_id=0;actual_x=12759;actual_y=2927;actual_vx=355;actual_vy=-367;actual_angle=347;pred_x=12798.0000;pred_y=2925.0000;pred_vx=418.0000;pred_vy=-385.0000;pred_angle=-13.47;diff_x=-39.00;diff_y=2.00;diff_vx=-63.00;diff_vy=18.00;diff_angle=0.47;diff_cp=0;my_timeout_left=77;opp_timeout_left=89\nPRED_ASSERT:turn=22;pod_id=1;actual_x=12497;actual_y=-3591;actual_vx=-187;actual_vy=-375;actual_angle=141;pred_x=12497.00;pred_y=-3591.00;pred_vx=-187.00;pred_vy=-375.00;pred_angle=141.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=77;opp_timeout_left=89\nP0:turn=23;id=0;x=12759;y=2927;vx=355;vy=-367;angle=347;target_cp=1;action=200;target_x=13613;target_y=3189;opp_id=2;opp_x=13613;opp_y=3189;opp_vx=522;opp_vy=100;opp_angle=87;opp_target_cp=2\nP1:turn=23;id=1;x=12497;y=-3591;vx=-187;vy=-375;angle=141;target_cp=1;action=200;target_x=11015;target_y=8460;opp_id=3;opp_x=12580;opp_y=4379;opp_vx=31;opp_vy=0;opp_angle=179;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 48\n14128.0 3389.0 438 169 100 0 13320 7574 1.6375158497752316 0 2 1\n\"\"\n12581.0 4379.0 0 0 30 0 10742 4402 3.1290797049566614 0 1 2\n\"\"\n13313.0 2576.0 471 -298 200 0 13613 3189 0.0791339772302547 0 1 3\n\"\"\n12310.0 -3966.0 -158 -318 0 0 11015 8460 -4.133110852990482 0 1 4\n\"\"\n1:88 2:76\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13379, 7368) at power 100\nPod 2 of player $0 moves towards (9542, 4402) at power 100\n",
+      "stdout": "13379 7368 100\n9542 4402 100\n",
+      "view": " 49\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 moves towards (8533, 5680) at power 200\n",
+      "stdout": "14128 3389 SHIELD\n8533 5680 200\n",
+      "stderr": "PRED_ASSERT:turn=23;pod_id=0;actual_x=13313;actual_y=2576;actual_vx=471;actual_vy=-298;actual_angle=5;pred_x=13313.00;pred_y=2577.00;pred_vx=471.00;pred_vy=-297.00;pred_angle=365.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=76;opp_timeout_left=88\nPRED_ASSERT:turn=23;pod_id=1;actual_x=12310;actual_y=-3966;actual_vx=-158;actual_vy=-318;actual_angle=123;pred_x=12310.00;pred_y=-3966.00;pred_vx=-158.00;pred_vy=-318.00;pred_angle=123.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.00;diff_cp=0;my_timeout_left=76;opp_timeout_left=88\nP0:turn=24;id=0;x=13313;y=2576;vx=471;vy=-298;angle=5;target_cp=1;action=SHIELD;target_x=14128;target_y=3389;opp_id=2;opp_x=14128;opp_y=3389;opp_vx=438;opp_vy=169;opp_angle=94;opp_target_cp=2\nP1:turn=24;id=1;x=12310;y=-3966;vx=-158;vy=-318;angle=123;target_cp=1;action=200;target_x=8533;target_y=5680;opp_id=3;opp_x=12581;opp_y=4379;opp_vx=0;opp_vy=0;opp_angle=179;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 50\n14548.0 3656.0 356 227 100 0 13379 7368 1.7568573594631909 0 2 1\n\"\"\n12481.0 4380.0 -84 0 100 0 9542 4402 3.134024519046437 0 1 2\n\"\"\n13784.0 2278.0 400 -253 0 0 14128 3389 0.39329324258923404 1 1 3\n\"\"\n12079.0 -4098.0 -196 -112 200 0 8533 5680 1.9440068345096384 0 1 4\n\"\"\n1:87 2:75\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13487, 7154) at power 100\nPod 2 of player $0 moves towards (10742, 4402) at power 100\n",
+      "stdout": "13487 7154 100\n10742 4402 100\n",
+      "view": " 51\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (5981, 7460) at power 200\n",
+      "stdout": "14548 3656 200\n5981 7460 200\n",
+      "stderr": "PRED_ASSERT:turn=24;pod_id=0;actual_x=13784;actual_y=2278;actual_vx=400;actual_vy=-253;actual_angle=23;pred_x=13784.00;pred_y=2278.00;pred_vx=400.00;pred_vy=-253.00;pred_angle=23.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=75;opp_timeout_left=87\nPRED_ASSERT:turn=24;pod_id=1;actual_x=12079;actual_y=-4098;actual_vx=-196;actual_vy=-112;actual_angle=111;pred_x=12079.00;pred_y=-4098.00;pred_vx=-196.00;pred_vy=-112.00;pred_angle=111.38;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.38;diff_cp=0;my_timeout_left=75;opp_timeout_left=87\nP0:turn=25;id=0;x=13784;y=2278;vx=400;vy=-253;angle=23;target_cp=1;action=200;target_x=14548;target_y=3656;opp_id=2;opp_x=14548;opp_y=3656;opp_vx=356;opp_vy=227;opp_angle=101;opp_target_cp=2\nP1:turn=25;id=1;x=12079;y=-4098;vx=-196;vy=-112;angle=111;target_cp=1;action=200;target_x=5981;target_y=7460;opp_id=3;opp_x=12481;opp_y=4380;opp_vx=-84;opp_vy=0;opp_angle=180;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 52\n14875.0 3979.0 277 274 100 0 13487 7154 1.8652927052351282 0 2 1\n\"\"\n12297.0 4381.0 -156 1 100 0 10742 4402 3.1289423796172144 0 1 2\n\"\"\n14184.0 2025.0 340 -215 0 0 14548 3656 0.7074525079482133 0 1 3\n\"\"\n11790.0 -4033.0 -245 55 200 0 5981 7460 2.0562793092745766 0 1 4\n\"\"\n1:86 2:74\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13645, 6956) at power 100\nPod 2 of player $0 moves towards (10741, 4394) at power 100\n",
+      "stdout": "13645 6956 100\n10741 4394 100\n",
+      "view": " 53\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (5516, 4120) at power 200\n",
+      "stdout": "14875 3979 200\n5516 4120 200\n",
+      "stderr": "PRED_ASSERT:turn=25;pod_id=0;actual_x=14184;actual_y=2025;actual_vx=340;actual_vy=-215;actual_angle=41;pred_x=14184.00;pred_y=2025.00;pred_vx=340.00;pred_vy=-215.00;pred_angle=41.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=74;opp_timeout_left=86\nPRED_ASSERT:turn=25;pod_id=1;actual_x=11790;actual_y=-4033;actual_vx=-245;actual_vy=55;actual_angle=118;pred_x=11790.00;pred_y=-4033.00;pred_vx=-245.00;pred_vy=55.00;pred_angle=117.82;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.18;diff_cp=0;my_timeout_left=74;opp_timeout_left=86\nP0:turn=26;id=0;x=14184;y=2025;vx=340;vy=-215;angle=41;target_cp=1;action=200;target_x=14875;target_y=3979;opp_id=2;opp_x=14875;opp_y=3979;opp_vx=277;opp_vy=274;opp_angle=107;opp_target_cp=2\nP1:turn=26;id=1;x=11790;y=-4033;vx=-245;vy=55;angle=118;target_cp=1;action=200;target_x=5516;target_y=4120;opp_id=3;opp_x=12297;opp_y=4381;opp_vx=-156;opp_vy=1;opp_angle=179;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 54\n15114.0 4345.0 202 311 100 0 13645 6956 1.9626023094476526 0 2 1\n\"\"\n12041.0 4383.0 -217 1 100 0 10741 4394 3.133238092190323 0 1 2\n\"\"\n14524.0 1810.0 289 -182 0 0 14875 3979 1.0216117733071925 0 1 3\n\"\"\n11423.0 -3819.0 -311 181 200 0 5516 4120 2.2266816062650796 0 1 4\n\"\"\n1:85 2:73\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (13845, 6793) at power 100\nPod 2 of player $0 moves towards (10741, 4396) at power 100\n",
+      "stdout": "13845 6793 100\n10741 4396 100\n",
+      "view": " 55\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (647, 8580) at power 200\n",
+      "stdout": "15114 4345 200\n647 8580 200\n",
+      "stderr": "PRED_ASSERT:turn=26;pod_id=0;actual_x=14524;actual_y=1810;actual_vx=289;actual_vy=-182;actual_angle=59;pred_x=14524.00;pred_y=1810.00;pred_vx=289.00;pred_vy=-182.00;pred_angle=59.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=73;opp_timeout_left=85\nPRED_ASSERT:turn=26;pod_id=1;actual_x=11423;actual_y=-3819;actual_vx=-311;actual_vy=181;actual_angle=128;pred_x=11423.00;pred_y=-3819.00;pred_vx=-311.00;pred_vy=181.00;pred_angle=127.58;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.42;diff_cp=0;my_timeout_left=73;opp_timeout_left=85\nP0:turn=27;id=0;x=14524;y=1810;vx=289;vy=-182;angle=59;target_cp=1;action=200;target_x=15114;target_y=4345;opp_id=2;opp_x=15114;opp_y=4345;opp_vx=202;opp_vy=311;opp_angle=112;opp_target_cp=2\nP1:turn=27;id=1;x=11423;y=-3819;vx=-311;vy=181;angle=128;target_cp=1;action=200;target_x=647;target_y=8580;opp_id=3;opp_x=12041;opp_y=4383;opp_vx=-217;opp_vy=1;opp_angle=180;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 56\n15270.0 4745.0 132 339 100 0 13845 6793 2.0490414390067633 0 2 1\n\"\"\n11724.0 4385.0 -269 1 100 0 10741 4396 3.131592986903128 0 1 2\n\"\"\n14813.0 1628.0 245 -154 0 0 15114 4345 1.3357710386661719 0 1 3\n\"\"\n10981.0 -3487.0 -375 282 200 0 647 8580 2.286276283973584 0 1 4\n\"\"\n1:84 2:72\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (14063, 6681) at power 100\nPod 2 of player $0 moves towards (13299, 7804) at power 0\n",
+      "stdout": "14063 6681 100\n13299 7804 0\n",
+      "view": " 57\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15270, 4745) at power 200\nPod 2 of player $1 moves towards (1019, 3148) at power 200\n",
+      "stdout": "15270 4745 200\n1019 3148 200\n",
+      "stderr": "PRED_ASSERT:turn=27;pod_id=0;actual_x=14813;actual_y=1628;actual_vx=245;actual_vy=-154;actual_angle=77;pred_x=14813.00;pred_y=1628.00;pred_vx=245.00;pred_vy=-154.00;pred_angle=76.90;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.10;diff_cp=0;my_timeout_left=72;opp_timeout_left=84\nPRED_ASSERT:turn=27;pod_id=1;actual_x=10981;actual_y=-3487;actual_vx=-375;actual_vy=282;actual_angle=131;pred_x=10981.00;pred_y=-3487.00;pred_vx=-375.00;pred_vy=282.00;pred_angle=130.99;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.01;diff_cp=0;my_timeout_left=72;opp_timeout_left=84\nP0:turn=28;id=0;x=14813;y=1628;vx=245;vy=-154;angle=77;target_cp=1;action=200;target_x=15270;target_y=4745;opp_id=2;opp_x=15270;opp_y=4745;opp_vx=132;opp_vy=339;opp_angle=117;opp_target_cp=2\nP1:turn=28;id=1;x=10981;y=-3487;vx=-375;vy=282;angle=131;target_cp=1;action=200;target_x=1019;target_y=3148;opp_id=3;opp_x=11724;opp_y=4385;opp_vx=-269;opp_vy=1;opp_angle=179;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 58\n15349.0 5169.0 67 360 100 0 14063 6681 2.1282805564137615 0 2 1\n\"\"\n11455.0 4386.0 -228 0 0 0 13299 7804 2.8174337215441487 0 1 2\n\"\"\n15087.0 1672.0 232 37 200 0 15270 4745 1.4252181970594517 0 1 3\n\"\"\n10440.0 -3094.0 -460 333 200 0 1019 3148 2.5540303132448487 0 1 4\n\"\"\n1:83 2:71\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (14279, 6620) at power 100\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "14279 6620 100\n13299 7800 0\n",
+      "view": " 59\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15349, 5169) at power 200\nPod 2 of player $1 moves towards (14152, 268) at power 200\n",
+      "stdout": "15349 5169 200\n14152 268 200\n",
+      "stderr": "PRED_ASSERT:turn=28;pod_id=0;actual_x=15087;actual_y=1672;actual_vx=232;actual_vy=37;actual_angle=82;pred_x=15087.00;pred_y=1672.00;pred_vx=232.00;pred_vy=37.00;pred_angle=81.66;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.34;diff_cp=0;my_timeout_left=71;opp_timeout_left=83\nPRED_ASSERT:turn=28;pod_id=1;actual_x=10440;actual_y=-3094;actual_vx=-460;actual_vy=333;actual_angle=146;pred_x=10440.00;pred_y=-3094.00;pred_vx=-460.00;pred_vy=333.00;pred_angle=146.34;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.34;diff_cp=0;my_timeout_left=71;opp_timeout_left=83\nP0:turn=29;id=0;x=15087;y=1672;vx=232;vy=37;angle=82;target_cp=1;action=200;target_x=15349;target_y=5169;opp_id=2;opp_x=15349;opp_y=5169;opp_vx=67;opp_vy=360;opp_angle=122;opp_target_cp=2\nP1:turn=29;id=1;x=10440;y=-3094;vx=-460;vy=333;angle=146;target_cp=1;action=200;target_x=14152;target_y=268;opp_id=3;opp_x=11455;opp_y=4386;opp_vx=-228;opp_vy=0;opp_angle=161;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 60\n15357.0 5609.0 6 374 100 0 14279 6620 2.2061990992071343 0 2 1\n\"\"\n11227.0 4386.0 -193 0 0 0 13299 7800 2.5032744561851694 0 1 2\n\"\"\n15334.0 1908.0 209 200 200 0 15349 5169 1.4960146785067163 0 1 3\n\"\"\n9856.0 -2604.0 -496 416 200 0 14152 268 2.2398710478858694 0 1 4\n\"\"\n1:82 2:70\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (14479, 6600) at power 100\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "14479 6600 100\n13299 7800 0\n",
+      "view": " 61\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15357, 5609) at power 200\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "15357 5609 200\n12789 5460 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=29;pod_id=0;actual_x=15334;actual_y=1908;actual_vx=209;actual_vy=200;actual_angle=86;pred_x=15334.00;pred_y=1908.00;pred_vx=209.00;pred_vy=200.00;pred_angle=85.72;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.28;diff_cp=0;my_timeout_left=70;opp_timeout_left=82\nPRED_ASSERT:turn=29;pod_id=1;actual_x=9856;actual_y=-2604;actual_vx=-496;actual_vy=416;actual_angle=128;pred_x=9857.00;pred_y=-2603.00;pred_vx=-495.00;pred_vy=417.00;pred_angle=128.00;diff_x=-1.00;diff_y=-1.00;diff_vx=-1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=70;opp_timeout_left=82\nP0:turn=30;id=0;x=15334;y=1908;vx=209;vy=200;angle=86;target_cp=1;action=200;target_x=15357;target_y=5609;opp_id=2;opp_x=15357;opp_y=5609;opp_vx=6;opp_vy=374;opp_angle=126;opp_target_cp=2\nP1:turn=30;id=1;x=9856;y=-2604;vx=-496;vy=416;angle=128;target_cp=1;action=SHIELD;target_x=12789;target_y=5460;opp_id=3;opp_x=11227;opp_y=4386;opp_vx=-193;opp_vy=0;opp_angle=143;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 62\n15297.0 6058.0 -51 381 100 0 14479 6600 2.2958078591625855 0 2 1\n\"\"\n11034.0 4386.0 -164 0 0 0 13299 7800 2.18911519082619 0 1 2\n\"\"\n15544.0 2308.0 178 339 200 0 15357 5609 1.5645818701840815 0 1 3\n\"\"\n9360.0 -2188.0 -421 353 0 0 12789 5460 1.9257117825268901 1 1 4\n\"\"\n1:81 2:69\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6142, 5455) at power 0\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "6142 5455 0\n13299 7800 0\n",
+      "view": " 63\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15297, 6058) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "15297 6058 200\n15513 613 200\n",
+      "stderr": "PRED_ASSERT:turn=30;pod_id=0;actual_x=15544;actual_y=2308;actual_vx=178;actual_vy=339;actual_angle=90;pred_x=15544.00;pred_y=2308.00;pred_vx=178.00;pred_vy=339.00;pred_angle=89.64;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.36;diff_cp=0;my_timeout_left=69;opp_timeout_left=81\nPRED_ASSERT:turn=30;pod_id=1;actual_x=9360;actual_y=-2188;actual_vx=-421;actual_vy=353;actual_angle=110;pred_x=9360.00;pred_y=-2188.00;pred_vx=-421.00;pred_vy=353.00;pred_angle=110.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=69;opp_timeout_left=81\nP0:turn=31;id=0;x=15544;y=2308;vx=178;vy=339;angle=90;target_cp=1;action=200;target_x=15297;target_y=6058;opp_id=2;opp_x=15297;opp_y=6058;opp_vx=-51;opp_vy=381;opp_angle=132;opp_target_cp=2\nP1:turn=31;id=1;x=9360;y=-2188;vx=-421;vy=353;angle=110;target_cp=1;action=200;target_x=15513;target_y=613;opp_id=3;opp_x=11034;opp_y=4386;opp_vx=-164;opp_vy=0;opp_angle=125;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 64\n15246.0 6439.0 -43 323 0 0 6142 5455 2.6099671245215648 0 2 1\n\"\"\n10870.0 4386.0 -139 0 0 0 13299 7800 1.8749559254672108 0 1 2\n\"\"\n15709.0 2847.0 140 457 200 0 15297 6058 1.6365679882700008 0 1 4\n\"\"\n8939.0 -1835.0 -357 300 0 0 15513 613 1.6115525171679108 0 1 3\n\"\"\n1:80 2:68\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6143, 5455) at power 0\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "6143 5455 0\n13299 7800 0\n",
+      "view": " 65\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15246, 6439) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "15246 6439 200\n7754 4284 200\n",
+      "stderr": "PRED_ASSERT:turn=31;pod_id=0;actual_x=15709;actual_y=2847;actual_vx=140;actual_vy=457;actual_angle=94;pred_x=15709.00;pred_y=2847.00;pred_vx=140.00;pred_vy=457.00;pred_angle=93.77;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.23;diff_cp=0;my_timeout_left=68;opp_timeout_left=80\nPRED_ASSERT:turn=31;pod_id=1;actual_x=8939;actual_y=-1835;actual_vx=-357;actual_vy=300;actual_angle=92;pred_x=8939.00;pred_y=-1835.00;pred_vx=-357.00;pred_vy=300.00;pred_angle=92.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=68;opp_timeout_left=80\nP0:turn=32;id=0;x=15709;y=2847;vx=140;vy=457;angle=94;target_cp=1;action=200;target_x=15246;target_y=6439;opp_id=2;opp_x=15246;opp_y=6439;opp_vx=-43;opp_vy=323;opp_angle=150;opp_target_cp=2\nP1:turn=32;id=1;x=8939;y=-1835;vx=-357;vy=300;angle=92;target_cp=1;action=200;target_x=7754;target_y=4284;opp_id=3;opp_x=10870;opp_y=4386;opp_vx=-139;opp_vy=0;opp_angle=107;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 66\n15203.0 6762.0 -36 274 0 0 6143 5455 2.924126389880544 0 2 1\n\"\"\n10731.0 4386.0 -118 0 0 0 13299 7800 1.5607966601082315 0 1 2\n\"\"\n15823.0 3502.0 97 557 200 0 15246 6439 1.6989870503296702 0 1 4\n\"\"\n8582.0 -1535.0 -303 255 0 0 7754 4284 1.762087494250794 0 1 3\n\"\"\n1:79 2:67\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6145, 5455) at power 0\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "6145 5455 0\n13299 7800 0\n",
+      "view": " 67\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15203, 6762) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "15203 6762 200\n13274 1623 200\n",
+      "stderr": "PRED_ASSERT:turn=32;pod_id=0;actual_x=15823;actual_y=3502;actual_vx=97;actual_vy=557;actual_angle=97;pred_x=15823.00;pred_y=3502.00;pred_vx=97.00;pred_vy=557.00;pred_angle=97.34;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.34;diff_cp=0;my_timeout_left=67;opp_timeout_left=79\nPRED_ASSERT:turn=32;pod_id=1;actual_x=8582;actual_y=-1535;actual_vx=-303;actual_vy=255;actual_angle=101;pred_x=8582.00;pred_y=-1535.00;pred_vx=-303.00;pred_vy=255.00;pred_angle=100.96;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.04;diff_cp=0;my_timeout_left=67;opp_timeout_left=79\nP0:turn=33;id=0;x=15823;y=3502;vx=97;vy=557;angle=97;target_cp=1;action=200;target_x=15203;target_y=6762;opp_id=2;opp_x=15203;opp_y=6762;opp_vx=-36;opp_vy=274;opp_angle=168;opp_target_cp=2\nP1:turn=33;id=1;x=8582;y=-1535;vx=-303;vy=255;angle=101;target_cp=1;action=200;target_x=13274;target_y=1623;opp_id=3;opp_x=10731;opp_y=4386;opp_vx=-118;opp_vy=0;opp_angle=89;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 68\n15167.0 7036.0 -30 232 0 0 6145 5455 3.2382856552395234 0 2 1\n\"\"\n10613.0 4386.0 -100 0 0 0 13299 7800 1.2466373947492522 0 1 2\n\"\"\n15883.0 4255.0 50 640 200 0 15203 6762 1.758735903716948 0 1 4\n\"\"\n8279.0 -1280.0 -257 216 0 0 13274 1623 1.4479282288918147 0 1 3\n\"\"\n1:78 2:66\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6148, 5456) at power 0\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "6148 5456 0\n13299 7800 0\n",
+      "view": " 69\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15167, 7036) at power 200\nPod 2 of player $1 moves towards (1841, 7916) at power 200\n",
+      "stdout": "15167 7036 200\n1841 7916 200\n",
+      "stderr": "PRED_ASSERT:turn=33;pod_id=0;actual_x=15883;actual_y=4255;actual_vx=50;actual_vy=640;actual_angle=101;pred_x=15883.00;pred_y=4255.00;pred_vx=50.00;pred_vy=640.00;pred_angle=100.77;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.23;diff_cp=0;my_timeout_left=66;opp_timeout_left=78\nPRED_ASSERT:turn=33;pod_id=1;actual_x=8279;actual_y=-1280;actual_vx=-257;actual_vy=216;actual_angle=83;pred_x=8279.00;pred_y=-1280.00;pred_vx=-257.00;pred_vy=216.00;pred_angle=83.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=66;opp_timeout_left=78\nP0:turn=34;id=0;x=15883;y=4255;vx=50;vy=640;angle=101;target_cp=1;action=200;target_x=15167;target_y=7036;opp_id=2;opp_x=15167;opp_y=7036;opp_vx=-30;opp_vy=232;opp_angle=186;opp_target_cp=2\nP1:turn=34;id=1;x=8279;y=-1280;vx=-257;vy=216;angle=83;target_cp=1;action=200;target_x=1841;target_y=7916;opp_id=3;opp_x=10613;opp_y=4386;opp_vx=-100;opp_vy=0;opp_angle=71;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 70\n15137.0 7268.0 -25 197 0 0 6148 5456 -2.9681667924215045 0 2 1\n\"\"\n10513.0 4386.0 -85 0 0 0 13299 7800 0.9324781293902729 0 1 2\n\"\"\n15883.0 5089.0 0 708 200 0 15167 7036 1.8227850102296073 0 1 4\n\"\"\n7984.0 -868.0 -250 350 200 0 1841 7916 1.762087494250794 0 1 3\n\"\"\n1:77 2:65\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6150, 5456) at power 0\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "6150 5456 0\n13299 7800 0\n",
+      "view": " 71\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15137, 7268) at power 200\nPod 2 of player $1 moves towards (1483, 7397) at power 200\n",
+      "stdout": "15137 7268 200\n1483 7397 200\n",
+      "stderr": "PRED_ASSERT:turn=34;pod_id=0;actual_x=15883;actual_y=5089;actual_vx=0;actual_vy=708;actual_angle=104;pred_x=15883.00;pred_y=5089.00;pred_vx=0.00;pred_vy=708.00;pred_angle=104.44;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.44;diff_cp=0;my_timeout_left=65;opp_timeout_left=77\nPRED_ASSERT:turn=34;pod_id=1;actual_x=7984;actual_y=-868;actual_vx=-250;actual_vy=350;actual_angle=101;pred_x=7984.00;pred_y=-868.00;pred_vx=-250.00;pred_vy=350.00;pred_angle=101.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=65;opp_timeout_left=77\nP0:turn=35;id=0;x=15883;y=5089;vx=0;vy=708;angle=104;target_cp=1;action=200;target_x=15137;target_y=7268;opp_id=2;opp_x=15137;opp_y=7268;opp_vx=-25;opp_vy=197;opp_angle=190;opp_target_cp=2\nP1:turn=35;id=1;x=7984;y=-868;vx=-250;vy=350;angle=101;target_cp=1;action=200;target_x=1483;target_y=7397;opp_id=3;opp_x=10513;opp_y=4386;opp_vx=-85;opp_vy=0;opp_angle=53;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 72\n15112.0 7465.0 -21 167 0 0 6150 5456 -2.9426354974736038 0 2 1\n\"\"\n10428.0 4386.0 -72 0 0 0 13299 7800 0.8863441991115742 0 1 2\n\"\"\n15818.0 5986.0 -55 762 200 0 15137 7268 1.900647761238766 0 1 4\n\"\"\n7637.0 -343.0 -294 446 200 0 1483 7397 2.0762467596097736 0 1 3\n\"\"\n1:76 2:64\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (14648, 6609) at power 100\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "14648 6609 100\n13299 7800 0\n",
+      "view": " 73\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15112, 7465) at power 200\nPod 2 of player $1 moves towards (12692, 5455) at power 200\n",
+      "stdout": "15112 7465 200\n12692 5455 200\n",
+      "stderr": "PRED_ASSERT:turn=35;pod_id=0;actual_x=15818;actual_y=5986;actual_vx=-55;actual_vy=762;actual_angle=109;pred_x=15818.00;pred_y=5986.00;pred_vx=-55.00;pred_vy=762.00;pred_angle=108.90;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.10;diff_cp=0;my_timeout_left=64;opp_timeout_left=76\nPRED_ASSERT:turn=35;pod_id=1;actual_x=7637;actual_y=-343;actual_vx=-294;actual_vy=446;actual_angle=119;pred_x=7637.00;pred_y=-343.00;pred_vx=-294.00;pred_vy=446.00;pred_angle=119.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=64;opp_timeout_left=76\nP0:turn=36;id=0;x=15818;y=5986;vx=-55;vy=762;angle=109;target_cp=1;action=200;target_x=15112;target_y=7465;opp_id=2;opp_x=15112;opp_y=7465;opp_vx=-21;opp_vy=167;opp_angle=191;opp_target_cp=2\nP1:turn=36;id=1;x=7637;y=-343;vx=-294;vy=446;angle=119;target_cp=1;action=200;target_x=12692;target_y=5455;opp_id=3;opp_x=10428;opp_y=4386;opp_vx=-72;opp_vy=0;opp_angle=51;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 74\n15004.0 7583.0 -91 100 100 0 14648 6609 -2.6284762321146244 0 3 1\n\"\"\n10356.0 4386.0 -61 0 0 0 13299 7800 0.8715803400610299 0 1 2\n\"\"\n15677.0 6928.0 -119 801 200 0 15112 7465 2.016159947338905 0 1 4\n\"\"\n7305.0 299.0 -282 545 200 0 12692 5455 1.7620874942507943 0 1 3\n\"\"\n1:100 2:63\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7109, 3378) at power 100\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "7109 3378 100\n13299 7800 0\n",
+      "view": " 75\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (15004, 7583) at power 200\nPod 2 of player $1 moves towards (992, 3632) at power 200\n",
+      "stdout": "15004 7583 200\n992 3632 200\n",
+      "stderr": "PRED_CHECKPOINT:turn=36;pod_id=2;actual_crossed=1;pred_crossed=1;actual_next_cp=3;pred_next_cp=3\nPRED_ASSERT:turn=36;pod_id=0;actual_x=15677;actual_y=6928;actual_vx=-119;actual_vy=801;actual_angle=116;pred_x=15677.00;pred_y=6928.00;pred_vx=-119.00;pred_vy=801.00;pred_angle=115.52;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.48;diff_cp=0;my_timeout_left=63;opp_timeout_left=100\nPRED_ASSERT:turn=36;pod_id=1;actual_x=7305;actual_y=299;actual_vx=-282;actual_vy=545;actual_angle=101;pred_x=7305.00;pred_y=299.00;pred_vx=-282.00;pred_vy=545.00;pred_angle=101.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=63;opp_timeout_left=100\nP0:turn=37;id=0;x=15677;y=6928;vx=-119;vy=801;angle=116;target_cp=1;action=200;target_x=15004;target_y=7583;opp_id=2;opp_x=15004;opp_y=7583;opp_vx=-91;opp_vy=100;opp_angle=209;opp_target_cp=3\nP1:turn=37;id=1;x=7305;y=299;vx=-282;vy=545;angle=101;target_cp=1;action=200;target_x=992;target_y=3632;opp_id=3;opp_x=10356;opp_y=4386;opp_vx=-61;opp_vy=0;opp_angle=50;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 76\n14457.0 7892.0 -552 324 100 0 7109 3378 -2.652194298770302 0 3 1\n\"\"\n10295.0 4386.0 -51 0 0 0 13299 7800 0.8593545841972159 0 1 2\n\"\"\n15788.0 7618.0 182 524 200 0 15004 7583 2.3303192126978844 0 1 4\n\"\"\n6926.0 1019.0 -322 611 200 0 992 3632 2.0762467596097736 0 1 3\n\"\"\n1:99 2:62\n7 0.2205805649539828 2 15620 7137 0 14964 7595 574.7840865984114 -218 500\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7336, 3658) at power 100\nPod 2 of player $0 moves towards (13299, 7800) at power 0\n",
+      "stdout": "7336 3658 100\n13299 7800 0\n",
+      "view": " 77\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (14457, 7892) at power 200\nPod 2 of player $1 moves towards (9113, 7860) at power 200\n",
+      "stdout": "14457 7892 200\n9113 7860 200\n",
+      "stderr": "PRED_COLLISION:turn=37;p1=2;p2=0;time=0.2409\nPRED_ASSERT:turn=37;pod_id=0;actual_x=15788;actual_y=7618;actual_vx=182;actual_vy=524;actual_angle=134;pred_x=15736.0000;pred_y=7671.0000;pred_vx=136.0000;pred_vy=577.0000;pred_angle=134.00;diff_x=52.00;diff_y=-53.00;diff_vx=46.00;diff_vy=-53.00;diff_angle=0.00;diff_cp=0;my_timeout_left=62;opp_timeout_left=99\nPRED_ASSERT:turn=37;pod_id=1;actual_x=6926;actual_y=1019;actual_vx=-322;actual_vy=611;actual_angle=119;pred_x=6926.00;pred_y=1019.00;pred_vx=-322.00;pred_vy=611.00;pred_angle=119.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=62;opp_timeout_left=99\nP0:turn=38;id=0;x=15788;y=7618;vx=182;vy=524;angle=134;target_cp=1;action=200;target_x=14457;target_y=7892;opp_id=2;opp_x=14457;opp_y=7892;opp_vx=-552;opp_vy=324;opp_angle=208;opp_target_cp=3\nP1:turn=38;id=1;x=6926;y=1019;vx=-322;vy=611;angle=119;target_cp=1;action=200;target_x=9113;target_y=7860;opp_id=3;opp_x=10295;opp_y=4386;opp_vx=-51;opp_vy=0;opp_angle=49;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 78\n13819.0 8165.0 -542 231 100 0 7336 3658 -2.6051684122486436 0 3 1\n\"\"\n10244.0 4386.0 -43 0 0 0 13299 7800 0.8491943028295434 0 1 2\n\"\"\n15794.0 8237.0 5 526 200 0 14457 7892 2.6444784780568638 0 1 4\n\"\"\n6566.0 1826.0 -306 686 200 0 9113 7860 1.7620874942507943 0 1 3\n\"\"\n1:98 2:61\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7405, 3795) at power 100\nPod 2 of player $0 moves towards (10742, 4402) at power 100\n",
+      "stdout": "7405 3795 100\n10742 4402 100\n",
+      "view": " 79\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (13819, 8165) at power 200\nPod 2 of player $1 moves towards (15035, 3995) at power 200\n",
+      "stdout": "13819 8165 200\n15035 3995 200\n",
+      "stderr": "PRED_ASSERT:turn=38;pod_id=0;actual_x=15794;actual_y=8237;actual_vx=5;actual_vy=526;actual_angle=152;pred_x=15793.00;pred_y=8236.00;pred_vx=4.00;pred_vy=525.00;pred_angle=152.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=61;opp_timeout_left=98\nPRED_ASSERT:turn=38;pod_id=1;actual_x=6566;actual_y=1826;actual_vx=-306;actual_vy=686;actual_angle=101;pred_x=6566.00;pred_y=1826.00;pred_vx=-306.00;pred_vy=686.00;pred_angle=101.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=61;opp_timeout_left=98\nP0:turn=39;id=0;x=15794;y=8237;vx=5;vy=526;angle=152;target_cp=1;action=200;target_x=13819;target_y=8165;opp_id=2;opp_x=13819;opp_y=8165;opp_vx=-542;opp_vy=231;opp_angle=211;opp_target_cp=3\nP1:turn=39;id=1;x=6566;y=1826;vx=-306;vy=686;angle=101;target_cp=1;action=200;target_x=15035;target_y=3995;opp_id=3;opp_x=10244;opp_y=4386;opp_vx=-43;opp_vy=0;opp_angle=49;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 80\n13194.0 8340.0 -530 148 100 0 7405 3795 -2.5435124839802707 0 3 1\n\"\"\n10287.0 4437.0 36 43 100 0 10742 4402 0.5350350374705641 0 1 2\n\"\"\n15602.0 8799.0 -162 478 200 0 13819 8165 2.958637743415843 0 1 4\n\"\"\n6285.0 2710.0 -239 751 200 0 15035 3995 1.447928228891815 0 1 3\n\"\"\n1:97 2:60\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7457, 3943) at power 100\nPod 2 of player $0 moves towards (10312, 5322) at power 52\n",
+      "stdout": "7457 3943 100\n10312 5322 52\n",
+      "view": " 81\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (13194, 8340) at power 200\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "13194 8340 200\n5338 5432 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=39;pod_id=0;actual_x=15602;actual_y=8799;actual_vx=-162;actual_vy=478;actual_angle=170;pred_x=15602.00;pred_y=8798.00;pred_vx=-163.00;pred_vy=476.00;pred_angle=170.00;diff_x=0.00;diff_y=1.00;diff_vx=1.00;diff_vy=2.00;diff_angle=0.00;diff_cp=0;my_timeout_left=60;opp_timeout_left=97\nPRED_ASSERT:turn=39;pod_id=1;actual_x=6285;actual_y=2710;actual_vx=-239;actual_vy=751;actual_angle=83;pred_x=6284.00;pred_y=2711.00;pred_vx=-239.00;pred_vy=751.00;pred_angle=83.00;diff_x=1.00;diff_y=-1.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=60;opp_timeout_left=97\nP0:turn=40;id=0;x=15602;y=8799;vx=-162;vy=478;angle=170;target_cp=1;action=200;target_x=13194;target_y=8340;opp_id=2;opp_x=13194;opp_y=8340;opp_vx=-530;opp_vy=148;opp_angle=214;opp_target_cp=3\nP1:turn=40;id=1;x=6285;y=2710;vx=-239;vy=751;angle=83;target_cp=1;action=SHIELD;target_x=5338;target_y=5432;opp_id=3;opp_x=10287;opp_y=4437;opp_vx=36;opp_vy=43;opp_angle=31;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 82\n12585.0 8427.0 -517 74 100 0 7457 3943 -2.487659979862161 0 3 1\n\"\"\n10357.0 4519.0 59 69 52 0 10312 5322 0.8491943028295434 0 1 2\n\"\"\n15242.0 9251.0 -306 384 200 0 13194 8340 3.2727970087748224 0 1 4\n\"\"\n6046.0 3461.0 -203 638 0 0 5338 5432 1.7620874942507943 1 1 3\n\"\"\n1:96 2:59\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7489, 4095) at power 100\nPod 2 of player $0 moves towards (10321, 5314) at power 47\n",
+      "stdout": "7489 4095 100\n10321 5314 47\n",
+      "view": " 83\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (12585, 8427) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "12585 8427 200\n4977 8117 200\n",
+      "stderr": "PRED_ASSERT:turn=40;pod_id=0;actual_x=15242;actual_y=9251;actual_vx=-306;actual_vy=384;actual_angle=188;pred_x=15242.00;pred_y=9249.00;pred_vx=-306.00;pred_vy=382.00;pred_angle=188.00;diff_x=0.00;diff_y=2.00;diff_vx=0.00;diff_vy=2.00;diff_angle=0.00;diff_cp=0;my_timeout_left=59;opp_timeout_left=96\nPRED_ASSERT:turn=40;pod_id=1;actual_x=6046;actual_y=3461;actual_vx=-203;actual_vy=638;actual_angle=101;pred_x=6046.00;pred_y=3461.00;pred_vx=-203.00;pred_vy=638.00;pred_angle=101.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=59;opp_timeout_left=96\nP0:turn=41;id=0;x=15242;y=9251;vx=-306;vy=384;angle=188;target_cp=1;action=200;target_x=12585;target_y=8427;opp_id=2;opp_x=12585;opp_y=8427;opp_vx=-517;opp_vy=74;opp_angle=217;opp_target_cp=3\nP1:turn=41;id=1;x=6046;y=3461;vx=-203;vy=638;angle=101;target_cp=1;action=200;target_x=4977;target_y=8117;opp_id=3;opp_x=10357;opp_y=4519;opp_vx=59;opp_vy=69;opp_angle=49;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 84\n11992.0 8436.0 -504 7 100 0 7489 4095 -2.437053021919205 0 3 1\n\"\"\n10435.0 4631.0 65 95 47 0 10321 5314 1.1633535681885228 0 1 2\n\"\"\n14745.0 9576.0 -422 276 200 0 12585 8427 -2.84087367649263 0 1 4\n\"\"\n5843.0 4099.0 -172 542 0 0 4977 8117 1.7964811877046634 0 1 3\n\"\"\n1:95 2:58\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7501, 4249) at power 100\nPod 2 of player $0 moves towards (10219, 5392) at power 47\n",
+      "stdout": "7501 4249 100\n10219 5392 47\n",
+      "view": " 85\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11992, 8436) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "11992 8436 200\n7435 1037 200\n",
+      "stderr": "PRED_ASSERT:turn=41;pod_id=0;actual_x=14745;actual_y=9576;actual_vx=-422;actual_vy=276;actual_angle=197;pred_x=14745.00;pred_y=9576.00;pred_vx=-422.00;pred_vy=276.00;pred_angle=-162.77;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.23;diff_cp=0;my_timeout_left=58;opp_timeout_left=95\nPRED_ASSERT:turn=41;pod_id=1;actual_x=5843;actual_y=4099;actual_vx=-172;actual_vy=542;actual_angle=103;pred_x=5843.00;pred_y=4099.00;pred_vx=-172.00;pred_vy=542.00;pred_angle=102.93;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.07;diff_cp=0;my_timeout_left=58;opp_timeout_left=95\nP0:turn=42;id=0;x=14745;y=9576;vx=-422;vy=276;angle=197;target_cp=1;action=200;target_x=11992;target_y=8436;opp_id=2;opp_x=11992;opp_y=8436;opp_vx=-504;opp_vy=7;opp_angle=220;opp_target_cp=3\nP1:turn=42;id=1;x=5843;y=4099;vx=-172;vy=542;angle=103;target_cp=1;action=200;target_x=7435;target_y=1037;opp_id=3;opp_x=10435;opp_y=4631;opp_vx=65;opp_vy=95;opp_angle=67;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 86\n11415.0 8375.0 -490 -52 100 0 7501 4249 -2.3912112840797883 0 3 1\n\"\"\n10504.0 4773.0 58 120 47 0 10219 5392 1.477512833547502 0 1 2\n\"\"\n14138.0 9775.0 -515 169 200 0 11992 8436 -2.748995871549357 0 1 4\n\"\"\n5671.0 4641.0 -146 460 0 0 7435 1037 1.482321922345684 0 1 3\n\"\"\n1:94 2:57\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7495, 4392) at power 100\nPod 2 of player $0 moves towards (10064, 5482) at power 48\n",
+      "stdout": "7495 4392 100\n10064 5482 48\n",
+      "view": " 87\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11415, 8375) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "11415 8375 200\n10525 2514 200\n",
+      "stderr": "PRED_ASSERT:turn=42;pod_id=0;actual_x=14138;actual_y=9775;actual_vx=-515;actual_vy=169;actual_angle=202;pred_x=14138.00;pred_y=9775.00;pred_vx=-515.00;pred_vy=169.00;pred_angle=-157.51;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.49;diff_cp=0;my_timeout_left=57;opp_timeout_left=94\nPRED_ASSERT:turn=42;pod_id=1;actual_x=5671;actual_y=4641;actual_vx=-146;actual_vy=460;actual_angle=85;pred_x=5671.00;pred_y=4641.00;pred_vx=-146.00;pred_vy=460.00;pred_angle=85.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=57;opp_timeout_left=94\nP0:turn=43;id=0;x=14138;y=9775;vx=-515;vy=169;angle=202;target_cp=1;action=200;target_x=11415;target_y=8375;opp_id=2;opp_x=11415;opp_y=8375;opp_vx=-490;opp_vy=-52;opp_angle=223;opp_target_cp=3\nP1:turn=43;id=1;x=5671;y=4641;vx=-146;vy=460;angle=85;target_cp=1;action=200;target_x=10525;target_y=2514;opp_id=3;opp_x=10504;opp_y=4773;opp_vx=58;opp_vy=120;opp_angle=85;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 88\n10855.0 8252.0 -476 -104 100 0 7495 4392 -2.3482230027119604 0 3 1\n\"\"\n10551.0 4940.0 40 141 48 0 10064 5482 1.7916720989064814 0 1 2\n\"\"\n13445.0 9853.0 -588 65 200 0 11415 8375 -2.666698075076134 0 1 4\n\"\"\n5525.0 5101.0 -124 391 0 0 10525 2514 1.1681626569867047 0 1 3\n\"\"\n1:93 2:56\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7474, 4522) at power 100\nPod 2 of player $0 moves towards (9869, 5556) at power 51\n",
+      "stdout": "7474 4522 100\n9869 5556 51\n",
+      "view": " 89\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10855, 8252) at power 200\nPod 2 of player $1 moves towards (14144, 3369) at power 200\n",
+      "stdout": "10855 8252 200\n14144 3369 200\n",
+      "stderr": "PRED_ASSERT:turn=43;pod_id=0;actual_x=13445;actual_y=9853;actual_vx=-588;actual_vy=65;actual_angle=207;pred_x=13445.00;pred_y=9853.00;pred_vx=-588.00;pred_vy=65.00;pred_angle=-152.79;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.21;diff_cp=0;my_timeout_left=56;opp_timeout_left=93\nPRED_ASSERT:turn=43;pod_id=1;actual_x=5525;actual_y=5101;actual_vx=-124;actual_vy=391;actual_angle=67;pred_x=5525.00;pred_y=5101.00;pred_vx=-124.00;pred_vy=391.00;pred_angle=67.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=56;opp_timeout_left=93\nP0:turn=44;id=0;x=13445;y=9853;vx=-588;vy=65;angle=207;target_cp=1;action=200;target_x=10855;target_y=8252;opp_id=2;opp_x=10855;opp_y=8252;opp_vx=-476;opp_vy=-104;opp_angle=225;opp_target_cp=3\nP1:turn=44;id=1;x=5525;y=5101;vx=-124;vy=391;angle=67;target_cp=1;action=200;target_x=14144;target_y=3369;opp_id=3;opp_x=10551;opp_y=4940;opp_vx=40;opp_vy=141;opp_angle=103;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 90\n10312.0 8074.0 -461 -151 100 0 7474 4522 -2.3071549475389697 0 3 1\n\"\"\n10565.0 5125.0 11 157 51 0 9869 5556 2.1058313642654607 0 1 2\n\"\"\n12687.0 9813.0 -644 -34 200 0 10855 8252 -2.587936727047242 0 1 4\n\"\"\n5532.0 5643.0 6 460 200 0 14144 3369 0.8540033916277254 0 1 3\n\"\"\n1:92 2:55\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7442, 4639) at power 100\nPod 2 of player $0 moves towards (9625, 5599) at power 55\n",
+      "stdout": "7442 4639 100\n9625 5599 55\n",
+      "view": " 91\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10312, 8074) at power 200\nPod 2 of player $1 moves towards (4745, 8723) at power 200\n",
+      "stdout": "10312 8074 200\n4745 8723 200\n",
+      "stderr": "PRED_ASSERT:turn=44;pod_id=0;actual_x=12687;actual_y=9813;actual_vx=-644;actual_vy=-34;actual_angle=212;pred_x=12687.00;pred_y=9813.00;pred_vx=-644.00;pred_vy=-34.00;pred_angle=-148.28;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.28;diff_cp=0;my_timeout_left=55;opp_timeout_left=92\nPRED_ASSERT:turn=44;pod_id=1;actual_x=5532;actual_y=5643;actual_vx=6;actual_vy=460;actual_angle=49;pred_x=5532.00;pred_y=5643.00;pred_vx=6.00;pred_vy=460.00;pred_angle=49.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.00;diff_cp=0;my_timeout_left=55;opp_timeout_left=92\nP0:turn=45;id=0;x=12687;y=9813;vx=-644;vy=-34;angle=212;target_cp=1;action=200;target_x=10312;target_y=8074;opp_id=2;opp_x=10312;opp_y=8074;opp_vx=-461;opp_vy=-151;opp_angle=228;opp_target_cp=3\nP1:turn=45;id=1;x=5532;y=5643;vx=6;vy=460;angle=49;target_cp=1;action=200;target_x=4745;target_y=8723;opp_id=3;opp_x=10565;opp_y=5125;opp_vx=11;opp_vy=157;opp_angle=121;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 92\n9787.0 7846.0 -446 -193 100 0 7442 4639 -2.2668217876354024 0 3 1\n\"\"\n10535.0 5318.0 -25 164 55 0 9625 5599 2.41999062962444 0 1 2\n\"\"\n11882.0 9661.0 -684 -129 200 0 10312 8074 -2.509574358692153 0 1 4\n\"\"\n5616.0 6287.0 71 547 200 0 4745 8723 1.1681626569867047 0 1 3\n\"\"\n1:91 2:54\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7403, 4742) at power 100\nPod 2 of player $0 moves towards (9361, 5588) at power 60\n",
+      "stdout": "7403 4742 100\n9361 5588 60\n",
+      "view": " 93\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (9787, 7846) at power 200\nPod 2 of player $1 moves towards (15993, 7459) at power 200\n",
+      "stdout": "9787 7846 200\n15993 7459 200\n",
+      "stderr": "PRED_ASSERT:turn=45;pod_id=0;actual_x=11882;actual_y=9661;actual_vx=-684;actual_vy=-129;actual_angle=216;pred_x=11882.00;pred_y=9661.00;pred_vx=-684.00;pred_vy=-129.00;pred_angle=-143.79;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.21;diff_cp=0;my_timeout_left=54;opp_timeout_left=91\nPRED_ASSERT:turn=45;pod_id=1;actual_x=5616;actual_y=6287;actual_vx=71;actual_vy=547;actual_angle=67;pred_x=5616.00;pred_y=6287.00;pred_vx=71.00;pred_vy=547.00;pred_angle=67.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=54;opp_timeout_left=91\nP0:turn=46;id=0;x=11882;y=9661;vx=-684;vy=-129;angle=216;target_cp=1;action=200;target_x=9787;target_y=7846;opp_id=2;opp_x=9787;opp_y=7846;opp_vx=-446;opp_vy=-193;opp_angle=230;opp_target_cp=3\nP1:turn=46;id=1;x=5616;y=6287;vx=71;vy=547;angle=67;target_cp=1;action=200;target_x=15993;target_y=7459;opp_id=3;opp_x=10535;opp_y=5318;opp_vx=-25;opp_vy=164;opp_angle=139;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 94\n9280.0 7574.0 -430 -231 100 0 7403 4742 -2.225744196445989 0 3 1\n\"\"\n10455.0 5506.0 -68 159 60 0 9361 5588 2.7341498949834193 0 1 2\n\"\"\n11047.0 9401.0 -709 -220 200 0 9787 7846 -2.427683707065783 0 1 4\n\"\"\n5818.0 6985.0 172 593 200 0 15993 7459 0.8540033916277254 0 1 3\n\"\"\n1:90 2:53\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7359, 4833) at power 100\nPod 2 of player $0 moves towards (9070, 5505) at power 67\n",
+      "stdout": "7359 4833 100\n9070 5505 67\n",
+      "view": " 95\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (9280, 7574) at power 200\nPod 2 of player $1 moves towards (9866, 2205) at power 200\n",
+      "stdout": "9280 7574 200\n9866 2205 200\n",
+      "stderr": "PRED_ASSERT:turn=46;pod_id=0;actual_x=11047;actual_y=9401;actual_vx=-709;actual_vy=-220;actual_angle=221;pred_x=11047.00;pred_y=9401.00;pred_vx=-709.00;pred_vy=-220.00;pred_angle=-139.10;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.10;diff_cp=0;my_timeout_left=53;opp_timeout_left=90\nPRED_ASSERT:turn=46;pod_id=1;actual_x=5818;actual_y=6985;actual_vx=172;actual_vy=593;actual_angle=49;pred_x=5818.00;pred_y=6985.00;pred_vx=171.00;pred_vy=593.00;pred_angle=49.00;diff_x=0.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=-0.00;diff_cp=0;my_timeout_left=53;opp_timeout_left=90\nP0:turn=47;id=0;x=11047;y=9401;vx=-709;vy=-220;angle=221;target_cp=1;action=200;target_x=9280;target_y=7574;opp_id=2;opp_x=9280;opp_y=7574;opp_vx=-430;opp_vy=-231;opp_angle=232;opp_target_cp=3\nP1:turn=47;id=1;x=5818;y=6985;vx=172;vy=593;angle=49;target_cp=1;action=200;target_x=9866;target_y=2205;opp_id=3;opp_x=10455;opp_y=5506;opp_vx=-68;opp_vy=159;opp_angle=157;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 96\n8793.0 7261.0 -414 -265 100 0 7359 4833 -2.1820852301558955 0 3 1\n\"\"\n10320.0 5671.0 -114 140 67 0 9070 5505 3.0483091603423986 0 1 2\n\"\"\n10199.0 9037.0 -720 -309 200 0 9280 7574 -2.3395015500667284 0 1 3\n\"\"\n6162.0 7681.0 292 591 200 0 9866 2205 0.5398441262687461 0 1 4\n\"\"\n1:89 2:52\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7312, 4912) at power 100\nPod 2 of player $0 moves towards (8784, 5332) at power 76\n",
+      "stdout": "7312 4912 100\n8784 5332 76\n",
+      "view": " 97\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8793, 7261) at power 200\nPod 2 of player $1 moves towards (4841, 6921) at power 200\n",
+      "stdout": "8793 7261 200\n4841 6921 200\n",
+      "stderr": "PRED_ASSERT:turn=47;pod_id=0;actual_x=10199;actual_y=9037;actual_vx=-720;actual_vy=-309;actual_angle=226;pred_x=10199.00;pred_y=9037.00;pred_vx=-720.00;pred_vy=-309.00;pred_angle=-134.04;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.04;diff_cp=0;my_timeout_left=52;opp_timeout_left=89\nPRED_ASSERT:turn=47;pod_id=1;actual_x=6162;actual_y=7681;actual_vx=292;actual_vy=591;actual_angle=31;pred_x=6161.00;pred_y=7681.00;pred_vx=291.00;pred_vy=591.00;pred_angle=31.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=52;opp_timeout_left=89\nP0:turn=48;id=0;x=10199;y=9037;vx=-720;vy=-309;angle=226;target_cp=1;action=200;target_x=8793;target_y=7261;opp_id=2;opp_x=8793;opp_y=7261;opp_vx=-414;opp_vy=-265;opp_angle=235;opp_target_cp=3\nP1:turn=48;id=1;x=6162;y=7681;vx=292;vy=591;angle=31;target_cp=1;action=200;target_x=4841;target_y=6921;opp_id=3;opp_x=10320;opp_y=5671;opp_vx=-114;opp_vy=140;opp_angle=175;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 98\n8326.0 6911.0 -397 -297 100 0 7312 4912 -2.1333273697888857 0 3 1\n\"\"\n10132.0 5795.0 -159 105 76 0 8784 5332 -2.9243717828311144 0 1 2\n\"\"\n9355.0 8571.0 -717 -395 200 0 8793 7261 -2.240435272471534 0 1 3\n\"\"\n6585.0 8423.0 359 630 200 0 4841 6921 0.8540033916277254 0 1 4\n\"\"\n1:88 2:51\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7262, 4984) at power 100\nPod 2 of player $0 moves towards (8540, 5063) at power 87\n",
+      "stdout": "7262 4984 100\n8540 5063 87\n",
+      "view": " 99\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8326, 6911) at power 200\nPod 2 of player $1 moves towards (6196, 7410) at power 200\n",
+      "stdout": "8326 6911 200\n6196 7410 200\n",
+      "stderr": "PRED_ASSERT:turn=48;pod_id=0;actual_x=9355;actual_y=8571;actual_vx=-717;actual_vy=-395;actual_angle=232;pred_x=9355.00;pred_y=8571.00;pred_vx=-717.00;pred_vy=-395.00;pred_angle=-128.37;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.37;diff_cp=0;my_timeout_left=51;opp_timeout_left=88\nPRED_ASSERT:turn=48;pod_id=1;actual_x=6585;actual_y=8423;actual_vx=359;actual_vy=630;actual_angle=49;pred_x=6585.00;pred_y=8423.00;pred_vx=359.00;pred_vy=630.00;pred_angle=49.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=51;opp_timeout_left=88\nP0:turn=49;id=0;x=9355;y=8571;vx=-717;vy=-395;angle=232;target_cp=1;action=200;target_x=8326;target_y=6911;opp_id=2;opp_x=8326;opp_y=6911;opp_vx=-397;opp_vy=-297;opp_angle=238;opp_target_cp=3\nP1:turn=49;id=1;x=6585;y=8423;vx=359;vy=630;angle=49;target_cp=1;action=200;target_x=6196;target_y=7410;opp_id=3;opp_x=10132;opp_y=5795;opp_vx=-159;opp_vy=105;opp_angle=192;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 100\n7881.0 6526.0 -378 -326 100 0 7262 4984 -2.075291474760026 0 3 1\n\"\"\n9894.0 5864.0 -202 58 87 0 8540 5063 -2.7106198260139576 0 1 2\n\"\"\n8533.0 8006.0 -699 -480 200 0 8326 6911 -2.125705021174322 0 1 3\n\"\"\n7116.0 9156.0 450 622 200 0 6196 7410 0.5398441262687461 0 1 4\n\"\"\n1:87 2:50\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7210, 5049) at power 100\nPod 2 of player $0 moves towards (8388, 4732) at power 96\n",
+      "stdout": "7210 5049 100\n8388 4732 96\n",
+      "view": " 101\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "7881 6526 SHIELD\n5443 6167 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=49;pod_id=0;actual_x=8533;actual_y=8006;actual_vx=-699;actual_vy=-480;actual_angle=238;pred_x=8533.00;pred_y=8006.00;pred_vx=-699.00;pred_vy=-480.00;pred_angle=-121.79;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.21;diff_cp=0;my_timeout_left=50;opp_timeout_left=87\nPRED_ASSERT:turn=49;pod_id=1;actual_x=7116;actual_y=9156;actual_vx=450;actual_vy=622;actual_angle=31;pred_x=7115.00;pred_y=9156.00;pred_vx=450.00;pred_vy=623.00;pred_angle=31.00;diff_x=1.00;diff_y=0.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=50;opp_timeout_left=87\nP0:turn=50;id=0;x=8533;y=8006;vx=-699;vy=-480;angle=238;target_cp=1;action=SHIELD;target_x=7881;target_y=6526;opp_id=2;opp_x=7881;opp_y=6526;opp_vx=-378;opp_vy=-326;opp_angle=241;opp_target_cp=3\nP1:turn=50;id=1;x=7116;y=9156;vx=450;vy=622;angle=31;target_cp=1;action=SHIELD;target_x=5443;target_y=6167;opp_id=3;opp_x=9894;opp_y=5864;opp_vx=-202;opp_vy=58;opp_angle=205;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 102\n7462.0 6109.0 -356 -354 100 0 7210 5049 -1.9972197591144838 0 3 1\n\"\"\n9615.0 5864.0 -236 0 96 0 8388 4732 -2.4970299740700166 0 1 2\n\"\"\n7834.0 7526.0 -594 -408 0 0 7881 6526 -1.9857559768626423 1 1 3\n\"\"\n7566.0 9778.0 382 528 0 0 5443 6167 0.2256848609097668 1 1 4\n\"\"\n1:86 2:49\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8641, 1699) at power 0\nPod 2 of player $0 moves towards (10742, 4401) at power 100\n",
+      "stdout": "8641 1699 0\n10742 4401 100\n",
+      "view": " 103\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "7462 6109 200\n5480 6600 200\n",
+      "stderr": "PRED_ASSERT:turn=50;pod_id=0;actual_x=7834;actual_y=7526;actual_vx=-594;actual_vy=-408;actual_angle=246;pred_x=7834.00;pred_y=7526.00;pred_vx=-594.00;pred_vy=-408.00;pred_angle=-113.78;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.22;diff_cp=0;my_timeout_left=49;opp_timeout_left=86\nPRED_ASSERT:turn=50;pod_id=1;actual_x=7566;actual_y=9778;actual_vx=382;actual_vy=528;actual_angle=13;pred_x=7566.00;pred_y=9778.00;pred_vx=382.00;pred_vy=528.00;pred_angle=13.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=49;opp_timeout_left=86\nP0:turn=51;id=0;x=7834;y=7526;vx=-594;vy=-408;angle=246;target_cp=1;action=200;target_x=7462;target_y=6109;opp_id=2;opp_x=7462;opp_y=6109;opp_vx=-356;opp_vy=-354;opp_angle=246;opp_target_cp=3\nP1:turn=51;id=1;x=7566;y=9778;vx=382;vy=528;angle=13;target_cp=1;action=200;target_x=5480;target_y=6600;opp_id=3;opp_x=9615;opp_y=5864;opp_vx=-236;opp_vy=0;opp_angle=217;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 104\n7106.0 5755.0 -302 -300 0 0 8641 1699 -1.6830604937555045 0 3 1\n\"\"\n9322.0 5782.0 -249 -69 100 0 10742 4401 -2.1828707087110373 0 1 2\n\"\"\n7240.0 7118.0 -504 -346 0 0 7462 6109 -1.8275294154232398 0 1 3\n\"\"\n7948.0 10306.0 324 448 0 0 5480 6600 -0.08847440444921251 0 1 4\n\"\"\n1:85 2:48\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8642, 1698) at power 0\nPod 2 of player $0 moves towards (10698, 4722) at power 100\n",
+      "stdout": "8642 1698 0\n10698 4722 100\n",
+      "view": " 105\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "7106 5755 200\n10508 8004 200\n",
+      "stderr": "PRED_ASSERT:turn=51;pod_id=0;actual_x=7240;actual_y=7118;actual_vx=-504;actual_vy=-346;actual_angle=255;pred_x=7240.00;pred_y=7118.00;pred_vx=-504.00;pred_vy=-346.00;pred_angle=-104.71;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.29;diff_cp=0;my_timeout_left=48;opp_timeout_left=85\nPRED_ASSERT:turn=51;pod_id=1;actual_x=7948;actual_y=10306;actual_vx=324;actual_vy=448;actual_angle=355;pred_x=7948.00;pred_y=10306.00;pred_vx=324.00;pred_vy=448.00;pred_angle=-5.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=48;opp_timeout_left=85\nP0:turn=52;id=0;x=7240;y=7118;vx=-504;vy=-346;angle=255;target_cp=1;action=200;target_x=7106;target_y=5755;opp_id=2;opp_x=7106;opp_y=5755;opp_vx=-302;opp_vy=-300;opp_angle=264;opp_target_cp=3\nP1:turn=52;id=1;x=7948;y=10306;vx=324;vy=448;angle=355;target_cp=1;action=200;target_x=10508;target_y=8004;opp_id=3;opp_x=9322;opp_y=5782;opp_vx=-249;opp_vy=-69;opp_angle=235;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 106\n6804.0 5455.0 -256 -255 0 0 8642 1698 -1.3689012283965252 0 3 1\n\"\"\n9044.0 5617.0 -236 -139 100 0 10698 4722 -1.868711443352058 0 1 2\n\"\"\n6736.0 6772.0 -428 -294 0 0 7106 5755 -1.6687939549768325 0 1 3\n\"\"\n8272.0 10754.0 275 380 0 0 10508 8004 -0.4026336698081918 0 1 4\n\"\"\n1:84 2:47\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8641, 1699) at power 0\nPod 2 of player $0 moves towards (10576, 5010) at power 100\n",
+      "stdout": "8641 1699 0\n10576 5010 100\n",
+      "view": " 107\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "6804 5455 200\n8371 3755 200\n",
+      "stderr": "PRED_ASSERT:turn=52;pod_id=0;actual_x=6736;actual_y=6772;actual_vx=-428;actual_vy=-294;actual_angle=264;pred_x=6736.00;pred_y=6772.00;pred_vx=-428.00;pred_vy=-294.00;pred_angle=-95.61;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.39;diff_cp=0;my_timeout_left=47;opp_timeout_left=84\nPRED_ASSERT:turn=52;pod_id=1;actual_x=8272;actual_y=10754;actual_vx=275;actual_vy=380;actual_angle=337;pred_x=8272.00;pred_y=10754.00;pred_vx=275.00;pred_vy=380.00;pred_angle=337.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=47;opp_timeout_left=84\nP0:turn=53;id=0;x=6736;y=6772;vx=-428;vy=-294;angle=264;target_cp=1;action=200;target_x=6804;target_y=5455;opp_id=2;opp_x=6804;opp_y=5455;opp_vx=-256;opp_vy=-255;opp_angle=282;opp_target_cp=3\nP1:turn=53;id=1;x=8272;y=10754;vx=275;vy=380;angle=337;target_cp=1;action=200;target_x=8371;target_y=3755;opp_id=3;opp_x=9044;opp_y=5617;opp_vx=-236;opp_vy=-139;opp_angle=253;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 108\n6548.0 5200.0 -217 -216 0 0 8641 1699 -1.1159194844360543 0 3 1\n\"\"\n8810.0 5378.0 -199 -203 100 0 10576 5010 -1.5545521779930787 0 1 2\n\"\"\n6308.0 6478.0 -363 -249 0 0 6804 5455 -1.5192096380557818 0 1 3\n\"\"\n8547.0 11134.0 233 323 0 0 8371 3755 -0.7167929351671711 0 1 4\n\"\"\n1:83 2:46\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7152, 5112) at power 100\nPod 2 of player $0 moves towards (10382, 5258) at power 100\n",
+      "stdout": "7152 5112 100\n10382 5258 100\n",
+      "view": " 109\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (6548, 5200) at power 200\nPod 2 of player $1 moves towards (4303, 6987) at power 200\n",
+      "stdout": "6548 5200 200\n4303 6987 200\n",
+      "stderr": "PRED_ASSERT:turn=53;pod_id=0;actual_x=6308;actual_y=6478;actual_vx=-363;actual_vy=-249;actual_angle=273;pred_x=6308.00;pred_y=6478.00;pred_vx=-363.00;pred_vy=-249.00;pred_angle=-87.04;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.04;diff_cp=0;my_timeout_left=46;opp_timeout_left=83\nPRED_ASSERT:turn=53;pod_id=1;actual_x=8547;actual_y=11134;actual_vx=233;actual_vy=323;actual_angle=319;pred_x=8547.00;pred_y=11134.00;pred_vx=233.00;pred_vy=323.00;pred_angle=319.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=46;opp_timeout_left=83\nP0:turn=54;id=0;x=6308;y=6478;vx=-363;vy=-249;angle=273;target_cp=1;action=200;target_x=6548;target_y=5200;opp_id=2;opp_x=6548;opp_y=5200;opp_vx=-217;opp_vy=-216;opp_angle=296;opp_target_cp=3\nP1:turn=54;id=1;x=8547;y=11134;vx=233;vy=323;angle=319;target_cp=1;action=200;target_x=4303;target_y=6987;opp_id=3;opp_x=8810;opp_y=5378;opp_vx=-199;opp_vy=-203;opp_angle=271;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 110\n6401.0 4912.0 -125 -244 100 0 7152 5112 -0.801760219077075 0 3 1\n\"\"\n8643.0 5080.0 -141 -252 100 0 10382 5258 -1.2403929126340993 0 1 2\n\"\"\n5982.0 6032.0 -277 -378 200 0 6548 5200 -1.3851649300947746 0 1 3\n\"\"\n8883.0 11285.0 285 128 200 0 4303 6987 -1.0309522005261504 0 1 4\n\"\"\n1:82 2:45\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6849, 5334) at power 100\nPod 2 of player $0 moves towards (10127, 5449) at power 100\n",
+      "stdout": "6849 5334 100\n10127 5449 100\n",
+      "view": " 111\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (6401, 4912) at power 200\nPod 2 of player $1 moves towards (14738, 3279) at power 200\n",
+      "stdout": "6401 4912 200\n14738 3279 200\n",
+      "stderr": "PRED_ASSERT:turn=54;pod_id=0;actual_x=5982;actual_y=6032;actual_vx=-277;actual_vy=-378;actual_angle=281;pred_x=5982.00;pred_y=6032.00;pred_vx=-277.00;pred_vy=-378.00;pred_angle=-79.36;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.36;diff_cp=0;my_timeout_left=45;opp_timeout_left=82\nPRED_ASSERT:turn=54;pod_id=1;actual_x=8883;actual_y=11285;actual_vx=285;actual_vy=128;actual_angle=301;pred_x=8883.00;pred_y=11286.00;pred_vx=285.00;pred_vy=128.00;pred_angle=301.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=45;opp_timeout_left=82\nP0:turn=55;id=0;x=5982;y=6032;vx=-277;vy=-378;angle=281;target_cp=1;action=200;target_x=6401;target_y=4912;opp_id=2;opp_x=6401;opp_y=4912;opp_vx=-125;opp_vy=-244;opp_angle=314;opp_target_cp=3\nP1:turn=55;id=1;x=8883;y=11285;vx=285;vy=128;angle=301;target_cp=1;action=200;target_x=14738;target_y=3279;opp_id=3;opp_x=8643;opp_y=5080;opp_vx=-141;opp_vy=-252;opp_angle=289;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 112\n6364.0 4621.0 -31 -247 100 0 6849 5334 -0.48760095371809564 0 4 1\n\"\"\n8562.0 4748.0 -68 -282 100 0 10127 5449 -0.92623364727512 0 1 2\n\"\"\n5775.0 5467.0 -175 -480 200 0 6401 4912 -1.2128086650752747 0 1 3\n\"\"\n9286.0 11252.0 342 -28 200 0 14738 3279 -0.939353759512296 0 1 4\n\"\"\n1:100 2:44\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7940, 2043) at power 100\nPod 2 of player $0 moves towards (9823, 5568) at power 100\n",
+      "stdout": "7940 2043 100\n9823 5568 100\n",
+      "view": " 113\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (6364, 4621) at power 200\nPod 2 of player $1 moves towards (7426, 2200) at power 200\n",
+      "stdout": "6364 4621 200\n7426 2200 200\n",
+      "stderr": "PRED_CHECKPOINT:turn=55;pod_id=2;actual_crossed=1;pred_crossed=1;actual_next_cp=4;pred_next_cp=4\nPRED_ASSERT:turn=55;pod_id=0;actual_x=5775;actual_y=5467;actual_vx=-175;actual_vy=-480;actual_angle=291;pred_x=5775.00;pred_y=5467.00;pred_vx=-175.00;pred_vy=-480.00;pred_angle=-69.49;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.49;diff_cp=0;my_timeout_left=44;opp_timeout_left=100\nPRED_ASSERT:turn=55;pod_id=1;actual_x=9286;actual_y=11252;actual_vx=342;actual_vy=-28;actual_angle=306;pred_x=9286.00;pred_y=11252.00;pred_vx=342.00;pred_vy=-28.00;pred_angle=-53.82;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.18;diff_cp=0;my_timeout_left=44;opp_timeout_left=100\nP0:turn=56;id=0;x=5775;y=5467;vx=-175;vy=-480;angle=291;target_cp=1;action=200;target_x=6364;target_y=4621;opp_id=2;opp_x=6364;opp_y=4621;opp_vx=-31;opp_vy=-247;opp_angle=332;opp_target_cp=4\nP1:turn=56;id=1;x=9286;y=11252;vx=342;vy=-28;angle=306;target_cp=1;action=200;target_x=7426;target_y=2200;opp_id=3;opp_x=8562;opp_y=4748;opp_vx=-68;opp_vy=-282;opp_angle=307;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 114\n6403.0 4302.0 32 -271 100 0 7940 2043 -0.801760219077075 0 4 1\n\"\"\n8576.0 4409.0 11 -288 100 0 9823 5568 -0.6120743819161407 0 1 2\n\"\"\n5714.0 4823.0 -51 -547 200 0 6364 4621 -0.9626134706481083 0 1 3\n\"\"\n9690.0 11034.0 343 -185 200 0 7426 2200 -1.2535130248712754 0 1 4\n\"\"\n1:99 2:43\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7650, 2044) at power 100\nPod 2 of player $0 moves towards (9496, 5601) at power 100\n",
+      "stdout": "7650 2044 100\n9496 5601 100\n",
+      "view": " 115\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (6403, 4302) at power 200\nPod 2 of player $1 moves towards (4858, 1401) at power 200\n",
+      "stdout": "6403 4302 200\n4858 1401 200\n",
+      "stderr": "PRED_ASSERT:turn=56;pod_id=0;actual_x=5714;actual_y=4823;actual_vx=-51;actual_vy=-547;actual_angle=305;pred_x=5714.00;pred_y=4823.00;pred_vx=-51.00;pred_vy=-547.00;pred_angle=-55.15;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.15;diff_cp=0;my_timeout_left=43;opp_timeout_left=99\nPRED_ASSERT:turn=56;pod_id=1;actual_x=9690;actual_y=11034;actual_vx=343;actual_vy=-185;actual_angle=288;pred_x=9690.00;pred_y=11034.00;pred_vx=343.00;pred_vy=-185.00;pred_angle=288.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=43;opp_timeout_left=99\nP0:turn=57;id=0;x=5714;y=4823;vx=-51;vy=-547;angle=305;target_cp=1;action=200;target_x=6403;target_y=4302;opp_id=2;opp_x=6403;opp_y=4302;opp_vx=32;opp_vy=-271;opp_angle=314;opp_target_cp=4\nP1:turn=57;id=1;x=9690;y=11034;vx=343;vy=-185;angle=288;target_cp=1;action=200;target_x=4858;target_y=1401;opp_id=3;opp_x=8576;opp_y=4409;opp_vx=11;opp_vy=-288;opp_angle=325;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 116\n6606.0 3867.0 222 -400 100 0 7650 2044 -1.0662206923747368 0 4 1\n\"\"\n8683.0 4092.0 90 -269 100 0 9496 5601 -0.2979151165571614 0 1 2\n\"\"\n5699.0 4231.0 -62 -472 200 0 6403 4302 -0.648454205289129 0 1 3\n\"\"\n10034.0 10649.0 292 -327 200 0 4858 1401 -1.5676722902302547 0 1 4\n\"\"\n1:98 2:42\n8 0.32182327401157074 2 5749 4608 0 6429 4187 213.38904725018983 94 -513\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7208, 1902) at power 100\nPod 2 of player $0 moves towards (9923, 3264) at power 98\n",
+      "stdout": "7208 1902 100\n9923 3264 98\n",
+      "view": " 117\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 moves towards (14521, 7857) at power 200\n",
+      "stdout": "6606 3867 SHIELD\n14521 7857 200\n",
+      "stderr": "PRED_COLLISION:turn=57;p1=2;p2=0;time=0.6161\nPRED_ASSERT:turn=57;pod_id=0;actual_x=5699;actual_y=4231;actual_vx=-62;actual_vy=-472;actual_angle=323;pred_x=5767.0000;pred_y=4186.0000;pred_vx=-30.0000;pred_vy=-500.0000;pred_angle=-37.10;diff_x=-68.00;diff_y=45.00;diff_vx=-32.00;diff_vy=28.00;diff_angle=0.10;diff_cp=0;my_timeout_left=42;opp_timeout_left=98\nPRED_ASSERT:turn=57;pod_id=1;actual_x=10034;actual_y=10649;actual_vx=292;actual_vy=-327;actual_angle=270;pred_x=10033.00;pred_y=10649.00;pred_vx=291.00;pred_vy=-327.00;pred_angle=270.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=42;opp_timeout_left=98\nP0:turn=58;id=0;x=5699;y=4231;vx=-62;vy=-472;angle=323;target_cp=1;action=SHIELD;target_x=6606;target_y=3867;opp_id=2;opp_x=6606;opp_y=3867;opp_vx=222;opp_vy=-400;opp_angle=299;opp_target_cp=4\nP1:turn=58;id=1;x=10034;y=10649;vx=292;vy=-327;angle=270;target_cp=1;action=200;target_x=14521;target_y=7857;opp_id=3;opp_x=8683;opp_y=4092;opp_vx=90;opp_vy=-269;opp_angle=343;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 118\n6857.0 3371.0 213 -421 100 0 7208 1902 -1.2735137220156034 0 4 1\n\"\"\n8855.0 3769.0 145 -274 98 0 9923 3264 -0.5887466510293119 0 1 2\n\"\"\n5637.0 3759.0 -52 -401 0 0 6606 3867 -0.38164641081949885 1 1 3\n\"\"\n10388.0 10132.0 301 -439 200 0 14521 7857 -1.2535130248712754 0 1 4\n\"\"\n1:97 2:41\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8230, 4873) at power 0\nPod 2 of player $0 moves towards (10103, 3341) at power 82\n",
+      "stdout": "8230 4873 0\n10103 3341 82\n",
+      "view": " 119\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (8204, 7287) at power 200\n",
+      "stdout": "6857 3371 200\n8204 7287 200\n",
+      "stderr": "PRED_ASSERT:turn=58;pod_id=0;actual_x=5637;actual_y=3759;actual_vx=-52;actual_vy=-401;actual_angle=338;pred_x=5637.00;pred_y=3759.00;pred_vx=-52.00;pred_vy=-401.00;pred_angle=-21.87;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.13;diff_cp=0;my_timeout_left=41;opp_timeout_left=97\nPRED_ASSERT:turn=58;pod_id=1;actual_x=10388;actual_y=10132;actual_vx=301;actual_vy=-439;actual_angle=288;pred_x=10388.00;pred_y=10132.00;pred_vx=300.00;pred_vy=-439.00;pred_angle=288.00;diff_x=0.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=41;opp_timeout_left=97\nP0:turn=59;id=0;x=5637;y=3759;vx=-52;vy=-401;angle=338;target_cp=1;action=200;target_x=6857;target_y=3371;opp_id=2;opp_x=6857;opp_y=3371;opp_vx=213;opp_vy=-421;opp_angle=287;opp_target_cp=4\nP1:turn=59;id=1;x=10388;y=10132;vx=301;vy=-439;angle=288;target_cp=1;action=200;target_x=8204;target_y=7287;opp_id=3;opp_x=8855;opp_y=3769;opp_vx=145;opp_vy=-274;opp_angle=326;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 120\n7070.0 2950.0 181 -357 0 0 8230 4873 -0.9593544566566241 0 4 1\n\"\"\n9078.0 3468.0 189 -255 82 0 10103 3341 -0.3303792951764974 0 1 2\n\"\"\n5585.0 3358.0 -44 -340 0 0 6857 3371 -0.3079174447138705 0 1 3\n\"\"\n10690.0 9493.0 256 -543 200 0 8204 7287 -1.5676722902302547 0 1 4\n\"\"\n1:96 2:40\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8231, 4873) at power 0\nPod 2 of player $0 moves towards (10256, 3437) at power 68\n",
+      "stdout": "8231 4873 0\n10256 3437 68\n",
+      "view": " 121\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "7070 2950 200\n2655 950 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=59;pod_id=0;actual_x=5585;actual_y=3358;actual_vx=-44;actual_vy=-340;actual_angle=342;pred_x=5585.00;pred_y=3358.00;pred_vx=-44.00;pred_vy=-340.00;pred_angle=-17.64;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.36;diff_cp=0;my_timeout_left=40;opp_timeout_left=96\nPRED_ASSERT:turn=59;pod_id=1;actual_x=10690;actual_y=9493;actual_vx=256;actual_vy=-543;actual_angle=270;pred_x=10689.00;pred_y=9493.00;pred_vx=255.00;pred_vy=-543.00;pred_angle=270.00;diff_x=1.00;diff_y=0.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=40;opp_timeout_left=96\nP0:turn=60;id=0;x=5585;y=3358;vx=-44;vy=-340;angle=342;target_cp=1;action=200;target_x=7070;target_y=2950;opp_id=2;opp_x=7070;opp_y=2950;opp_vx=181;opp_vy=-357;opp_angle=305;opp_target_cp=4\nP1:turn=60;id=1;x=10690;y=9493;vx=256;vy=-543;angle=270;target_cp=1;action=SHIELD;target_x=2655;target_y=950;opp_id=3;opp_x=9078;opp_y=3468;opp_vx=189;opp_vy=-255;opp_angle=341;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 122\n7251.0 2593.0 153 -303 0 0 8231 4873 -0.6451951912976448 0 4 1\n\"\"\n9335.0 3211.0 218 -218 68 0 10256 3437 -0.02630971725292219 0 1 2\n\"\"\n5541.0 3018.0 -37 -289 0 0 7070 2950 -0.26813142503493925 0 1 3\n\"\"\n10946.0 8950.0 217 -461 0 0 2655 950 -1.881831555589234 1 1 4\n\"\"\n1:95 2:39\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8229, 4872) at power 0\nPod 2 of player $0 moves towards (10390, 3553) at power 59\n",
+      "stdout": "8229 4872 0\n10390 3553 59\n",
+      "view": " 123\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "7251 2593 200\n13120 5018 200\n",
+      "stderr": "PRED_ASSERT:turn=60;pod_id=0;actual_x=5541;actual_y=3018;actual_vx=-37;actual_vy=-289;actual_angle=345;pred_x=5541.00;pred_y=3018.00;pred_vx=-37.00;pred_vy=-289.00;pred_angle=-15.36;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.36;diff_cp=0;my_timeout_left=39;opp_timeout_left=95\nPRED_ASSERT:turn=60;pod_id=1;actual_x=10946;actual_y=8950;actual_vx=217;actual_vy=-461;actual_angle=252;pred_x=10946.00;pred_y=8950.00;pred_vx=217.00;pred_vy=-461.00;pred_angle=252.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=39;opp_timeout_left=95\nP0:turn=61;id=0;x=5541;y=3018;vx=-37;vy=-289;angle=345;target_cp=1;action=200;target_x=7251;target_y=2593;opp_id=2;opp_x=7251;opp_y=2593;opp_vx=153;opp_vy=-303;opp_angle=323;opp_target_cp=4\nP1:turn=61;id=1;x=10946;y=8950;vx=217;vy=-461;angle=252;target_cp=1;action=200;target_x=13120;target_y=5018;opp_id=3;opp_x=9335;opp_y=3211;opp_vx=218;opp_vy=-218;opp_angle=358;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 124\n7404.0 2290.0 130 -257 0 0 8229 4872 -0.3310359259386655 0 4 1\n\"\"\n9610.0 3010.0 233 -171 59 0 10390 3553 0.2878495481060571 0 1 2\n\"\"\n5504.0 2729.0 -31 -245 0 0 7251 2593 -0.24360220150477047 0 1 3\n\"\"\n11163.0 8489.0 184 -391 0 0 13120 5018 -1.5676722902302547 0 1 4\n\"\"\n1:94 2:38\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8230, 4873) at power 0\nPod 2 of player $0 moves towards (10509, 3692) at power 55\n",
+      "stdout": "8230 4873 0\n10509 3692 55\n",
+      "view": " 125\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7404, 2290) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "7404 2290 200\n11912 1354 200\n",
+      "stderr": "PRED_ASSERT:turn=61;pod_id=0;actual_x=5504;actual_y=2729;actual_vx=-31;actual_vy=-245;actual_angle=346;pred_x=5504.00;pred_y=2729.00;pred_vx=-31.00;pred_vy=-245.00;pred_angle=-13.96;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.04;diff_cp=0;my_timeout_left=38;opp_timeout_left=94\nPRED_ASSERT:turn=61;pod_id=1;actual_x=11163;actual_y=8489;actual_vx=184;actual_vy=-391;actual_angle=270;pred_x=11163.00;pred_y=8489.00;pred_vx=184.00;pred_vy=-391.00;pred_angle=270.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=38;opp_timeout_left=94\nP0:turn=62;id=0;x=5504;y=2729;vx=-31;vy=-245;angle=346;target_cp=1;action=200;target_x=7404;target_y=2290;opp_id=2;opp_x=7404;opp_y=2290;opp_vx=130;opp_vy=-257;opp_angle=341;opp_target_cp=4\nP1:turn=62;id=1;x=11163;y=8489;vx=184;vy=-391;angle=270;target_cp=1;action=200;target_x=11912;target_y=1354;opp_id=3;opp_x=9610;opp_y=3010;opp_vx=233;opp_vy=-171;opp_angle=16;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 126\n7534.0 2033.0 110 -218 0 0 8230 4873 -0.016876660579686176 0 4 1\n\"\"\n9888.0 2870.0 236 -118 55 0 10509 3692 0.6020088134650364 0 1 2\n\"\"\n5668.0 2439.0 139 -246 200 0 7404 2290 -0.22706790289614628 0 1 4\n\"\"\n11347.0 8098.0 156 -332 0 0 11912 1354 -1.4662039287426536 0 1 3\n\"\"\n1:93 2:37\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8229, 4872) at power 0\nPod 2 of player $0 moves towards (10615, 3865) at power 55\n",
+      "stdout": "8229 4872 0\n10615 3865 55\n",
+      "view": " 127\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7534, 2033) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "7534 2033 200\n13310 6533 200\n",
+      "stderr": "PRED_ASSERT:turn=62;pod_id=0;actual_x=5668;actual_y=2439;actual_vx=139;actual_vy=-246;actual_angle=347;pred_x=5668.00;pred_y=2439.00;pred_vx=139.00;pred_vy=-246.00;pred_angle=-13.01;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.01;diff_cp=0;my_timeout_left=37;opp_timeout_left=93\nPRED_ASSERT:turn=62;pod_id=1;actual_x=11347;actual_y=8098;actual_vx=156;actual_vy=-332;actual_angle=276;pred_x=11347.00;pred_y=8098.00;pred_vx=156.00;pred_vy=-332.00;pred_angle=-84.01;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.01;diff_cp=0;my_timeout_left=37;opp_timeout_left=93\nP0:turn=63;id=0;x=5668;y=2439;vx=139;vy=-246;angle=347;target_cp=1;action=200;target_x=7534;target_y=2033;opp_id=2;opp_x=7534;opp_y=2033;opp_vx=110;opp_vy=-218;opp_angle=359;opp_target_cp=4\nP1:turn=63;id=1;x=11347;y=8098;vx=156;vy=-332;angle=276;target_cp=1;action=200;target_x=13310;target_y=6533;opp_id=3;opp_x=9888;opp_y=2870;opp_vx=236;opp_vy=-118;opp_angle=34;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 128\n7644.0 1815.0 93 -185 0 0 8229 4872 0.29728260477929314 0 4 1\n\"\"\n10157.0 2796.0 229 -63 55 0 10615 3865 0.9161680788240157 0 1 2\n\"\"\n6002.0 2150.0 284 -245 200 0 7534 2033 -0.2142386670094815 0 1 4\n\"\"\n11503.0 7766.0 132 -282 0 0 13310 6533 -1.1520446633836743 0 1 3\n\"\"\n1:92 2:36\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8227, 4871) at power 0\nPod 2 of player $0 moves towards (10699, 4083) at power 58\n",
+      "stdout": "8227 4871 0\n10699 4083 58\n",
+      "view": " 129\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7644, 1815) at power 200\nPod 2 of player $1 moves towards (11086, 3143) at power 200\n",
+      "stdout": "7644 1815 200\n11086 3143 200\n",
+      "stderr": "PRED_ASSERT:turn=63;pod_id=0;actual_x=6002;actual_y=2150;actual_vx=284;actual_vy=-245;actual_angle=348;pred_x=6002.00;pred_y=2150.00;pred_vx=284.00;pred_vy=-245.00;pred_angle=-12.27;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.27;diff_cp=0;my_timeout_left=36;opp_timeout_left=92\nPRED_ASSERT:turn=63;pod_id=1;actual_x=11503;actual_y=7766;actual_vx=132;actual_vy=-282;actual_angle=294;pred_x=11503.00;pred_y=7766.00;pred_vx=132.00;pred_vy=-282.00;pred_angle=294.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=36;opp_timeout_left=92\nP0:turn=64;id=0;x=6002;y=2150;vx=284;vy=-245;angle=348;target_cp=1;action=200;target_x=7644;target_y=1815;opp_id=2;opp_x=7644;opp_y=1815;opp_vx=93;opp_vy=-185;opp_angle=17;opp_target_cp=4\nP1:turn=64;id=1;x=11503;y=7766;vx=132;vy=-282;angle=294;target_cp=1;action=200;target_x=11086;target_y=3143;opp_id=3;opp_x=10157;opp_y=2796;opp_vx=229;opp_vy=-63;opp_angle=52;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 130\n7737.0 1630.0 79 -157 0 0 8227 4871 0.6114418701382724 0 4 1\n\"\"\n10409.0 2786.0 213 -8 58 0 10699 4083 1.1722044101500895 0 1 2\n\"\"\n6482.0 1865.0 407 -242 200 0 7644 1815 -0.201257448199072 0 1 4\n\"\"\n11656.0 7285.0 129 -408 200 0 11086 3143 -1.4662039287426536 0 1 3\n\"\"\n1:91 2:35\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8228, 4872) at power 0\nPod 2 of player $0 moves towards (10741, 4356) at power 64\n",
+      "stdout": "8228 4872 0\n10741 4356 64\n",
+      "view": " 131\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7737, 1630) at power 200\nPod 2 of player $1 moves towards (2941, 3287) at power 200\n",
+      "stdout": "7737 1630 200\n2941 3287 200\n",
+      "stderr": "PRED_ASSERT:turn=64;pod_id=0;actual_x=6482;actual_y=1865;actual_vx=407;actual_vy=-242;actual_angle=348;pred_x=6482.00;pred_y=1865.00;pred_vx=407.00;pred_vy=-242.00;pred_angle=-11.53;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.47;diff_cp=0;my_timeout_left=35;opp_timeout_left=91\nPRED_ASSERT:turn=64;pod_id=1;actual_x=11656;actual_y=7285;actual_vx=129;actual_vy=-408;actual_angle=276;pred_x=11656.00;pred_y=7285.00;pred_vx=129.00;pred_vy=-408.00;pred_angle=276.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=35;opp_timeout_left=91\nP0:turn=65;id=0;x=6482;y=1865;vx=407;vy=-242;angle=348;target_cp=1;action=200;target_x=7737;target_y=1630;opp_id=2;opp_x=7737;opp_y=1630;opp_vx=79;opp_vy=-157;opp_angle=35;opp_target_cp=4\nP1:turn=65;id=1;x=11656;y=7285;vx=129;vy=-408;angle=276;target_cp=1;action=200;target_x=2941;target_y=3287;opp_id=3;opp_x=10409;opp_y=2786;opp_vx=213;opp_vy=-8;opp_angle=67;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 132\n7876.0 1463.0 518 -205 0 0 8228 4872 0.9256011354972518 0 4 1\n\"\"\n10635.0 2841.0 192 46 64 0 10741 4356 1.3624014549889147 0 1 2\n\"\"\n7025.0 1596.0 62 -164 200 0 7737 1630 -0.18510739190555509 0 1 4\n\"\"\n11743.0 6681.0 74 -513 200 0 2941 3287 -1.780363194101633 0 1 3\n\"\"\n1:90 2:34\n9 0.8866916287007939 2 7017 1618 0 7807 1491 537.2679751764209 341 -218\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6675, 1294) at power 100\nPod 2 of player $0 moves towards (10708, 4681) at power 74\n",
+      "stdout": "6675 1294 100\n10708 4681 74\n",
+      "view": " 133\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (7876, 1463) at power 200\nPod 2 of player $1 moves towards (6119, 7704) at power 200\n",
+      "stdout": "7876 1463 200\n6119 7704 200\n",
+      "stderr": "PRED_ASSERT:turn=65;pod_id=0;actual_x=7025;actual_y=1596;actual_vx=62;actual_vy=-164;actual_angle=349;pred_x=7086.00;pred_y=1586.00;pred_vx=513.00;pred_vy=-236.00;pred_angle=-10.61;diff_x=-61.00;diff_y=10.00;diff_vx=-451.00;diff_vy=72.00;diff_angle=-0.39;diff_cp=0;my_timeout_left=34;opp_timeout_left=90\nPRED_ASSERT:turn=65;pod_id=1;actual_x=11743;actual_y=6681;actual_vx=74;actual_vy=-513;actual_angle=258;pred_x=11743.00;pred_y=6681.00;pred_vx=74.00;pred_vy=-513.00;pred_angle=258.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=34;opp_timeout_left=90\nP0:turn=66;id=0;x=7025;y=1596;vx=62;vy=-164;angle=349;target_cp=1;action=200;target_x=7876;target_y=1463;opp_id=2;opp_x=7876;opp_y=1463;opp_vx=518;opp_vy=-205;opp_angle=53;opp_target_cp=4\nP1:turn=66;id=1;x=11743;y=6681;vx=74;vy=-513;angle=258;target_cp=1;action=200;target_x=6119;target_y=7704;opp_id=3;opp_x=10635;opp_y=2841;opp_vx=192;opp_vy=46;opp_angle=78;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 134\n8427.0 1353.0 467 -93 100 0 6675 1294 1.239760400856231 0 4 1\n\"\"\n10830.0 2961.0 165 101 74 0 10708 4681 1.5311432099507292 0 1 2\n\"\"\n7285.0 1401.0 220 -165 200 0 7876 1463 -0.15503258807225698 0 1 4\n\"\"\n11717.0 5995.0 -22 -583 200 0 6119 7704 -2.094522459460612 0 1 3\n\"\"\n1:89 2:33\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8967, 618) at power 54\nPod 2 of player $0 moves towards (10565, 5028) at power 87\n",
+      "stdout": "8967 618 54\n10565 5028 87\n",
+      "view": " 135\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8427, 1353) at power 200\nPod 2 of player $1 moves towards (4602, 2631) at power 200\n",
+      "stdout": "8427 1353 200\n4602 2631 200\n",
+      "stderr": "PRED_ASSERT:turn=66;pod_id=0;actual_x=7285;actual_y=1401;actual_vx=220;actual_vy=-165;actual_angle=351;pred_x=7285.00;pred_y=1401.00;pred_vx=220.00;pred_vy=-165.00;pred_angle=-8.88;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.12;diff_cp=0;my_timeout_left=33;opp_timeout_left=89\nPRED_ASSERT:turn=66;pod_id=1;actual_x=11717;actual_y=5995;actual_vx=-22;actual_vy=-583;actual_angle=240;pred_x=11717.00;pred_y=5995.00;pred_vx=-22.00;pred_vy=-583.00;pred_angle=240.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=33;opp_timeout_left=89\nP0:turn=67;id=0;x=7285;y=1401;vx=220;vy=-165;angle=351;target_cp=1;action=200;target_x=8427;target_y=1353;opp_id=2;opp_x=8427;opp_y=1353;opp_vx=467;opp_vy=-93;opp_angle=71;opp_target_cp=4\nP1:turn=67;id=1;x=11717;y=5995;vx=-22;vy=-583;angle=240;target_cp=1;action=200;target_x=4602;target_y=2631;opp_id=3;opp_x=10830;opp_y=2961;opp_vx=165;opp_vy=101;opp_angle=88;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 136\n8926.0 1303.0 424 -42 54 0 8967 618 0.9256011354972518 0 4 1\n\"\"\n10984.0 3148.0 130 159 87 0 10565 5028 1.698305885010135 0 1 2\n\"\"\n7705.0 1228.0 356 -147 200 0 8427 1353 -0.04200679819670231 0 1 4\n\"\"\n11546.0 5278.0 -145 -609 200 0 4602 2631 -2.4086817248195915 0 1 3\n\"\"\n1:88 2:32\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8985, 734) at power 37\nPod 2 of player $0 moves towards (8782, 3473) at power 100\n",
+      "stdout": "8985 734 37\n8782 3473 100\n",
+      "view": " 137\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8926, 1303) at power 200\nPod 2 of player $1 moves towards (9005, 4944) at power 200\n",
+      "stdout": "8926 1303 200\n9005 4944 200\n",
+      "stderr": "PRED_ASSERT:turn=67;pod_id=0;actual_x=7705;actual_y=1228;actual_vx=356;actual_vy=-147;actual_angle=358;pred_x=7705.00;pred_y=1228.00;pred_vx=356.00;pred_vy=-147.00;pred_angle=-2.41;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.41;diff_cp=0;my_timeout_left=32;opp_timeout_left=88\nPRED_ASSERT:turn=67;pod_id=1;actual_x=11546;actual_y=5278;actual_vx=-145;actual_vy=-609;actual_angle=222;pred_x=11546.00;pred_y=5278.00;pred_vx=-145.00;pred_vy=-609.00;pred_angle=222.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=32;opp_timeout_left=88\nP0:turn=68;id=0;x=7705;y=1228;vx=356;vy=-147;angle=358;target_cp=1;action=200;target_x=8926;target_y=1303;opp_id=2;opp_x=8926;opp_y=1303;opp_vx=424;opp_vy=-42;opp_angle=53;opp_target_cp=4\nP1:turn=68;id=1;x=11546;y=5278;vx=-145;vy=-609;angle=222;target_cp=1;action=200;target_x=9005;target_y=4944;opp_id=3;opp_x=10984;opp_y=3148;opp_vx=130;opp_vy=159;opp_angle=97;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 138\n9380.0 1282.0 386 -17 37 0 8985 734 0.6114418701382724 0 4 1\n\"\"\n11071.0 3397.0 74 211 100 0 8782 3473 2.012465150369114 0 1 3\n\"\"\n8261.0 1093.0 472 -114 200 0 8926 1303 0.061347982808496064 0 1 4\n\"\"\n11218.0 4588.0 -278 -586 200 0 9005 4944 -2.722840990178571 0 1 2\n\"\"\n1:87 2:31\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8989, 800) at power 33\nPod 2 of player $0 moves towards (9144, 3269) at power 100\n",
+      "stdout": "8989 800 33\n9144 3269 100\n",
+      "view": " 139\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 moves towards (15509, 3507) at power 200\n",
+      "stdout": "9380 1282 SHIELD\n15509 3507 200\n",
+      "stderr": "PRED_ASSERT:turn=68;pod_id=0;actual_x=8261;actual_y=1093;actual_vx=472;actual_vy=-114;actual_angle=4;pred_x=8261.00;pred_y=1093.00;pred_vx=472.00;pred_vy=-114.00;pred_angle=3.51;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.49;diff_cp=0;my_timeout_left=31;opp_timeout_left=87\nPRED_ASSERT:turn=68;pod_id=1;actual_x=11218;actual_y=4588;actual_vx=-278;actual_vy=-586;actual_angle=204;pred_x=11218.00;pred_y=4588.00;pred_vx=-278.00;pred_vy=-586.00;pred_angle=204.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=31;opp_timeout_left=87\nP0:turn=69;id=0;x=8261;y=1093;vx=472;vy=-114;angle=4;target_cp=1;action=SHIELD;target_x=9380;target_y=1282;opp_id=2;opp_x=9380;opp_y=1282;opp_vx=386;opp_vy=-17;opp_angle=35;opp_target_cp=4\nP1:turn=69;id=1;x=11218;y=4588;vx=-278;vy=-586;angle=204;target_cp=1;action=200;target_x=15509;target_y=3507;opp_id=3;opp_x=11071;opp_y=3397;opp_vx=74;opp_vy=211;opp_angle=115;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 140\n9798.0 1275.0 354 -6 33 0 8989 800 0.29728260477929314 0 4 1\n\"\"\n11093.0 3076.0 27 -601 100 0 9144 3269 2.3266244157280935 0 1 3\n\"\"\n8733.0 979.0 401 -96 0 0 9380 1282 0.16732164226919896 1 1 4\n\"\"\n10775.0 4473.0 -385 230 200 0 15509 3507 -2.4086817248195915 0 1 2\n\"\"\n1:86 2:30\n10 0.3898929039377231 3 11052 4307 1 11073 3508 991.6288557538248 -211 -218\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8990, 832) at power 31\nPod 2 of player $0 moves towards (9595, 3203) at power 52\n",
+      "stdout": "8990 832 31\n9595 3203 52\n",
+      "view": " 141\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "9798 1275 200\n8417 345 SHIELD\n",
+      "stderr": "PRED_COLLISION:turn=69;p1=3;p2=1;time=0.3631\nPRED_ASSERT:turn=69;pod_id=0;actual_x=8733;actual_y=979;actual_vx=401;actual_vy=-96;actual_angle=10;pred_x=8733.0000;pred_y=979.0000;pred_vx=401.0000;pred_vy=-96.0000;pred_angle=9.59;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.41;diff_cp=0;my_timeout_left=30;opp_timeout_left=86\nPRED_ASSERT:turn=69;pod_id=1;actual_x=10775;actual_y=4473;actual_vx=-385;actual_vy=230;actual_angle=222;pred_x=10804.00;pred_y=4558.00;pred_vx=-345.00;pred_vy=309.00;pred_angle=222.00;diff_x=-29.00;diff_y=-85.00;diff_vx=-40.00;diff_vy=-79.00;diff_angle=0.00;diff_cp=0;my_timeout_left=30;opp_timeout_left=86\nP0:turn=70;id=0;x=8733;y=979;vx=401;vy=-96;angle=10;target_cp=1;action=200;target_x=9798;target_y=1275;opp_id=2;opp_x=9798;opp_y=1275;opp_vx=354;opp_vy=-6;opp_angle=17;opp_target_cp=4\nP1:turn=70;id=1;x=10775;y=4473;vx=-385;vy=230;angle=222;target_cp=1;action=SHIELD;target_x=8417;target_y=345;opp_id=3;opp_x=11093;opp_y=3076;opp_vx=27;opp_vy=-601;opp_angle=133;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 142\n10183.0 1268.0 327 -5 31 0 8990 832 -0.016876660579686176 0 4 1\n\"\"\n11074.0 2500.0 -15 -489 52 0 9595 3203 2.640783681087073 0 1 3\n\"\"\n9134.0 883.0 340 -81 0 0 9798 1275 0.2710921287877616 0 1 4\n\"\"\n10390.0 4703.0 -327 195 0 0 8417 345 -2.094522459460612 1 1 2\n\"\"\n1:85 2:29\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8990, 834) at power 31\nPod 2 of player $0 moves towards (9505, 3202) at power 46\n",
+      "stdout": "8990 834 31\n9505 3202 46\n",
+      "view": " 143\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "10183 1268 BOOST\n4508 1492 200\n",
+      "stderr": "PRED_ASSERT:turn=70;pod_id=0;actual_x=9134;actual_y=883;actual_vx=340;actual_vy=-81;actual_angle=16;pred_x=9134.00;pred_y=883.00;pred_vx=340.00;pred_vy=-81.00;pred_angle=15.53;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.47;diff_cp=0;my_timeout_left=29;opp_timeout_left=85\nPRED_ASSERT:turn=70;pod_id=1;actual_x=10390;actual_y=4703;actual_vx=-327;actual_vy=195;actual_angle=240;pred_x=10390.00;pred_y=4703.00;pred_vx=-327.00;pred_vy=195.00;pred_angle=240.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.00;diff_cp=0;my_timeout_left=29;opp_timeout_left=85\nP0:turn=71;id=0;x=9134;y=883;vx=340;vy=-81;angle=16;target_cp=1;action=BOOST;target_x=10183;target_y=1268;opp_id=2;opp_x=10183;opp_y=1268;opp_vx=327;opp_vy=-5;opp_angle=359;opp_target_cp=4\nP1:turn=71;id=1;x=10390;y=4703;vx=-327;vy=195;angle=240;target_cp=1;action=200;target_x=4508;target_y=1492;opp_id=3;opp_x=11074;opp_y=2500;opp_vx=-15;opp_vy=-489;opp_angle=151;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 144\n10539.0 1253.0 302 -12 31 0 8990 834 -0.3310359259386655 0 4 1\n\"\"\n11017.0 2030.0 -48 -399 46 0 9505 3202 2.7208873792513493 0 1 3\n\"\"\n9474.0 802.0 289 -68 0 0 10183 1268 0.35175287409463096 0 1 4\n\"\"\n10063.0 4898.0 -277 165 0 0 4508 1492 -2.4086817248195915 0 1 2\n\"\"\n1:84 2:28\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8990, 805) at power 31\nPod 2 of player $0 moves towards (9398, 3210) at power 45\n",
+      "stdout": "8990 805 31\n9398 3210 45\n",
+      "view": " 145\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "10539 1253 200\n7785 7886 200\n",
+      "stderr": "PRED_ASSERT:turn=71;pod_id=0;actual_x=9474;actual_y=802;actual_vx=289;actual_vy=-68;actual_angle=20;pred_x=9474.00;pred_y=802.00;pred_vx=289.00;pred_vy=-68.00;pred_angle=20.15;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.15;diff_cp=0;my_timeout_left=28;opp_timeout_left=84\nPRED_ASSERT:turn=71;pod_id=1;actual_x=10063;actual_y=4898;actual_vx=-277;actual_vy=165;actual_angle=222;pred_x=10063.00;pred_y=4898.00;pred_vx=-277.00;pred_vy=165.00;pred_angle=222.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=28;opp_timeout_left=84\nP0:turn=72;id=0;x=9474;y=802;vx=289;vy=-68;angle=20;target_cp=1;action=200;target_x=10539;target_y=1253;opp_id=2;opp_x=10539;opp_y=1253;opp_vx=302;opp_vy=-12;opp_angle=341;opp_target_cp=4\nP1:turn=72;id=1;x=10063;y=4898;vx=-277;vy=165;angle=222;target_cp=1;action=200;target_x=7785;target_y=7886;opp_id=3;opp_x=11017;opp_y=2030;opp_vx=-48;opp_vy=-399;opp_angle=156;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 146\n10679.0 884.0 73 -396 31 0 8990 805 -0.6451951912976448 0 4 1\n\"\"\n11119.0 1996.0 132 53 45 0 9398 3210 2.511768806891593 0 1 3\n\"\"\n9763.0 734.0 245 -57 0 0 10539 1253 0.40057755328780514 0 1 4\n\"\"\n9786.0 5063.0 -235 140 0 0 7785 7886 -2.722840990178571 0 1 2\n\"\"\n1:83 2:27\n11 0.22339535522737136 1 10998 1947 0 10612 1246 497.84293198835144 121 -202\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8008, -327) at power 88\nPod 2 of player $0 moves towards (10655, 4849) at power 86\n",
+      "stdout": "8008 -327 88\n10655 4849 86\n",
+      "view": " 147\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10679, 884) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "10679 884 200\n6394 4225 200\n",
+      "stderr": "PRED_COLLISION:turn=72;p1=3;p2=2;time=0.2553\nPRED_ASSERT:turn=72;pod_id=0;actual_x=9763;actual_y=734;actual_vx=245;actual_vy=-57;actual_angle=23;pred_x=9763.0000;pred_y=734.0000;pred_vx=245.0000;pred_vy=-57.0000;pred_angle=22.95;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.05;diff_cp=0;my_timeout_left=27;opp_timeout_left=83\nPRED_ASSERT:turn=72;pod_id=1;actual_x=9786;actual_y=5063;actual_vx=-235;actual_vy=140;actual_angle=204;pred_x=9786.00;pred_y=5063.00;pred_vx=-235.00;pred_vy=140.00;pred_angle=204.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=27;opp_timeout_left=83\nP0:turn=73;id=0;x=9763;y=734;vx=245;vy=-57;angle=23;target_cp=1;action=200;target_x=10679;target_y=884;opp_id=2;opp_x=10679;opp_y=884;opp_vx=73;opp_vy=-396;opp_angle=323;opp_target_cp=4\nP1:turn=73;id=1;x=9786;y=5063;vx=-235;vy=140;angle=204;target_cp=1;action=200;target_x=6394;target_y=4225;opp_id=3;opp_x=11119;opp_y=1996;opp_vx=132;opp_vy=53;opp_angle=144;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 148\n11001.0 413.0 370 -401 88 0 8008 -327 -0.9593544566566241 0 4 1\n\"\"\n11201.0 2119.0 69 104 86 0 10655 4849 2.197609541532614 0 1 3\n\"\"\n10007.0 712.0 110 -17 200 0 10679 884 0.16231482031768538 0 1 4\n\"\"\n9551.0 5203.0 -199 119 0 0 6394 4225 -2.8993906041798176 0 1 2\n\"\"\n1:82 2:26\n12 0.3640572642180092 2 9924 725 0 10724 714 312.4962308854832 283 -246\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8604, -28) at power 45\nPod 2 of player $0 moves towards (8878, 3402) at power 100\n",
+      "stdout": "8604 -28 45\n8878 3402 100\n",
+      "view": " 149\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 moves towards (12520, 8252) at power 200\n",
+      "stdout": "11001 413 SHIELD\n12520 8252 200\n",
+      "stderr": "PRED_COLLISION:turn=73;p1=2;p2=0;time=0.4852\nPRED_ASSERT:turn=73;pod_id=0;actual_x=10007;actual_y=712;actual_vx=110;actual_vy=-17;actual_angle=9;pred_x=10099.0000;pred_y=724.0000;pred_vx=199.0000;pred_vy=3.0000;pred_angle=9.30;diff_x=-92.00;diff_y=-12.00;diff_vx=-89.00;diff_vy=-20.00;diff_angle=-0.30;diff_cp=0;my_timeout_left=26;opp_timeout_left=82\nPRED_ASSERT:turn=73;pod_id=1;actual_x=9551;actual_y=5203;actual_vx=-199;actual_vy=119;actual_angle=194;pred_x=9551.00;pred_y=5203.00;pred_vx=-199.00;pred_vy=119.00;pred_angle=-166.12;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.12;diff_cp=0;my_timeout_left=26;opp_timeout_left=82\nP0:turn=74;id=0;x=10007;y=712;vx=110;vy=-17;angle=9;target_cp=1;action=SHIELD;target_x=11001;target_y=413;opp_id=2;opp_x=11001;opp_y=413;opp_vx=370;opp_vy=-401;opp_angle=305;opp_target_cp=4\nP1:turn=74;id=1;x=9551;y=5203;vx=-199;vy=119;angle=194;target_cp=1;action=200;target_x=12520;target_y=8252;opp_id=3;opp_x=11201;opp_y=2119;opp_vx=69;opp_vy=104;opp_angle=126;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 150\n11384.0 -31.0 325 -377 45 0 8604 -28 -1.2735137220156034 0 4 1\n\"\"\n11189.0 2282.0 -10 138 100 0 8878 3402 2.511768806891593 0 1 3\n\"\"\n10117.0 695.0 93 -14 0 0 11001 413 -0.15184444504129394 1 1 4\n\"\"\n9153.0 5336.0 -338 113 200 0 12520 8252 -3.213549869538797 0 1 2\n\"\"\n1:81 2:25\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8574, -55) at power 42\nPod 2 of player $0 moves towards (9628, 3205) at power 100\n",
+      "stdout": "8574 -55 42\n9628 3205 100\n",
+      "view": " 151\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (14186, 1087) at power 200\n",
+      "stdout": "11384 -31 200\n14186 1087 200\n",
+      "stderr": "PRED_ASSERT:turn=74;pod_id=0;actual_x=10117;actual_y=695;actual_vx=93;actual_vy=-14;actual_angle=351;pred_x=10117.00;pred_y=695.00;pred_vx=93.00;pred_vy=-14.00;pred_angle=-9.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=25;opp_timeout_left=81\nPRED_ASSERT:turn=74;pod_id=1;actual_x=9153;actual_y=5336;actual_vx=-338;actual_vy=113;actual_angle=176;pred_x=9152.00;pred_y=5336.00;pred_vx=-338.00;pred_vy=113.00;pred_angle=176.00;diff_x=1.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=25;opp_timeout_left=81\nP0:turn=75;id=0;x=10117;y=695;vx=93;vy=-14;angle=351;target_cp=1;action=200;target_x=11384;target_y=-31;opp_id=2;opp_x=11384;opp_y=-31;opp_vx=325;opp_vy=-377;opp_angle=287;opp_target_cp=4\nP1:turn=75;id=1;x=9153;y=5336;vx=-338;vy=113;angle=176;target_cp=1;action=200;target_x=14186;target_y=1087;opp_id=3;opp_x=11189;opp_y=2282;opp_vx=-10;opp_vy=138;opp_angle=144;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 152\n11708.0 -450.0 275 -356 42 0 8574 -55 -1.5876729873745827 0 4 1\n\"\"\n11093.0 2471.0 -81 160 100 0 9628 3205 2.6076039328368097 0 1 3\n\"\"\n10210.0 681.0 79 -11 0 0 11384 -31 -0.4660037104002732 0 1 4\n\"\"\n8621.0 5401.0 -452 55 200 0 14186 1087 -2.8993906041798176 0 1 2\n\"\"\n1:80 2:24\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8524, -96) at power 41\nPod 2 of player $0 moves towards (10083, 3331) at power 100\n",
+      "stdout": "8524 -96 41\n10083 3331 100\n",
+      "view": " 153\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (76, 180) at power 200\n",
+      "stdout": "11708 -450 200\n76 180 200\n",
+      "stderr": "PRED_ASSERT:turn=75;pod_id=0;actual_x=10210;actual_y=681;actual_vx=79;actual_vy=-11;actual_angle=333;pred_x=10210.00;pred_y=681.00;pred_vx=79.00;pred_vy=-11.00;pred_angle=333.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=24;opp_timeout_left=80\nPRED_ASSERT:turn=75;pod_id=1;actual_x=8621;actual_y=5401;actual_vx=-452;actual_vy=55;actual_angle=194;pred_x=8621.00;pred_y=5401.00;pred_vx=-452.00;pred_vy=54.00;pred_angle=194.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=24;opp_timeout_left=80\nP0:turn=76;id=0;x=10210;y=681;vx=79;vy=-11;angle=333;target_cp=1;action=200;target_x=11708;target_y=-450;opp_id=2;opp_x=11708;opp_y=-450;opp_vx=275;opp_vy=-356;opp_angle=269;opp_target_cp=4\nP1:turn=76;id=1;x=8621;y=5401;vx=-452;vy=55;angle=194;target_cp=1;action=200;target_x=76;target_y=180;opp_id=3;opp_x=11093;opp_y=2471;opp_vx=-81;opp_vy=160;opp_angle=149;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 154\n11970.0 -845.0 222 -335 41 0 8524 -96 -1.901832252733562 0 4 1\n\"\"\n10936.0 2696.0 -133 191 100 0 10083 3331 2.436237015752604 0 1 3\n\"\"\n10289.0 670.0 67 -9 0 0 11708 -450 -0.6466976882092386 0 1 4\n\"\"\n7998.0 5352.0 -529 -41 200 0 76 180 -2.59312372794047 0 1 2\n\"\"\n1:79 2:23\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8453, -147) at power 42\nPod 2 of player $0 moves towards (10227, 3417) at power 100\n",
+      "stdout": "8453 -147 42\n10227 3417 100\n",
+      "view": " 155\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 moves towards (11599, 2254) at power 200\n",
+      "stdout": "11970 -845 200\n11599 2254 200\n",
+      "stderr": "PRED_ASSERT:turn=76;pod_id=0;actual_x=10289;actual_y=670;actual_vx=67;actual_vy=-9;actual_angle=323;pred_x=10289.00;pred_y=670.00;pred_vx=67.00;pred_vy=-9.00;pred_angle=-37.05;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.05;diff_cp=0;my_timeout_left=23;opp_timeout_left=79\nPRED_ASSERT:turn=76;pod_id=1;actual_x=7998;actual_y=5352;actual_vx=-529;actual_vy=-41;actual_angle=211;pred_x=7998.00;pred_y=5352.00;pred_vx=-529.00;pred_vy=-41.00;pred_angle=-148.58;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.42;diff_cp=0;my_timeout_left=23;opp_timeout_left=79\nP0:turn=77;id=0;x=10289;y=670;vx=67;vy=-9;angle=323;target_cp=1;action=200;target_x=11970;target_y=-845;opp_id=2;opp_x=11970;opp_y=-845;opp_vx=222;opp_vy=-335;opp_angle=251;opp_target_cp=4\nP1:turn=77;id=1;x=7998;y=5352;vx=-529;vy=-41;angle=211;target_cp=1;action=200;target_x=11599;target_y=2254;opp_id=3;opp_x=10936;opp_y=2696;opp_vx=-133;opp_vy=191;opp_angle=140;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 156\n12167.0 -1214.0 167 -313 42 0 8453 -147 -2.215991518092541 0 4 1\n\"\"\n10733.0 2958.0 -172 222 100 0 10227 3417 2.347803078768894 0 1 2\n\"\"\n10356.0 661.0 56 -7 0 0 11970 -845 -0.7335048701119964 0 1 4\n\"\"\n7339.0 5159.0 -560 -163 200 0 11599 2254 -2.2789644625814907 0 1 3\n\"\"\n1:78 2:22\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8355, -205) at power 43\nPod 2 of player $0 moves towards (15233, 6851) at power 0\n",
+      "stdout": "8355 -205 43\n15233 6851 0\n",
+      "view": " 157\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (12167, -1214) at power 200\nPod 2 of player $1 moves towards (5510, 6698) at power 200\n",
+      "stdout": "12167 -1214 200\n5510 6698 200\n",
+      "stderr": "PRED_ASSERT:turn=77;pod_id=0;actual_x=10356;actual_y=661;actual_vx=56;actual_vy=-7;actual_angle=318;pred_x=10356.00;pred_y=661.00;pred_vx=56.00;pred_vy=-7.00;pred_angle=-42.03;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.03;diff_cp=0;my_timeout_left=22;opp_timeout_left=78\nPRED_ASSERT:turn=77;pod_id=1;actual_x=7339;actual_y=5159;actual_vx=-560;actual_vy=-163;actual_angle=229;pred_x=7338.00;pred_y=5160.00;pred_vx=-561.00;pred_vy=-163.00;pred_angle=229.00;diff_x=1.00;diff_y=-1.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=22;opp_timeout_left=78\nP0:turn=78;id=0;x=10356;y=661;vx=56;vy=-7;angle=318;target_cp=1;action=200;target_x=12167;target_y=-1214;opp_id=2;opp_x=12167;opp_y=-1214;opp_vx=167;opp_vy=-313;opp_angle=233;opp_target_cp=4\nP1:turn=78;id=1;x=7339;y=5159;vx=-560;vy=-163;angle=229;target_cp=1;action=200;target_x=5510;target_y=6698;opp_id=3;opp_x=10733;opp_y=2958;opp_vx=-172;opp_vy=222;opp_angle=135;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 158\n12299.0 -1552.0 112 -287 43 0 8355 -205 -2.5301507834515204 0 4 1\n\"\"\n10561.0 3180.0 -146 188 0 0 15233 6851 2.0336438134099146 0 1 2\n\"\"\n10551.0 510.0 165 -128 200 0 12167 -1214 -0.8027594140014382 0 1 4\n\"\"\n6608.0 4892.0 -621 -227 200 0 5510 6698 -2.59312372794047 0 1 3\n\"\"\n1:77 2:21\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8227, -264) at power 46\nPod 2 of player $0 moves towards (15235, 6852) at power 0\n",
+      "stdout": "8227 -264 46\n15235 6852 0\n",
+      "view": " 159\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 enabled its shield\nPod 2 of player $1 moves towards (10540, 130) at power 200\n",
+      "stdout": "12299 -1552 SHIELD\n10540 130 200\n",
+      "stderr": "PRED_ASSERT:turn=78;pod_id=0;actual_x=10551;actual_y=510;actual_vx=165;actual_vy=-128;actual_angle=314;pred_x=10551.00;pred_y=510.00;pred_vx=165.00;pred_vy=-128.00;pred_angle=-45.99;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.01;diff_cp=0;my_timeout_left=21;opp_timeout_left=77\nPRED_ASSERT:turn=78;pod_id=1;actual_x=6608;actual_y=4892;actual_vx=-621;actual_vy=-227;actual_angle=211;pred_x=6608.00;pred_y=4893.00;pred_vx=-621.00;pred_vy=-226.00;pred_angle=211.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=21;opp_timeout_left=77\nP0:turn=79;id=0;x=10551;y=510;vx=165;vy=-128;angle=314;target_cp=1;action=SHIELD;target_x=12299;target_y=-1552;opp_id=2;opp_x=12299;opp_y=-1552;opp_vx=112;opp_vy=-287;opp_angle=215;opp_target_cp=4\nP1:turn=79;id=1;x=6608;y=4892;vx=-621;vy=-227;angle=211;target_cp=1;action=200;target_x=10540;target_y=130;opp_id=3;opp_x=10561;opp_y=3180;opp_vx=-146;opp_vy=188;opp_angle=117;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 160\n12367.0 -1852.0 57 -255 46 0 8227 -264 -2.8443100488104998 0 4 1\n\"\"\n10415.0 3368.0 -124 159 0 0 15235 6852 1.7194845480509353 0 1 2\n\"\"\n10716.0 382.0 140 -108 0 0 12299 -1552 -0.867627026420569 1 1 4\n\"\"\n5857.0 4513.0 -638 -322 200 0 10540 130 -2.2789644625814907 0 1 3\n\"\"\n1:76 2:20\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8052, -318) at power 52\nPod 2 of player $0 moves towards (10279, 3455) at power 100\n",
+      "stdout": "8052 -318 52\n10279 3455 100\n",
+      "view": " 161\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "12367 -1852 200\n5945 4002 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=79;pod_id=0;actual_x=10716;actual_y=382;actual_vx=140;actual_vy=-108;actual_angle=310;pred_x=10716.00;pred_y=382.00;pred_vx=140.00;pred_vy=-108.00;pred_angle=-49.71;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.29;diff_cp=0;my_timeout_left=20;opp_timeout_left=76\nPRED_ASSERT:turn=79;pod_id=1;actual_x=5857;actual_y=4513;actual_vx=-638;actual_vy=-322;actual_angle=229;pred_x=5856.00;pred_y=4514.00;pred_vx=-639.00;pred_vy=-321.00;pred_angle=229.00;diff_x=1.00;diff_y=-1.00;diff_vx=1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=20;opp_timeout_left=76\nP0:turn=80;id=0;x=10716;y=382;vx=140;vy=-108;angle=310;target_cp=1;action=200;target_x=12367;target_y=-1852;opp_id=2;opp_x=12367;opp_y=-1852;opp_vx=57;opp_vy=-255;opp_angle=197;opp_target_cp=4\nP1:turn=80;id=1;x=5857;y=4513;vx=-638;vy=-322;angle=229;target_cp=1;action=SHIELD;target_x=5945;target_y=4002;opp_id=3;opp_x=10415;opp_y=3368;opp_vx=-124;opp_vy=159;opp_angle=99;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 162\n12372.0 -2106.0 4 -216 52 0 8052 -318 -3.158469314169479 0 4 1\n\"\"\n10246.0 3616.0 -143 211 100 0 10279 3455 2.0336438134099146 0 1 2\n\"\"\n10856.0 274.0 119 -91 0 0 12367 -1852 -0.934351044461028 0 1 4\n\"\"\n5219.0 4191.0 -542 -273 0 0 5945 4002 -1.9648051972225113 1 1 3\n\"\"\n1:75 2:19\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7813, -346) at power 60\nPod 2 of player $0 moves towards (15172, 6806) at power 0\n",
+      "stdout": "7813 -346 60\n15172 6806 0\n",
+      "view": " 163\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "12372 -2106 200\n9888 1454 200\n",
+      "stderr": "PRED_ASSERT:turn=80;pod_id=0;actual_x=10856;actual_y=274;actual_vx=119;actual_vy=-91;actual_angle=306;pred_x=10856.00;pred_y=274.00;pred_vx=119.00;pred_vy=-91.00;pred_angle=-53.53;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.47;diff_cp=0;my_timeout_left=19;opp_timeout_left=75\nPRED_ASSERT:turn=80;pod_id=1;actual_x=5219;actual_y=4191;actual_vx=-542;actual_vy=-273;actual_angle=247;pred_x=5219.00;pred_y=4191.00;pred_vx=-542.00;pred_vy=-273.00;pred_angle=247.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=19;opp_timeout_left=75\nP0:turn=81;id=0;x=10856;y=274;vx=119;vy=-91;angle=306;target_cp=1;action=200;target_x=12372;target_y=-2106;opp_id=2;opp_x=12372;opp_y=-2106;opp_vx=4;opp_vy=-216;opp_angle=179;opp_target_cp=4\nP1:turn=81;id=1;x=5219;y=4191;vx=-542;vy=-273;angle=247;target_cp=1;action=200;target_x=9888;target_y=1454;opp_id=3;opp_x=10246;opp_y=3616;opp_vx=-143;opp_vy=211;opp_angle=117;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 164\n12319.0 -2302.0 -44 -167 60 0 7813 -346 -3.4726285795284584 0 4 1\n\"\"\n10103.0 3827.0 -121 179 0 0 15172 6806 1.7194845480509353 0 1 2\n\"\"\n10975.0 183.0 101 -77 0 0 12372 -2106 -1.0036322321515987 0 1 3\n\"\"\n4677.0 3918.0 -460 -232 0 0 9888 1454 -1.650645931863532 0 1 4\n\"\"\n1:74 2:18\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7485, -307) at power 75\nPod 2 of player $0 moves towards (10214, 3407) at power 100\n",
+      "stdout": "7485 -307 75\n10214 3407 100\n",
+      "view": " 165\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 waits for its engine to reload\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "12319 -2302 200\n9367 369 200\n",
+      "stderr": "PRED_ASSERT:turn=81;pod_id=0;actual_x=10975;actual_y=183;actual_vx=101;actual_vy=-77;actual_angle=302;pred_x=10975.00;pred_y=183.00;pred_vx=101.00;pred_vy=-77.00;pred_angle=-57.50;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.50;diff_cp=0;my_timeout_left=18;opp_timeout_left=74\nPRED_ASSERT:turn=81;pod_id=1;actual_x=4677;actual_y=3918;actual_vx=-460;actual_vy=-232;actual_angle=265;pred_x=4677.00;pred_y=3918.00;pred_vx=-460.00;pred_vy=-232.00;pred_angle=265.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=18;opp_timeout_left=74\nP0:turn=82;id=0;x=10975;y=183;vx=101;vy=-77;angle=302;target_cp=1;action=200;target_x=12319;target_y=-2302;opp_id=2;opp_x=12319;opp_y=-2302;opp_vx=-44;opp_vy=-167;opp_angle=161;opp_target_cp=4\nP1:turn=82;id=1;x=4677;y=3918;vx=-460;vy=-232;angle=265;target_cp=1;action=200;target_x=9367;target_y=369;opp_id=3;opp_x=10103;opp_y=3827;opp_vx=-121;opp_vy=179;opp_angle=99;opp_target_cp=1\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 166\n12206.0 -2440.0 -96 -117 75 0 7485 -307 2.7501847197229132 0 4 1\n\"\"\n9998.0 4105.0 -88 235 100 0 10214 3407 1.405325282691956 0 2 2\n\"\"\n11076.0 106.0 85 -65 0 0 12319 -2302 -1.0750090126654177 0 1 3\n\"\"\n4217.0 3686.0 -391 -197 0 0 9367 369 -1.3364866665045527 0 1 4\n\"\"\n1:100 2:17\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8551, 1781) at power 100\nPod 2 of player $0 moves towards (14919, 6676) at power 100\n",
+      "stdout": "8551 1781 100\n14919 6676 100\n",
+      "view": " 167\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (12206, -2440) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "12206 -2440 200\n3875 6387 200\n",
+      "stderr": "PRED_CHECKPOINT:turn=82;pod_id=3;actual_crossed=1;pred_crossed=1;actual_next_cp=2;pred_next_cp=2\nPRED_ASSERT:turn=82;pod_id=0;actual_x=11076;actual_y=106;actual_vx=85;actual_vy=-65;actual_angle=298;pred_x=11076.00;pred_y=106.00;pred_vx=85.00;pred_vy=-65.00;pred_angle=-61.59;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.41;diff_cp=0;my_timeout_left=17;opp_timeout_left=100\nPRED_ASSERT:turn=82;pod_id=1;actual_x=4217;actual_y=3686;actual_vx=-391;actual_vy=-197;actual_angle=283;pred_x=4217.00;pred_y=3686.00;pred_vx=-391.00;pred_vy=-197.00;pred_angle=283.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=17;opp_timeout_left=100\nP0:turn=83;id=0;x=11076;y=106;vx=85;vy=-65;angle=298;target_cp=1;action=200;target_x=12206;target_y=-2440;opp_id=2;opp_x=12206;opp_y=-2440;opp_vx=-96;opp_vy=-117;opp_angle=158;opp_target_cp=4\nP1:turn=83;id=1;x=4217;y=3686;vx=-391;vy=-197;angle=283;target_cp=1;action=200;target_x=3875;target_y=6387;opp_id=3;opp_x=9998;opp_y=4105;opp_vx=-88;opp_vy=235;opp_angle=81;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 168\n12034.0 -2492.0 -146 -44 100 0 8551 1781 2.436025454363934 0 4 1\n\"\"\n9956.0 4429.0 -35 275 100 0 14919 6676 1.0911660173329767 0 2 2\n\"\"\n11242.0 -142.0 141 -210 200 0 12206 -2440 -1.1530823128380594 0 1 3\n\"\"\n3826.0 3489.0 -332 -167 0 0 3875 6387 -1.0223274011455734 0 1 4\n\"\"\n1:99 2:16\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8939, 1199) at power 100\nPod 2 of player $0 moves towards (14650, 6609) at power 100\n",
+      "stdout": "8939 1199 100\n14650 6609 100\n",
+      "view": " 169\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (12034, -2492) at power 200\nPod 2 of player $1 moves towards (3123, 7037) at power 200\n",
+      "stdout": "12034 -2492 200\n3123 7037 200\n",
+      "stderr": "PRED_ASSERT:turn=83;pod_id=0;actual_x=11242;actual_y=-142;actual_vx=141;actual_vy=-210;actual_angle=294;pred_x=11242.00;pred_y=-142.00;pred_vx=141.00;pred_vy=-210.00;pred_angle=-66.07;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.07;diff_cp=0;my_timeout_left=16;opp_timeout_left=99\nPRED_ASSERT:turn=83;pod_id=1;actual_x=3826;actual_y=3489;actual_vx=-332;actual_vy=-167;actual_angle=301;pred_x=3826.00;pred_y=3489.00;pred_vx=-332.00;pred_vy=-167.00;pred_angle=301.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=16;opp_timeout_left=99\nP0:turn=84;id=0;x=11242;y=-142;vx=141;vy=-210;angle=294;target_cp=1;action=200;target_x=12034;target_y=-2492;opp_id=2;opp_x=12034;opp_y=-2492;opp_vx=-146;opp_vy=-44;opp_angle=140;opp_target_cp=4\nP1:turn=84;id=1;x=3826;y=3489;vx=-332;vy=-167;angle=301;target_cp=1;action=200;target_x=3123;target_y=7037;opp_id=3;opp_x=9956;opp_y=4429;opp_vx=-35;opp_vy=275;opp_angle=63;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 170\n11824.0 -2459.0 -178 27 100 0 8939 1199 2.268591396851772 0 4 1\n\"\"\n9992.0 4774.0 30 293 100 0 14650 6609 0.7770067519739974 0 2 2\n\"\"\n11447.0 -542.0 174 -339 200 0 12034 -2492 -1.2457303038018437 0 1 3\n\"\"\n3646.0 3192.0 -153 -252 200 0 3123 7037 -0.7081681357865941 0 1 4\n\"\"\n1:98 2:15\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8977, 673) at power 100\nPod 2 of player $0 moves towards (14376, 6606) at power 100\n",
+      "stdout": "8977 673 100\n14376 6606 100\n",
+      "view": " 171\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11824, -2459) at power 200\nPod 2 of player $1 moves towards (9105, 4558) at power 200\n",
+      "stdout": "11824 -2459 200\n9105 4558 200\n",
+      "stderr": "PRED_ASSERT:turn=84;pod_id=0;actual_x=11447;actual_y=-542;actual_vx=174;actual_vy=-339;actual_angle=289;pred_x=11447.00;pred_y=-542.00;pred_vx=174.00;pred_vy=-339.00;pred_angle=-71.38;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.38;diff_cp=0;my_timeout_left=15;opp_timeout_left=98\nPRED_ASSERT:turn=84;pod_id=1;actual_x=3646;actual_y=3192;actual_vx=-153;actual_vy=-252;actual_angle=319;pred_x=3645.00;pred_y=3191.00;pred_vx=-153.00;pred_vy=-253.00;pred_angle=319.00;diff_x=1.00;diff_y=1.00;diff_vx=0.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=15;opp_timeout_left=98\nP0:turn=85;id=0;x=11447;y=-542;vx=174;vy=-339;angle=289;target_cp=1;action=200;target_x=11824;target_y=-2459;opp_id=2;opp_x=11824;opp_y=-2459;opp_vx=-178;opp_vy=27;opp_angle=130;opp_target_cp=4\nP1:turn=85;id=1;x=3646;y=3192;vx=-153;vy=-252;angle=319;target_cp=1;action=200;target_x=9105;target_y=4558;opp_id=3;opp_x=9992;opp_y=4774;opp_vx=30;opp_vy=293;opp_angle=45;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 172\n11579.0 -2358.0 -208 85 100 0 8977 673 2.3085637088377777 0 4 1\n\"\"\n10111.0 5112.0 101 287 100 0 14376 6606 0.46284748661501807 0 2 2\n\"\"\n11660.0 -1077.0 180 -454 200 0 11824 -2459 -1.376612962281207 0 1 3\n\"\"\n3678.0 2863.0 26 -279 200 0 9105 4558 -0.3940088704276148 0 1 4\n\"\"\n1:97 2:14\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8901, 399) at power 100\nPod 2 of player $0 moves towards (14100, 6668) at power 100\n",
+      "stdout": "8901 399 100\n14100 6668 100\n",
+      "view": " 173\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11579, -2358) at power 200\nPod 2 of player $1 moves towards (2717, 2945) at power 200\n",
+      "stdout": "11579 -2358 200\n2717 2945 200\n",
+      "stderr": "PRED_ASSERT:turn=85;pod_id=0;actual_x=11660;actual_y=-1077;actual_vx=180;actual_vy=-454;actual_angle=281;pred_x=11660.00;pred_y=-1077.00;pred_vx=180.00;pred_vy=-454.00;pred_angle=-78.87;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.13;diff_cp=0;my_timeout_left=14;opp_timeout_left=97\nPRED_ASSERT:turn=85;pod_id=1;actual_x=3678;actual_y=2863;actual_vx=26;actual_vy=-279;actual_angle=337;pred_x=3677.00;pred_y=2862.00;pred_vx=26.00;pred_vy=-280.00;pred_angle=337.00;diff_x=1.00;diff_y=1.00;diff_vx=0.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=14;opp_timeout_left=97\nP0:turn=86;id=0;x=11660;y=-1077;vx=180;vy=-454;angle=281;target_cp=1;action=200;target_x=11579;target_y=-2358;opp_id=2;opp_x=11579;opp_y=-2358;opp_vx=-208;opp_vy=85;opp_angle=132;opp_target_cp=4\nP1:turn=86;id=1;x=3678;y=2863;vx=26;vy=-279;angle=337;target_cp=1;action=200;target_x=2717;target_y=2945;opp_id=3;opp_x=10111;opp_y=5112;opp_vx=101;opp_vy=287;opp_angle=27;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 174\n11237.0 -2311.0 -439 -212 100 0 8901 399 2.341660095152635 0 4 1\n\"\"\n10305.0 5435.0 165 274 100 0 14100 6668 0.37191917439159733 0 2 2\n\"\"\n11892.0 -1621.0 346 -209 200 0 11579 -2358 -1.6339441058992286 0 1 4\n\"\"\n3856.0 2454.0 151 -347 200 0 2717 2945 -0.7081681357865941 0 1 3\n\"\"\n1:96 2:13\n13 0.7301296097008622 2 11782 -1554 0 11376 -2244 472.4198433387029 -55 -248\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8871, 1374) at power 100\nPod 2 of player $0 moves towards (13879, 6772) at power 100\n",
+      "stdout": "8871 1374 100\n13879 6772 100\n",
+      "view": " 175\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (11237, -2311) at power 200\nPod 2 of player $1 moves towards (3327, 4053) at power 200\n",
+      "stdout": "11237 -2311 200\n3327 4053 200\n",
+      "stderr": "PRED_COLLISION:turn=86;p1=2;p2=0;time=0.6923\nPRED_ASSERT:turn=86;pod_id=0;actual_x=11892;actual_y=-1621;actual_vx=346;actual_vy=-209;actual_angle=266;pred_x=11904.0000;pred_y=-1613.0000;pred_vx=355.0000;pred_vy=-229.0000;pred_angle=-93.62;diff_x=-12.00;diff_y=-8.00;diff_vx=-9.00;diff_vy=20.00;diff_angle=-0.38;diff_cp=0;my_timeout_left=13;opp_timeout_left=96\nPRED_ASSERT:turn=86;pod_id=1;actual_x=3856;actual_y=2454;actual_vx=151;actual_vy=-347;actual_angle=319;pred_x=3855.00;pred_y=2453.00;pred_vx=150.00;pred_vy=-348.00;pred_angle=319.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=13;opp_timeout_left=96\nP0:turn=87;id=0;x=11892;y=-1621;vx=346;vy=-209;angle=266;target_cp=1;action=200;target_x=11237;target_y=-2311;opp_id=2;opp_x=11237;opp_y=-2311;opp_vx=-439;opp_vy=-212;opp_angle=134;opp_target_cp=4\nP1:turn=87;id=1;x=3856;y=2454;vx=151;vy=-347;angle=319;target_cp=1;action=200;target_x=3327;target_y=4053;opp_id=3;opp_x=10305;opp_y=5435;opp_vx=165;opp_vy=274;opp_angle=21;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 176\n10744.0 -2439.0 -419 -108 100 0 8871 1374 2.1415712689566724 0 4 1\n\"\"\n10564.0 5744.0 219 262 100 0 13879 6772 0.3579731978144079 0 2 2\n\"\"\n12164.0 -2016.0 231 -335 200 0 11237 -2311 -1.9481033712582079 0 1 4\n\"\"\n4192.0 2030.0 285 -360 200 0 3327 4053 -0.3940088704276148 0 1 3\n\"\"\n1:95 2:12\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8953, 1152) at power 100\nPod 2 of player $0 moves towards (13729, 6879) at power 100\n",
+      "stdout": "8953 1152 100\n13729 6879 100\n",
+      "view": " 177\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10744, -2439) at power 200\nPod 2 of player $1 moves towards (2683, 803) at power 200\n",
+      "stdout": "10744 -2439 200\n2683 803 200\n",
+      "stderr": "PRED_ASSERT:turn=87;pod_id=0;actual_x=12164;actual_y=-2016;actual_vx=231;actual_vy=-335;actual_angle=248;pred_x=12163.00;pred_y=-2015.00;pred_vx=230.00;pred_vy=-335.00;pred_angle=248.00;diff_x=1.00;diff_y=-1.00;diff_vx=1.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=12;opp_timeout_left=95\nPRED_ASSERT:turn=87;pod_id=1;actual_x=4192;actual_y=2030;actual_vx=285;actual_vy=-360;actual_angle=337;pred_x=4191.00;pred_y=2029.00;pred_vx=284.00;pred_vy=-361.00;pred_angle=337.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=12;opp_timeout_left=95\nP0:turn=88;id=0;x=12164;y=-2016;vx=231;vy=-335;angle=248;target_cp=1;action=200;target_x=10744;target_y=-2439;opp_id=2;opp_x=10744;opp_y=-2439;opp_vx=-419;opp_vy=-108;opp_angle=123;opp_target_cp=4\nP1:turn=88;id=1;x=4192;y=2030;vx=285;vy=-360;angle=337;target_cp=1;action=200;target_x=2683;target_y=803;opp_id=3;opp_x=10564;opp_y=5744;opp_vx=219;opp_vy=262;opp_angle=21;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 178\n10280.0 -2458.0 -394 -15 100 0 8953 1152 2.033440927104973 0 4 1\n\"\"\n10877.0 6040.0 266 251 100 0 13729 6879 0.3443243298047464 0 2 2\n\"\"\n12267.0 -2505.0 87 -415 200 0 10744 -2439 -2.262262636617187 0 1 4\n\"\"\n4629.0 1540.0 371 -416 200 0 2683 803 -0.7081681357865941 0 1 3\n\"\"\n1:94 2:11\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8990, 898) at power 100\nPod 2 of player $0 moves towards (13626, 6976) at power 100\n",
+      "stdout": "8990 898 100\n13626 6976 100\n",
+      "view": " 179\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (10280, -2458) at power 200\nPod 2 of player $1 moves towards (15789, 7181) at power 200\n",
+      "stdout": "10280 -2458 200\n15789 7181 200\n",
+      "stderr": "PRED_ASSERT:turn=88;pod_id=0;actual_x=12267;actual_y=-2505;actual_vx=87;actual_vy=-415;actual_angle=230;pred_x=12266.00;pred_y=-2504.00;pred_vx=87.00;pred_vy=-414.00;pred_angle=230.00;diff_x=1.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=11;opp_timeout_left=94\nPRED_ASSERT:turn=88;pod_id=1;actual_x=4629;actual_y=1540;actual_vx=371;actual_vy=-416;actual_angle=319;pred_x=4628.00;pred_y=1539.00;pred_vx=370.00;pred_vy=-417.00;pred_angle=319.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=11;opp_timeout_left=94\nP0:turn=89;id=0;x=12267;y=-2505;vx=87;vy=-415;angle=230;target_cp=1;action=200;target_x=10280;target_y=-2458;opp_id=2;opp_x=10280;opp_y=-2458;opp_vx=-394;opp_vy=-15;opp_angle=117;opp_target_cp=4\nP1:turn=89;id=1;x=4629;y=1540;vx=371;vy=-416;angle=319;target_cp=1;action=200;target_x=15789;target_y=7181;opp_id=3;opp_x=10877;opp_y=6040;opp_vx=266;opp_vy=251;opp_angle=20;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 180\n9850.0 -2380.0 -365 66 100 0 8990 898 1.9377704721298084 0 4 1\n\"\"\n11238.0 6323.0 306 240 100 0 13626 6976 0.32817538159789916 0 2 2\n\"\"\n12185.0 -3027.0 -69 -443 200 0 10280 -2458 -2.5764219019761665 0 1 4\n\"\"\n5185.0 1047.0 472 -418 200 0 15789 7181 -0.3940088704276148 0 1 3\n\"\"\n1:93 2:10\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8971, 639) at power 100\nPod 2 of player $0 moves towards (13554, 7059) at power 100\n",
+      "stdout": "8971 639 100\n13554 7059 100\n",
+      "view": " 181\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (9850, -2380) at power 200\nPod 2 of player $1 enabled its shield\n",
+      "stdout": "9850 -2380 200\n2656 4429 SHIELD\n",
+      "stderr": "PRED_ASSERT:turn=89;pod_id=0;actual_x=12185;actual_y=-3027;actual_vx=-69;actual_vy=-443;actual_angle=212;pred_x=12184.00;pred_y=-3026.00;pred_vx=-70.00;pred_vy=-442.00;pred_angle=212.00;diff_x=1.00;diff_y=-1.00;diff_vx=1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=10;opp_timeout_left=93\nPRED_ASSERT:turn=89;pod_id=1;actual_x=5185;actual_y=1047;actual_vx=472;actual_vy=-418;actual_angle=337;pred_x=5184.00;pred_y=1046.00;pred_vx=471.00;pred_vy=-420.00;pred_angle=337.00;diff_x=1.00;diff_y=1.00;diff_vx=1.00;diff_vy=2.00;diff_angle=0.00;diff_cp=0;my_timeout_left=10;opp_timeout_left=93\nP0:turn=90;id=0;x=12185;y=-3027;vx=-69;vy=-443;angle=212;target_cp=1;action=200;target_x=9850;target_y=-2380;opp_id=2;opp_x=9850;opp_y=-2380;opp_vx=-365;opp_vy=66;opp_angle=111;opp_target_cp=4\nP1:turn=90;id=1;x=5185;y=1047;vx=472;vy=-418;angle=337;target_cp=1;action=SHIELD;target_x=2656;target_y=4429;opp_id=3;opp_x=11238;opp_y=6323;opp_vx=306;opp_vy=240;opp_angle=19;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 182\n9457.0 -2218.0 -334 137 100 0 8971 639 1.8541197520196142 0 4 1\n\"\"\n11639.0 6593.0 341 229 100 0 13554 7059 0.3076963002175449 0 2 2\n\"\"\n11922.0 -3520.0 -223 -418 200 0 9850 -2380 -2.890581167335146 0 1 4\n\"\"\n5657.0 629.0 401 -355 0 0 2656 4429 -0.07984960506863548 1 1 3\n\"\"\n1:92 2:9\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8901, 397) at power 100\nPod 2 of player $0 moves towards (13502, 7130) at power 100\n",
+      "stdout": "8901 397 100\n13502 7130 100\n",
+      "view": " 183\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (9457, -2218) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "9457 -2218 200\n8716 8060 200\n",
+      "stderr": "PRED_ASSERT:turn=90;pod_id=0;actual_x=11922;actual_y=-3520;actual_vx=-223;actual_vy=-418;actual_angle=194;pred_x=11922.00;pred_y=-3518.00;pred_vx=-223.00;pred_vy=-417.00;pred_angle=194.00;diff_x=0.00;diff_y=-2.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=9;opp_timeout_left=92\nPRED_ASSERT:turn=90;pod_id=1;actual_x=5657;actual_y=629;actual_vx=401;actual_vy=-355;actual_angle=355;pred_x=5657.00;pred_y=629.00;pred_vx=401.00;pred_vy=-355.00;pred_angle=355.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=9;opp_timeout_left=92\nP0:turn=91;id=0;x=11922;y=-3520;vx=-223;vy=-418;angle=194;target_cp=1;action=200;target_x=9457;target_y=-2218;opp_id=2;opp_x=9457;opp_y=-2218;opp_vx=-334;opp_vy=137;opp_angle=106;opp_target_cp=4\nP1:turn=91;id=1;x=5657;y=629;vx=401;vy=-355;angle=355;target_cp=1;action=200;target_x=8716;target_y=8060;opp_id=3;opp_x=11639;opp_y=6593;opp_vx=341;opp_vy=229;opp_angle=18;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 184\n9102.0 -1983.0 -301 199 100 0 8901 397 1.7802960566851276 0 4 1\n\"\"\n12076.0 6850.0 371 218 100 0 13502 7130 0.2806375931088792 0 2 2\n\"\"\n11499.0 -3925.0 -359 -344 200 0 9457 -2218 -3.204740432694125 0 1 4\n\"\"\n6058.0 274.0 340 -301 0 0 8716 8060 0.23430966029034384 0 1 3\n\"\"\n1:91 2:8\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8792, 191) at power 100\nPod 2 of player $0 moves towards (7336, 4873) at power 0\n",
+      "stdout": "8792 191 100\n7336 4873 0\n",
+      "view": " 185\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (9102, -1983) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "9102 -1983 200\n1188 242 200\n",
+      "stderr": "PRED_ASSERT:turn=91;pod_id=0;actual_x=11499;actual_y=-3925;actual_vx=-359;actual_vy=-344;actual_angle=176;pred_x=11499.00;pred_y=-3924.00;pred_vx=-359.00;pred_vy=-343.00;pred_angle=176.00;diff_x=0.00;diff_y=-1.00;diff_vx=0.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=8;opp_timeout_left=91\nPRED_ASSERT:turn=91;pod_id=1;actual_x=6058;actual_y=274;actual_vx=340;actual_vy=-301;actual_angle=13;pred_x=6058.00;pred_y=274.00;pred_vx=340.00;pred_vy=-301.00;pred_angle=373.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=8;opp_timeout_left=91\nP0:turn=92;id=0;x=11499;y=-3925;vx=-359;vy=-344;angle=176;target_cp=1;action=200;target_x=9102;target_y=-1983;opp_id=2;opp_x=9102;opp_y=-1983;opp_vx=-301;opp_vy=199;opp_angle=102;opp_target_cp=4\nP1:turn=92;id=1;x=6058;y=274;vx=340;vy=-301;angle=13;target_cp=1;action=200;target_x=1188;target_y=242;opp_id=3;opp_x=12076;opp_y=6850;opp_vx=371;opp_vy=218;opp_angle=16;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 186\n8787.0 -1685.0 -267 253 100 0 8792 191 1.7124357822290759 0 4 1\n\"\"\n12447.0 7068.0 315 185 0 0 7336 4873 -0.03352167225010011 0 2 2\n\"\"\n10954.0 -4195.0 -463 -229 200 0 9102 -1983 -3.5188996980531044 0 1 4\n\"\"\n6398.0 -27.0 289 -255 0 0 1188 242 0.5484689256493231 0 1 3\n\"\"\n1:90 2:7\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8662, 27) at power 100\nPod 2 of player $0 moves towards (7336, 4873) at power 0\n",
+      "stdout": "8662 27 100\n7336 4873 0\n",
+      "view": " 187\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8787, -1685) at power 200\nPod 2 of player $1 waits for its engine to reload\n",
+      "stdout": "8787 -1685 200\n937 697 200\n",
+      "stderr": "PRED_ASSERT:turn=92;pod_id=0;actual_x=10954;actual_y=-4195;actual_vx=-463;actual_vy=-229;actual_angle=158;pred_x=10955.00;pred_y=-4194.00;pred_vx=-462.00;pred_vy=-228.00;pred_angle=158.00;diff_x=-1.00;diff_y=-1.00;diff_vx=-1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=7;opp_timeout_left=90\nPRED_ASSERT:turn=92;pod_id=1;actual_x=6398;actual_y=-27;actual_vx=289;actual_vy=-255;actual_angle=31;pred_x=6398.00;pred_y=-27.00;pred_vx=289.00;pred_vy=-255.00;pred_angle=31.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=7;opp_timeout_left=90\nP0:turn=93;id=0;x=10954;y=-4195;vx=-463;vy=-229;angle=158;target_cp=1;action=200;target_x=8787;target_y=-1685;opp_id=2;opp_x=8787;opp_y=-1685;opp_vx=-267;opp_vy=253;opp_angle=98;opp_target_cp=4\nP1:turn=93;id=1;x=6398;y=-27;vx=289;vy=-255;angle=31;target_cp=1;action=200;target_x=937;target_y=697;opp_id=3;opp_x=12447;opp_y=7068;opp_vx=315;opp_vy=185;opp_angle=358;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 188\n8513.0 -1332.0 -233 299 100 0 8662 27 1.643681011871977 0 4 1\n\"\"\n12762.0 7253.0 267 157 0 0 7336 4873 -0.3476809376090794 0 2 2\n\"\"\n10337.0 -4296.0 -524 -86 200 0 8787 -1685 -3.8330589634120837 0 1 4\n\"\"\n6687.0 -282.0 245 -216 0 0 937 697 0.8626281910083025 0 1 3\n\"\"\n1:89 2:6\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8528, -93) at power 100\nPod 2 of player $0 moves towards (7336, 4874) at power 0\n",
+      "stdout": "8528 -93 100\n7336 4874 0\n",
+      "view": " 189\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8513, -1332) at power 200\nPod 2 of player $1 moves towards (5741, 4689) at power 200\n",
+      "stdout": "8513 -1332 200\n5741 4689 200\n",
+      "stderr": "PRED_ASSERT:turn=93;pod_id=0;actual_x=10337;actual_y=-4296;actual_vx=-524;actual_vy=-86;actual_angle=140;pred_x=10338.00;pred_y=-4295.00;pred_vx=-523.00;pred_vy=-85.00;pred_angle=140.00;diff_x=-1.00;diff_y=-1.00;diff_vx=-1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=6;opp_timeout_left=89\nPRED_ASSERT:turn=93;pod_id=1;actual_x=6687;actual_y=-282;actual_vx=245;actual_vy=-216;actual_angle=49;pred_x=6687.00;pred_y=-282.00;pred_vx=245.00;pred_vy=-216.00;pred_angle=49.00;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.00;diff_cp=0;my_timeout_left=6;opp_timeout_left=89\nP0:turn=94;id=0;x=10337;y=-4296;vx=-524;vy=-86;angle=140;target_cp=1;action=200;target_x=8513;target_y=-1332;opp_id=2;opp_x=8513;opp_y=-1332;opp_vx=-233;opp_vy=299;opp_angle=94;opp_target_cp=4\nP1:turn=94;id=1;x=6687;y=-282;vx=245;vy=-216;angle=49;target_cp=1;action=200;target_x=5741;target_y=4689;opp_id=3;opp_x=12762;opp_y=7253;opp_vx=267;opp_vy=157;opp_angle=340;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 190\n8281.0 -933.0 -197 339 100 0 8528 -93 1.558690380690631 0 4 1\n\"\"\n13029.0 7410.0 226 133 0 0 7336 4874 -0.6618402029680588 0 2 2\n\"\"\n9706.0 -4213.0 -536 70 200 0 8513 -1332 -4.147218228771063 0 1 4\n\"\"\n7009.0 -313.0 273 -26 200 0 5741 4689 1.1767874563672818 0 1 3\n\"\"\n1:88 2:5\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (8393, -184) at power 100\nPod 2 of player $0 moves towards (7336, 4874) at power 0\n",
+      "stdout": "8393 -184 100\n7336 4874 0\n",
+      "view": " 191\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8281, -933) at power 200\nPod 2 of player $1 moves towards (11492, 7924) at power 200\n",
+      "stdout": "8281 -933 200\n11492 7924 200\n",
+      "stderr": "PRED_ASSERT:turn=94;pod_id=0;actual_x=9706;actual_y=-4213;actual_vx=-536;actual_vy=70;actual_angle=122;pred_x=9707.00;pred_y=-4212.00;pred_vx=-535.00;pred_vy=71.00;pred_angle=122.00;diff_x=-1.00;diff_y=-1.00;diff_vx=-1.00;diff_vy=-1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=5;opp_timeout_left=88\nPRED_ASSERT:turn=94;pod_id=1;actual_x=7009;actual_y=-313;actual_vx=273;actual_vy=-26;actual_angle=67;pred_x=7010.00;pred_y=-314.00;pred_vx=274.00;pred_vy=-27.00;pred_angle=67.00;diff_x=-1.00;diff_y=1.00;diff_vx=-1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=5;opp_timeout_left=88\nP0:turn=95;id=0;x=9706;y=-4213;vx=-536;vy=70;angle=122;target_cp=1;action=200;target_x=8281;target_y=-933;opp_id=2;opp_x=8281;opp_y=-933;opp_vx=-197;opp_vy=339;opp_angle=89;opp_target_cp=4\nP1:turn=95;id=1;x=7009;y=-313;vx=273;vy=-26;angle=67;target_cp=1;action=200;target_x=11492;target_y=7924;opp_id=3;opp_x=13029;opp_y=7410;opp_vx=226;opp_vy=133;opp_angle=322;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 192\n8104.0 -498.0 324 151 100 0 8393 -184 1.4223634175448017 0 4 1\n\"\"\n13255.0 7543.0 192 113 0 0 7336 4874 -0.9759994683270381 0 2 2\n\"\"\n9090.0 -3960.0 -523 215 200 0 8281 -933 1.980644929468704 0 1 4\n\"\"\n7372.0 -161.0 -166 347 200 0 11492 7924 1.072377224949973 0 1 3\n\"\"\n1:87 2:4\n14 0.9900685931906346 3 7374 -165 0 8101 -499 620.8807500501724 93 294\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6703, 346) at power 100\nPod 2 of player $0 moves towards (7336, 4874) at power 0\n",
+      "stdout": "6703 346 100\n7336 4874 0\n",
+      "view": " 193\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8104, -498) at power 200\nPod 2 of player $1 moves towards (2764, 4576) at power 200\n",
+      "stdout": "8104 -498 200\n2764 4576 200\n",
+      "stderr": "PRED_COLLISION:turn=95;p1=2;p2=1;time=0.9580\nPRED_ASSERT:turn=95;pod_id=0;actual_x=9090;actual_y=-3960;actual_vx=-523;actual_vy=215;actual_angle=113;pred_x=9090.0000;pred_y=-3960.0000;pred_vx=-523.0000;pred_vy=215.0000;pred_angle=113.48;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=-0.48;diff_cp=0;my_timeout_left=4;opp_timeout_left=87\nPRED_ASSERT:turn=95;pod_id=1;actual_x=7372;actual_y=-161;actual_vx=-166;actual_vy=347;actual_angle=61;pred_x=7353.00;pred_y=-155.00;pred_vx=-194.00;pred_vy=293.00;pred_angle=61.44;diff_x=19.00;diff_y=-6.00;diff_vx=28.00;diff_vy=54.00;diff_angle=-0.44;diff_cp=0;my_timeout_left=4;opp_timeout_left=87\nP0:turn=96;id=0;x=9090;y=-3960;vx=-523;vy=215;angle=113;target_cp=1;action=200;target_x=8104;target_y=-498;opp_id=2;opp_x=8104;opp_y=-498;opp_vx=324;opp_vy=151;opp_angle=81;opp_target_cp=4\nP1:turn=96;id=1;x=7372;y=-161;vx=-166;vy=347;angle=61;target_cp=1;action=200;target_x=2764;target_y=4576;opp_id=3;opp_x=13255;opp_y=7543;opp_vx=192;opp_vy=113;opp_angle=304;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 194\n8412.0 -248.0 261 212 100 0 6703 346 1.736522682903781 0 4 1\n\"\"\n13447.0 7656.0 163 96 0 0 7336 4874 -1.2901587336860174 0 2 2\n\"\"\n8512.0 -3553.0 -491 346 200 0 8104 -498 1.8482564835931956 0 1 4\n\"\"\n7243.0 383.0 -109 462 200 0 2764 4576 1.3865364903089523 0 1 3\n\"\"\n1:86 2:3\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (6859, 96) at power 100\nPod 2 of player $0 moves towards (7335, 4874) at power 0\n",
+      "stdout": "6859 96 100\n7335 4874 0\n",
+      "view": " 195\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8412, -248) at power 200\nPod 2 of player $1 moves towards (14048, 8559) at power 200\n",
+      "stdout": "8412 -248 200\n14048 8559 200\n",
+      "stderr": "PRED_ASSERT:turn=96;pod_id=0;actual_x=8512;actual_y=-3553;actual_vx=-491;actual_vy=346;actual_angle=106;pred_x=8512.00;pred_y=-3553.00;pred_vx=-491.00;pred_vy=346.00;pred_angle=105.90;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.10;diff_cp=0;my_timeout_left=3;opp_timeout_left=86\nPRED_ASSERT:turn=96;pod_id=1;actual_x=7243;actual_y=383;actual_vx=-109;actual_vy=462;actual_angle=79;pred_x=7244.00;pred_y=382.00;pred_vx=-108.00;pred_vy=461.00;pred_angle=79.00;diff_x=-1.00;diff_y=1.00;diff_vx=-1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=3;opp_timeout_left=86\nP0:turn=97;id=0;x=8512;y=-3553;vx=-491;vy=346;angle=106;target_cp=1;action=200;target_x=8412;target_y=-248;opp_id=2;opp_x=8412;opp_y=-248;opp_vx=261;opp_vy=212;opp_angle=99;opp_target_cp=4\nP1:turn=97;id=1;x=7243;y=383;vx=-109;vy=462;angle=79;target_cp=1;action=200;target_x=14048;target_y=8559;opp_id=3;opp_x=13447;opp_y=7656;opp_vx=163;opp_vy=96;opp_angle=286;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 196\n8627.0 53.0 182 255 100 0 6859 96 2.0506819482627603 0 4 1\n\"\"\n13610.0 7752.0 138 81 0 0 7335 4874 -1.6043179990449967 0 2 2\n\"\"\n8015.0 -3007.0 -422 464 200 0 8412 -248 1.6010442844877157 0 1 4\n\"\"\n7230.0 1021.0 -11 542 200 0 14048 8559 1.072377224949973 0 1 3\n\"\"\n1:85 2:2\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7093, -123) at power 100\nPod 2 of player $0 moves towards (7336, 4873) at power 0\n",
+      "stdout": "7093 -123 100\n7336 4873 0\n",
+      "view": " 197\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "Pod 1 of player $1 moves towards (8627, 53) at power 200\nPod 2 of player $1 moves towards (9180, 1361) at power 200\n",
+      "stdout": "8627 53 200\n9180 1361 200\n",
+      "stderr": "PRED_ASSERT:turn=97;pod_id=0;actual_x=8015;actual_y=-3007;actual_vx=-422;actual_vy=464;actual_angle=92;pred_x=8015.00;pred_y=-3007.00;pred_vx=-422.00;pred_vy=464.00;pred_angle=91.73;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.27;diff_cp=0;my_timeout_left=2;opp_timeout_left=85\nPRED_ASSERT:turn=97;pod_id=1;actual_x=7230;actual_y=1021;actual_vx=-11;actual_vy=542;actual_angle=61;pred_x=7231.00;pred_y=1020.00;pred_vx=-10.00;pred_vy=541.00;pred_angle=61.00;diff_x=-1.00;diff_y=1.00;diff_vx=-1.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=2;opp_timeout_left=85\nP0:turn=98;id=0;x=8015;y=-3007;vx=-422;vy=464;angle=92;target_cp=1;action=200;target_x=8627;target_y=53;opp_id=2;opp_x=8627;opp_y=53;opp_vx=182;opp_vy=255;opp_angle=117;opp_target_cp=4\nP1:turn=98;id=1;x=7230;y=1021;vx=-11;vy=542;angle=61;target_cp=1;action=200;target_x=9180;target_y=1361;opp_id=3;opp_x=13610;opp_y=7752;opp_vx=138;opp_vy=81;opp_angle=268;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 rank: 2\n",
+      "view": " 198\n8738.0 378.0 94 276 100 0 7093 -123 2.3648412136217396 0 4 1\n\"\"\n13748.0 7833.0 117 68 0 0 7336 4873 -1.918477264403976 0 2 2\n\"\"\n7632.0 -2347.0 -325 561 200 0 8627 53 1.373400766945016 0 1 4\n\"\"\n7364.0 1701.0 114 577 200 0 9180 1361 0.7582179595909937 0 1 3\n\"\"\n1:84 2:1\n",
+      "keyframe": true,
+      "agentId": 1
+    },
+    {
+      "gameInformation": "Pod 1 of player $0 moves towards (7404, -282) at power 100\nPod 2 of player $0 moves towards (7339, 4868) at power 0\n",
+      "stdout": "7404 -282 100\n7339 4868 0\n",
+      "view": " 199\n",
+      "keyframe": false,
+      "agentId": 0
+    },
+    {
+      "gameInformation": "¤RED¤$1 did not reach the next checkpoint in time§RED§\n",
+      "stdout": "8738 378 200\n11347 616 200\n",
+      "stderr": "PRED_ASSERT:turn=98;pod_id=0;actual_x=7632;actual_y=-2347;actual_vx=-325;actual_vy=561;actual_angle=79;pred_x=7632.00;pred_y=-2347.00;pred_vx=-325.00;pred_vy=561.00;pred_angle=78.69;diff_x=0.00;diff_y=0.00;diff_vx=0.00;diff_vy=0.00;diff_angle=0.31;diff_cp=0;my_timeout_left=1;opp_timeout_left=84\nPRED_ASSERT:turn=98;pod_id=1;actual_x=7364;actual_y=1701;actual_vx=114;actual_vy=577;actual_angle=43;pred_x=7365.00;pred_y=1699.00;pred_vx=114.00;pred_vy=576.00;pred_angle=43.00;diff_x=-1.00;diff_y=2.00;diff_vx=0.00;diff_vy=1.00;diff_angle=0.00;diff_cp=0;my_timeout_left=1;opp_timeout_left=84\nP0:turn=99;id=0;x=7632;y=-2347;vx=-325;vy=561;angle=79;target_cp=1;action=200;target_x=8738;target_y=378;opp_id=2;opp_x=8738;opp_y=378;opp_vx=94;opp_vy=276;opp_angle=135;opp_target_cp=4\nP1:turn=99;id=1;x=7364;y=1701;vx=114;vy=577;angle=43;target_cp=1;action=200;target_x=11347;target_y=616;opp_id=3;opp_x=13748;opp_y=7833;opp_vx=117;opp_vy=68;opp_angle=250;opp_target_cp=2\n",
+      "summary": "$0 rank: 1\n$1 eliminated! rank: 2\n",
+      "view": " 200\n8743.0 699.0 3 272 100 0 7404 -282 2.679000478980719 0 4 1\n\"\"\n13865.0 7901.0 99 57 0 0 7339 4868 -2.2326365297629556 0 2 2\n\"\"\n7382.0 -1601.0 -212 634 200 1 8738 378 1.1852385308816231 0 1 4\n\"\"\n7659.0 2364.0 250 563 200 1 11347 616 0.4440586942320144 0 1 3\n\"\"\n1:83 2:0\n",
+      "keyframe": true,
+      "agentId": 1
+    }
+  ],
+  "gameId": 891684902,
+  "refereeInput": "seed=604635077\npod_timeout=100\nmap=3149 7552 9542 4402 14499 7800 6302 4266 7791 853 7689 5944\npod_per_player=2\n",
+  "scores": [
+    2.0,
+    0.0
+  ],
+  "ranks": [
+    0,
+    1
+  ],
+  "tooltips": [
+    "{\"turn\":200,\"text\":\"$1 did not reach the next checkpoint in time\",\"event\":1}"
+  ],
+  "agents": [
+    {
+      "index": 0,
+      "codingamer": {
+        "userId": 608523,
+        "pseudo": "Blinkq",
+        "avatar": 2691689399726
+      },
+      "agentId": 3069641,
+      "score": 13.506809788832697,
+      "valid": true
+    },
+    {
+      "index": 1,
+      "codingamer": {
+        "userId": 984614,
+        "pseudo": "SamSi",
+        "avatar": 9557317848695
+      },
+      "agentId": 6489224,
+      "score": 10.39357592063464,
+      "valid": true
+    }
+  ]
+}
