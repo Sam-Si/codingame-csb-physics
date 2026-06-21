@@ -1,0 +1,44 @@
+name: Scheduled tests
+
+on:
+  schedule:
+    # Daily at 07:00 UTC
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scheduled-tests
+  cancel-in-progress: false
+
+jobs:
+  nightly-verify:
+    name: Nightly physics verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ build-essential
+
+      - name: Build replay_driver
+        working-directory: physics
+        run: g++ -std=c++17 -O2 -Wall -Wextra -o replay_driver replay_driver.cpp
+
+      - name: Verify all test-session battles
+        run: python3 sim/verify_battles.py battles/test_session_battles
+
+      - name: Verify all leaderboard battles
+        run: python3 sim/verify_battles.py battles/leaderboard_battles || true

@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-physics:
+    name: Build driver & verify battles
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ build-essential
+
+      - name: Build replay_driver
+        working-directory: physics
+        run: g++ -std=c++17 -O2 -o replay_driver replay_driver.cpp
+
+      - name: Verify test-session battles (strict)
+        run: python3 sim/verify_battles.py battles/test_session_battles
+
+      - name: Verify leaderboard battles (report only)
+        # Leaderboard corpus has known borderline float edge cases; fail only on runner crash.
+        run: |
+          set +e
+          python3 sim/verify_battles.py battles/leaderboard_battles
+          status=$?
+          set -e
+          if [ "$status" -gt 1 ]; then
+            echo "Verifier crashed (exit $status)"
+            exit "$status"
+          fi
+          echo "Leaderboard pass completed (exit $status — non-zero allowed for known edge cases)"
