@@ -222,3 +222,18 @@ generated/
 cookies.txt
 *.cookies
 session.json
+
+# -----------------------------------------------------------------------------
+# AI agent / CLI tool local state (never commit — often machine-specific symlinks
+# or config pointers, not project source)
+# -----------------------------------------------------------------------------
+.antigravitycli/
+.antigravity/
+.gemini/
+.grok/
+.claude/
+.aider*
+.continue/
+.windsurf/
+.codeium/
+.tabnine/
