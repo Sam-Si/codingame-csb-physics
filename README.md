@@ -1,3 +1,13 @@
+# ⚠️ ARCHIVED / MERGED
+
+This repository has been **merged into** [`mad_pod_arena`](https://github.com/Sam-Si/mad_pod_arena).
+
+**Do not develop here.** All physics, sim tools, battles, and docs now live in the arena monorepo.
+
+See: `docs/archive/MERGED_FROM_codingame-csb-physics.md` in mad_pod_arena.
+
+---
+
 # Coders Strike Back — Verified Referee Physics Engine
 
 **Status: production-grade double-precision physics** — `physics/physics.h` uses `double` throughout and is validated turn-by-turn against real CodinGame battle replays.
