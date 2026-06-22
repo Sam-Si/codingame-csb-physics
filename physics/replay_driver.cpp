@@ -85,6 +85,8 @@ void run_text_replay() {
             int nxt, sh, bo;
             std::cin >> idx >> x >> y >> vx >> vy >> ang >> nxt >> sh >> bo;
             g.setPodState(idx, x, y, vx, vy, ang, nxt, sh, bo);
+            // Allow STEP after pods are injected even if INIT was skipped (verify_battles path).
+            initialized = true;
             std::cout << "OK SET_POD " << idx << "\nREADY\n";
         } else if (cmd == "SET_TIMEOUTS") {
             int t0, t1;
@@ -100,7 +102,9 @@ void run_text_replay() {
             std::cout << "OK ACTION " << pod << "\nREADY\n";
         } else if (cmd == "STEP") {
             if (!initialized) {
-                std::cout << "ERR not initialized\n";
+                // Still emit STEP_DONE so the Python reader cannot hang forever.
+                std::cout << "ERR not initialized\nSTEP_DONE\n";
+                std::cout.flush();
                 continue;
             }
             g.nextTurn();

@@ -47,28 +47,30 @@ struct Pod {
     bool won;          // Won flag
     bool isFirstTurn;  // True until the first applyAction call
 
+    // Go referee: math.Mod(2*da, 2*pi) - da  (shortest signed angle; allows angle to accumulate outside [-pi,pi])
     double diffAngle(Point target) const {
         double a = std::atan2(target.y - p.y, target.x - p.x);
         double da = std::fmod(a - angle, 2.0 * M_PI);
-        if (da < -M_PI) da += 2.0 * M_PI;
-        if (da > M_PI) da -= 2.0 * M_PI;
-        return da;
+        return std::fmod(2.0 * da, 2.0 * M_PI) - da;
     }
 
     void applyRotate(Point target) {
         double a = std::atan2(target.y - p.y, target.x - p.x);
         double rotateAngle = diffAngle(target);
+        // Two separate ifs (not else-if) — mirrors Go referee exactly
         if (rotateAngle < -maxRotate) {
             a = angle - maxRotate;
-        } else if (rotateAngle > maxRotate) {
+        }
+        if (rotateAngle > maxRotate) {
             a = angle + maxRotate;
         }
         angle = a;
+        // Go does NOT normalize angle into [-pi, pi] here; it accumulates.
     }
 
     void applyRotateFirst(double rotateAngle) {
         // First turn: set angle directly (no 18° clamp).
-        // Keep in [-π, π] to match the referee's atan2 convention.
+        // Real CG battles store atan2 range [-pi, pi]; do not expand to [0, 2pi].
         angle = rotateAngle;
     }
 
@@ -91,15 +93,18 @@ struct Pod {
         }
     }
 
+    // Go referee uses disc < 0 miss. We also miss disc == 0 (tangent/grazing): CG
+    // viewer records no bounce on those frames (battle_885624120 t=216) and treating
+    // disc==0 as hit causes t1≈0 infinite bounce loops.
     double newCollide(const Pod* b, double rsq) const {
-        Point rel_p = {b->p.x - p.x, b->p.y - p.y};
+        Point rel_p{b->p.x - p.x, b->p.y - p.y};
         double pLength2 = rel_p.x * rel_p.x + rel_p.y * rel_p.y;
 
         if (pLength2 <= rsq) {
             return 0.0;
         }
 
-        Point v = {b->s.x - s.x, b->s.y - s.y};
+        Point v{b->s.x - s.x, b->s.y - s.y};
         double dot = rel_p.dot(v);
 
         if (dot > 0.0) {
@@ -112,12 +117,15 @@ struct Pod {
         }
         double disc = dot * dot - vLength2 * (pLength2 - rsq);
 
-        if (disc < 0.0) {
+        // Go uses disc < 0 miss. We also miss disc == 0 (tangent/grazing): CG
+        // viewer records no bounce on those frames (battle_885624120 t=216) and treating
+        // disc==0 as hit causes t1≈0 infinite bounce loops.
+        if (disc <= 0.0) {
             return 10.0;
         }
 
-        double discdist = std::sqrt(disc);
-        double t1 = (-dot - discdist) / vLength2;
+        double t1 = (-dot - std::sqrt(disc)) / vLength2;
+        if (t1 < 0.0) return 10.0;
         return t1;
     }
 
@@ -127,6 +135,9 @@ struct Pod {
             next = (int)globalCp.size() - 1;
             won = true;
         }
+        // Go referee resets to 100; end-of-turn decrement yields 99. CG viewer frames
+        // usually show 100 after a pass-turn (capture order), so we set 101 then let
+        // the end-of-turn -- bring it to 100 in the reported state.
         if (podn < 2) {
             playerTimeout[0] = 101;
         } else {
@@ -135,28 +146,50 @@ struct Pod {
     }
 };
 
-inline bool cpCollide(Point p1, Point p2, Point cp, double cpRSQ) {
+inline double cpDistSq(Point p1, Point p2, Point cp) {
     double dx = p2.x - p1.x;
     double dy = p2.y - p1.y;
     Point pp = p1;
     double pd2 = dx * dx + dy * dy;
-
     if (pd2 != 0.0) {
         double u = ((cp.x - p1.x) * dx + (cp.y - p1.y) * dy) / pd2;
-        if (u > 1.0) {
-            pp = p2;
-        } else if (u > 0.0) {
-            pp.x = p1.x + u * dx;
-            pp.y = p1.y + u * dy;
-        }
+        if (u > 1.0) pp = p2;
+        else if (u > 0.0) { pp.x = p1.x + u * dx; pp.y = p1.y + u * dy; }
     }
+    pp.x -= cp.x; pp.y -= cp.y;
+    return pp.x * pp.x + pp.y * pp.y;
+}
 
-    pp.x -= cp.x;
-    pp.y -= cp.y;
-    double distSQ = pp.x * pp.x + pp.y * pp.y;
-    if (distSQ < cpRSQ) {
-        return true;
-    }
+// Segment CP test: strict < matches Go csbref.go.
+inline bool cpCollide(Point p1, Point p2, Point cp, double cpRSQ) {
+    return cpDistSq(p1, p2, cp) < cpRSQ;
+}
+
+// Endpoint on/in CP radius: CG keyframes pass when rounded position lands at
+// exactly dsq == rsq (158224761 t=15). Segment strict < misses these.
+inline bool cpEndpointOnOrIn(Point segEnd, Point cp, double cpRSQ) {
+    double dx = segEnd.x - cp.x;
+    double dy = segEnd.y - cp.y;
+    return dx * dx + dy * dy <= cpRSQ;
+}
+
+// Bounce-clip gate: piecewise segment after a bounce can clip a CP while straight
+// turnStart→segEnd only hair-misses (dsq in (rsq, rsq+band]). Block those.
+// Clear straight miss (fullDsq > rsq+band) = real bounce deflection; allow piecewise.
+// Endpoint on/in always passes (not gated).
+const double CP_NEAR_MISS_DSQ = 250.0;
+
+// forceStraightGate: end-of-turn always gates (bounce may have occurred without
+// anyBounceSoFar if only the final segment carries the clip after t hits 0).
+inline bool cpShouldPass(Point segStart, Point segEnd, Point turnStart, Point cp,
+                         double cpRSQ, bool segmentIsPostBounce,
+                         bool forceStraightGate = false) {
+    if (cpEndpointOnOrIn(segEnd, cp, cpRSQ)) return true;
+    if (!cpCollide(segStart, segEnd, cp, cpRSQ)) return false;
+    if (!segmentIsPostBounce && !forceStraightGate) return true;
+    double fullDsq = cpDistSq(turnStart, segEnd, cp);
+    if (fullDsq < cpRSQ) return true;
+    if (fullDsq > cpRSQ + CP_NEAR_MISS_DSQ) return true;
     return false;
 }
 
@@ -199,45 +232,23 @@ struct Game {
         Pod& p = pods[pod_idx];
         Point target = {(double)target_x, (double)target_y};
 
-        // InvalidInput handling — verified from battle data:
-        // - Negative thrust (e.g. "-1"): activates shield (shieldtimer=4), no rotation, no thrust.
-        // - Thrust > 200 (e.g. "286", "32766"): does NOT activate shield, no rotation, no thrust.
+        // InvalidInput handling — verified from battle data (incl. collision outcomes):
+        // - Negative thrust (e.g. "-1"): NO shield, no rotation, no thrust.
+        // - Thrust > 200 (e.g. "286", "32766"): NO shield, no rotation, no thrust.
         // Both cases: angle stays exactly unchanged, velocity gets only friction.
+        // Important: negative thrust must NOT set shieldtimer — doing so gives 10× mass
+        // on collisions and diverges from the referee (battle_891684936 turn 102).
+        // Also do NOT clear isFirstTurn: invalid output is not a successful rotate.
         if (thrust_str != "SHIELD" && thrust_str != "BOOST") {
             try {
                 int val = std::stoi(thrust_str);
-                if (val < 0) {
-                    // Negative thrust: activates shield
-                    p.shieldtimer = 4;
-                    if (p.isFirstTurn) p.isFirstTurn = false;
-                    return;
-                }
-                if (val > 200) {
-                    // Thrust > 200: invalid but does NOT activate shield
-                    if (p.isFirstTurn) p.isFirstTurn = false;
+                if (val < 0 || val > 200) {
                     return;
                 }
             } catch (...) {}
         }
 
-        // Rotation: skip if target is the pod's own position (atan2(0,0) undefined).
-        // The referee checks dx/dy != 0 before computing the facing direction.
-        // Verified from battle data: bots commonly target their own position on SHIELD turns.
-        double dx = target.x - p.p.x;
-        double dy = target.y - p.p.y;
-        if (dx != 0.0 || dy != 0.0) {
-            if (p.isFirstTurn) {
-                p.isFirstTurn = false;
-                double a = std::atan2(dy, dx);
-                p.applyRotateFirst(a);
-            } else {
-                p.applyRotate(target);
-            }
-        } else {
-            // Target == position: no rotation, but consume isFirstTurn
-            if (p.isFirstTurn) p.isFirstTurn = false;
-        }
-
+        // Parse thrust / SHIELD / BOOST first so shieldtimer is set even when target==position.
         int thrust = 0;
         bool used_shield = false;
 
@@ -270,6 +281,25 @@ struct Game {
         // BOOST IS consumed during cooldown (boosted stays 1) — verified from battle data.
         if (!used_shield && p.shieldtimer > 0) {
             thrust = 0;
+        }
+
+        // Go referee: if target == position, skip rotate AND thrust entirely
+        // (atan2(0,0) undefined; shieldtimer already applied above if SHIELD was requested).
+        // IMPORTANT: do NOT clear isFirstTurn here — the pod has not rotated yet.
+        // First successful rotate (possibly on a later turn) still gets the unclamped snap.
+        // Verified: battle_870230125 pod0 targets self on turn 0, snaps angle on turn 1.
+        double dx = target.x - p.p.x;
+        double dy = target.y - p.p.y;
+        if (dx == 0.0 && dy == 0.0) {
+            return;
+        }
+
+        if (p.isFirstTurn) {
+            p.isFirstTurn = false;
+            double a = std::atan2(dy, dx);
+            p.applyRotateFirst(a);
+        } else {
+            p.applyRotate(target);
         }
 
         p.applyThrust(thrust);
@@ -360,10 +390,16 @@ struct Game {
     }
 
     void nextTurn() {
+        // Go piecewise mid-turn CP + segment-aware gate on segments that include a
+        // bounce this step (see cpShouldPass). Endpoint on/in CP always passes.
         double t = 1.0;
         std::vector<Point> curps = {pods[0].p, pods[1].p, pods[2].p, pods[3].p};
+        std::vector<Point> turnStart = curps;
+        bool anyBounceSoFar = false;
+        int safety = 0;
 
         while (t > 0.0) {
+            if (++safety > 100) break;
             double first = t;
             int cli = 0;
             int clj = 0;
@@ -371,7 +407,7 @@ struct Game {
             for (int i = podCount - 1; i > 0; --i) {
                 for (int j = i - 1; j >= 0; --j) {
                     double tx = pods[i].newCollide(&pods[j], podRSQ);
-                    if (tx <= first) {
+                    if (tx >= 0.0 && tx <= first) {
                         first = tx;
                         cli = i;
                         clj = j;
@@ -379,16 +415,26 @@ struct Game {
                 }
             }
 
-            forwardTime(first);
-            t -= first;
-
-            if (cli != clj) {
-                bounce(cli, clj);
+            bool bouncedThisStep = false;
+            if (first < EPSILON) {
+                if (cli != clj) { bounce(cli, clj); bouncedThisStep = true; }
+                double adv = (EPSILON < t) ? EPSILON : t;
+                forwardTime(adv);
+                t -= adv;
+            } else {
+                forwardTime(first);
+                t -= first;
+                if (cli != clj) { bounce(cli, clj); bouncedThisStep = true; }
             }
+
+            // Segment includes this step's bounce; gate before advancing curps.
+            if (bouncedThisStep) anyBounceSoFar = true;
 
             if (t > 0.0) {
                 for (int i = 0; i < podCount; ++i) {
-                    if (cpCollide(curps[i], pods[i].p, globalCp[pods[i].next], cpRSQ)) {
+                    if (pods[i].next < (int)globalCp.size() &&
+                        cpShouldPass(curps[i], pods[i].p, turnStart[i],
+                                     globalCp[pods[i].next], cpRSQ, anyBounceSoFar)) {
                         pods[i].passCheckpoint(i, globalCp, playerTimeout);
                     }
                 }
@@ -398,7 +444,9 @@ struct Game {
 
         for (int i = 0; i < podCount; ++i) {
             pods[i].endTurn();
-            if (cpCollide(curps[i], pods[i].p, globalCp[pods[i].next], cpRSQ)) {
+            if (pods[i].next < (int)globalCp.size() &&
+                cpShouldPass(curps[i], pods[i].p, turnStart[i],
+                             globalCp[pods[i].next], cpRSQ, anyBounceSoFar)) {
                 pods[i].passCheckpoint(i, globalCp, playerTimeout);
             }
         }
